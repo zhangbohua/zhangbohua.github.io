@@ -20,7 +20,7 @@
     <link rel="alternative" href="/atom.xml" title="Chamberlan" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/img/favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -88,6 +88,10 @@
 		        
 					<a class="google" target="_blank" href="https://mail.google.com/mail/u/0/#inbox" title="google"><i class="icon-google"></i></a>
 		        
+			</div>
+			<!--音乐播放插件-->
+			<div style="margin-top:30px;">
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=240 height=52 src="//music.163.com/outchain/player?type=2&id=32507038&auto=1&height=32"></iframe>
 			</div>
 		</nav>
 	</header>		
@@ -161,6 +165,8 @@
   <div class="article-inner">
     
       <header class="article-header">
+
+
         
   
     <h1 itemprop="name">
@@ -227,6 +233,8 @@
   <div class="article-inner">
     
       <header class="article-header">
+
+
         
   
     <h1 itemprop="name">
@@ -292,151 +300,12 @@
 
 
   
-    <article id="post-任务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">异步任务</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/07/%E4%BB%BB%E5%8A%A1/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在Java应用中，绝大多数情况下都是通过同步的方式来实现交互处理的；但是在处理与第三方系统交互的时候，容易造成响应迟缓的情况，之前大部分都是使用多线程来完成此类任务，其实，在<code>Spring 3.x</code>之后，就已经内置了<code>@Async</code>来完美解决这个问题。</p>
-<p>两个注解：</p>
-<p><strong>@EnableAysnc</strong>、<strong>@Aysnc</strong></p>
-        
-          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Yapi部署文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">Yapi部署文档</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong><code>Yapi</code></strong> 由 <code>YMFE</code>开源，旨在为开发、产品、测试人员提供更优雅的接口管理服务，可以帮助开发者轻松创建、发布、维护<code>API</code>。</p>
-<ul>
-<li><strong>权限管理</strong><br><strong>YApi</strong>成熟的团队管理扁平化项目权限配置满足各类企业的需求</li>
-<li><strong>可视化接口管理</strong><br>基于 <strong>websocket</strong>的多人协作接口编辑功能和类 postman 测试工具，让多人协作成倍提升开发效率</li>
-<li><strong>Mock Server</strong><br>易用的 <strong>Mock Server</strong>，再也不用担心 <strong>mock</strong> 数据的生成了</li>
-<li><strong>自动化测试</strong><br>完善的接口自动化测试,保证数据的正确性</li>
-<li><strong>数据导入</strong><br>支持导入<strong>*swagger, postman, har</strong>数据格式，方便迁移旧项目</li>
-<li><strong>插件机制</strong><br>强大的插件机制，满足各类业务需求</li>
-</ul>
-<p><strong>Yapi</strong>支持内网部署，只需在管理员或内网某台机器上<strong>安装部署一次</strong>，团队其他成员不需要部署，访问相应的地址即可使用。本部分内容只需负责配置环境人员阅读，需要相关人员具有基本的<code>node</code>与<code>mongodb</code>知识。</p>
-        
-          <a class="article-more-a" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-Vue学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
+
+
         
   
     <h1 itemprop="name">
@@ -511,10 +380,157 @@
 
 
   
+    <article id="post-Yapi部署文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+
+
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">Yapi部署文档</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/" class="archive-article-date">
+  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong><code>Yapi</code></strong> 由 <code>YMFE</code>开源，旨在为开发、产品、测试人员提供更优雅的接口管理服务，可以帮助开发者轻松创建、发布、维护<code>API</code>。</p>
+<ul>
+<li><strong>权限管理</strong><br><strong>YApi</strong>成熟的团队管理扁平化项目权限配置满足各类企业的需求</li>
+<li><strong>可视化接口管理</strong><br>基于 <strong>websocket</strong>的多人协作接口编辑功能和类 postman 测试工具，让多人协作成倍提升开发效率</li>
+<li><strong>Mock Server</strong><br>易用的 <strong>Mock Server</strong>，再也不用担心 <strong>mock</strong> 数据的生成了</li>
+<li><strong>自动化测试</strong><br>完善的接口自动化测试,保证数据的正确性</li>
+<li><strong>数据导入</strong><br>支持导入<strong>*swagger, postman, har</strong>数据格式，方便迁移旧项目</li>
+<li><strong>插件机制</strong><br>强大的插件机制，满足各类业务需求</li>
+</ul>
+<p><strong>Yapi</strong>支持内网部署，只需在管理员或内网某台机器上<strong>安装部署一次</strong>，团队其他成员不需要部署，访问相应的地址即可使用。本部分内容只需负责配置环境人员阅读，需要相关人员具有基本的<code>node</code>与<code>mongodb</code>知识。</p>
+        
+          <a class="article-more-a" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-任务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+
+
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">异步任务</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/07/%E4%BB%BB%E5%8A%A1/" class="archive-article-date">
+  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在Java应用中，绝大多数情况下都是通过同步的方式来实现交互处理的；但是在处理与第三方系统交互的时候，容易造成响应迟缓的情况，之前大部分都是使用多线程来完成此类任务，其实，在<code>Spring 3.x</code>之后，就已经内置了<code>@Async</code>来完美解决这个问题。</p>
+<p>两个注解：</p>
+<p><strong>@EnableAysnc</strong>、<strong>@Aysnc</strong></p>
+        
+          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-注册Servlet三大组件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
+
+
         
   
     <h1 itemprop="name">
@@ -581,6 +597,8 @@
   <div class="article-inner">
     
       <header class="article-header">
+
+
         
   
     <h1 itemprop="name">
@@ -649,6 +667,8 @@
   <div class="article-inner">
     
       <header class="article-header">
+
+
         
   
     <h1 itemprop="name">
@@ -718,6 +738,8 @@
   <div class="article-inner">
     
       <header class="article-header">
+
+
         
   
     <h1 itemprop="name">
@@ -783,6 +805,8 @@
   <div class="article-inner">
     
       <header class="article-header">
+
+
         
   
     <h1 itemprop="name">
@@ -870,6 +894,7 @@
         </div>
       </div>
       <footer id="footer">
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
@@ -878,6 +903,9 @@
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
+		<span id="busuanzi_container_site_uv"> 
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
     </div>
   </div>
 </footer>
@@ -1008,7 +1036,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
           
             <li class="search-li">
-              <a href="/https:/www.buhuiwy.cn/lovewenyu/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>夫人的礼物</a>
+              <a href="/lovewenyu" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>夫人的礼物</a>
             </li>
           
         </ul>
