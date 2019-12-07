@@ -157,19 +157,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Http和Https" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JAVA并发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/Http%E5%92%8CHttps/">Http和Https</a>
+      <a class="article-title" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">JAVA并发</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/Http%E5%92%8CHttps/" class="archive-article-date">
+        <a href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -177,12 +177,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>超文本传输协议HTTP协议被用于在Web浏览器和网站服务器之间传递信息，HTTP协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。</p>
-<p>为了解决HTTP协议的这一缺陷，需要使用另一种协议：安全套接字层超文本传输协议HTTPS，为了数据传输的安全，HTTPS在HTTP的基础上加入了SSL协议，SSL依靠证书来验证服务器的身份，并为浏览器和服务器之间的通信加密。</p>
-<h3 id="Http和Https的基本概念"><a href="#Http和Https的基本概念" class="headerlink" title="Http和Https的基本概念"></a>Http和Https的基本概念</h3><p>HTTP：是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少。</p>
-<p>HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</p>
+        <h3 id="线程与进程的区别"><a href="#线程与进程的区别" class="headerlink" title="线程与进程的区别"></a>线程与进程的区别</h3><p>线程，程序执行流的最小执行单位，是行程中的实际运作单位，经常容易和进程这个概念混淆。那么，线程和进程究竟有什么区别呢？首先，进程是一个动态的过程，是一个活动的实体。简单来说，一个应用程序的运行就可以被看做是一个进程，而线程，是运行中的实际的任务执行者。可以说，进程中包含了多个可以同时运行的线程。</p>
+<h3 id="线程的基本概念"><a href="#线程的基本概念" class="headerlink" title="线程的基本概念"></a>线程的基本概念</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf199915321a4?w=808&h=293&f=png&s=53728" alt="img"></p>
         
-          <a class="article-more-a" href="/2019/12/07/Http%E5%92%8CHttps/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/#more">more >></a>
         
       
 
@@ -195,7 +193,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/Http%E5%92%8CHttps/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">展开全文 >></a>
         </p>
       
 
@@ -247,29 +245,12 @@
       
         <h3 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h3><p>Spring Security是针对Spring项目的安全框架，也是Spring Boot底层安全模块默认的技术选型。他可以实现强大的web安全控制。对于安全控制，我们仅需引入spring-boot-starter-security模块，进行少量的配置，即可实现强大的安全管理。</p>
 <p> 几个类：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;AuthenticationManagerBuilder&#96;&#96;&#96;：自定义认证策略</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;@EnableWebSecurity&#96;&#96;&#96;：开启WebSecurity模式</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">- 应用程序的两个主要区域是“认证”和“授权”（或者访问控制）。这两个主要区域是Spring Security 的两个目标。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">- 认证”（Authentication），是建立一个他声明的主体的过程（一个“主体”一般是指用户，设备或一些可以在你的应用程序中执行动作的其他系统）。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">- “授权”（Authorization）指确定一个主体是否允许在你的应用程序执行一个动作的过程。为了抵达需要授权的店，主体的身份已经有认证过程建立。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">- 这个概念是通用的而不只在Spring Security中。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">### web&amp;安全</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">1.登陆&#x2F;注销</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">- HttpSecurity配置登陆、注销功能</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">2.Thymeleaf提供的SpringSecurity标签支持</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">- 需要引入thymeleaf-extras-springsecurity4</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">- sec:authentication&#x3D;“name”获得当前用户的用户名</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">- sec:authorize&#x3D;“hasRole(‘ADMIN’)”当前用户必须拥有ADMIN权限时才会显示标签内容</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">3.remember me</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">- 表单添加remember-me的checkbox</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">- 配置启用remember-me功能</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">4.CSRF（Cross-site request forgery）跨站请求伪造</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">- HttpSecurity启用csrf功能，会为表单添加_csrf的值，提交携带来预防CSRF；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;java</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">&#x2F;**</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line"> * 1.引入springsecurity</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line"> * 2.编写SpringSecurity的配置类</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line"> * @EnableWebSecurity</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line"> * public class MySecurityConfig extends WebSecurityConfigurerAdapter &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line"> * &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line"> * 3.控制请求的访问权限</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line"> *&#x2F;</span></pre></td></tr></table></figure>
-
-<p>引入thymeleaf与springsecurity整合的依赖</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.thymeleaf.extras<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>thymeleaf-extras-springsecurity5<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.0.4.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@EnableWebSecurity</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MySecurityConfig</span> <span class="keyword">extends</span> <span class="title">WebSecurityConfigurerAdapter</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Override</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//super.configure(http);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//定制请求的授权规则</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        http.authorizeRequests().antMatchers(<span class="string">"/"</span>).permitAll()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">                .antMatchers(<span class="string">"/level1/**"</span>).hasRole(<span class="string">"VIP1"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">                .antMatchers(<span class="string">"/level2/**"</span>).hasRole(<span class="string">"VIP2"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">                .antMatchers(<span class="string">"/level3/**"</span>).hasRole(<span class="string">"VIP3"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//开启自动配置的登录功能</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        http.formLogin().usernameParameter(<span class="string">"user"</span>).passwordParameter(<span class="string">"pwd"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">                .loginPage(<span class="string">"/userlogin"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//1、/login来到登陆页</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//2、重定向到/login?error表示登陆失败</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//3、更多详细规定</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//4、默认post形式的 /login代表处理登陆</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//5、一但定制loginPage；那么 loginPage的post请求就是登陆</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//开启自动配置的注销功能</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">        http.logout().logoutSuccessUrl(<span class="string">"/"</span>);<span class="comment">//注销成功以后来到首页</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"><span class="comment">         * 访问/logoout表示用户注销，清空session</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="comment">         * 注销成功会返回/login?logout页面</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line"><span class="comment">         * 开启记住我功能</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line"><span class="comment">         */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">        http.rememberMe().rememberMeParameter(<span class="string">"remember"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line"><span class="comment">         * 登录成功以后，将Cookie发给浏览器保存，以后访问页面带上这个cookie，只要通过检车就可以免登录</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line"><span class="comment">         * 点击注销会删除cookie</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line"><span class="comment">         */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">//定义认证规则</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Override</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(AuthenticationManagerBuilder auth)</span> <span class="keyword">throws</span> Exception </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//super.configure(auth);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//用户名和密码以及角色暂时放在内存中</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">        auth.inMemoryAuthentication().passwordEncoder(<span class="keyword">new</span> BCryptPasswordEncoder()).withUser(<span class="string">"zhangsan"</span>).password(<span class="keyword">new</span> BCryptPasswordEncoder().encode(<span class="string">"123456"</span>)).roles(<span class="string">"VIP1"</span>, <span class="string">"VIP2"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">                .and()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">                .withUser(<span class="string">"lisi"</span>).password(<span class="keyword">new</span> BCryptPasswordEncoder().encode(<span class="string">"123456"</span>)).roles(<span class="string">"VIP2"</span>, <span class="string">"VIP3"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line">                .and()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">                .withUser(<span class="string">"wangwu"</span>).password(<span class="keyword">new</span> BCryptPasswordEncoder().encode(<span class="string">"123456"</span>)).roles(<span class="string">"VIP1"</span>, <span class="string">"VIP3"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<p>welcome页面如下</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">      //引入<span class="attr">thymeleaf-security</span>的名称空间</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="tag">      <span class="attr">xmlns:sec</span>=<span class="string">"http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Insert title here<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span>欢迎光临武林秘籍管理系统<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">sec:authorize</span>=<span class="string">"!isAuthenticated()"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">h2</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span>游客您好，如果想查看武林秘籍 <span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/userlogin&#125;"</span>&gt;</span>请登录<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">sec:authorize</span>=<span class="string">"isAuthenticated()"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">sec:authentication</span>=<span class="string">"name"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>, 您好，您的角色有：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">			<span class="tag">&lt;<span class="name">span</span> <span class="attr">sec:authentication</span>=<span class="string">"principal.authorities"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">form</span> <span class="attr">th:action</span>=<span class="string">"@&#123;/logout&#125;"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">			<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"注销"</span>/&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">hr</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">sec:authorize</span>=<span class="string">"hasRole('VIP1')"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">h3</span>&gt;</span>普通武功秘籍<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level1/1&#125;"</span>&gt;</span>罗汉拳<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level1/2&#125;"</span>&gt;</span>武当长拳<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level1/3&#125;"</span>&gt;</span>全真剑法<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">sec:authorize</span>=<span class="string">"hasRole('VIP2')"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">h3</span>&gt;</span>高级武功秘籍<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level2/1&#125;"</span>&gt;</span>太极拳<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level2/2&#125;"</span>&gt;</span>七伤拳<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level2/3&#125;"</span>&gt;</span>梯云纵<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">sec:authorize</span>=<span class="string">"hasRole('VIP3')"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">h3</span>&gt;</span>绝世武功秘籍<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level3/1&#125;"</span>&gt;</span>葵花宝典<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level3/2&#125;"</span>&gt;</span>龟派气功<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/level3/3&#125;"</span>&gt;</span>独孤九剑<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></pre></td></tr></table></figure>
-
-<p>登录页如下login.html</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Insert title here<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">h1</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span>欢迎登陆武林秘籍管理系统<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">hr</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;<span class="name">form</span> <span class="attr">th:action</span>=<span class="string">"@&#123;/userlogin&#125;"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">			用户名:<span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"user"</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">			密码:<span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"pwd"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">			<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"remember"</span>/&gt;</span> 记住我<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">			<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"登陆"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">		<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">KungfuController</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> String PREFIX = <span class="string">"pages/"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	<span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * 欢迎页</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="meta">@GetMapping</span>(<span class="string">"/"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">index</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">return</span> <span class="string">"welcome"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	<span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * 登陆页</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">	<span class="meta">@GetMapping</span>(<span class="string">"/userlogin"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">loginPage</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">return</span> PREFIX+<span class="string">"login"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">	<span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * level1页面映射</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * <span class="doctag">@param</span> path</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">	<span class="meta">@GetMapping</span>(<span class="string">"/level1/&#123;path&#125;"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">level1</span><span class="params">(@PathVariable(<span class="string">"path"</span>)</span>String path) </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">return</span> PREFIX+<span class="string">"level1/"</span>+path;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">	<span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * level2页面映射</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * <span class="doctag">@param</span> path</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">	<span class="meta">@GetMapping</span>(<span class="string">"/level2/&#123;path&#125;"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">level2</span><span class="params">(@PathVariable(<span class="string">"path"</span>)</span>String path) </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">return</span> PREFIX+<span class="string">"level2/"</span>+path;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line">	<span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * level3页面映射</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * <span class="doctag">@param</span> path</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line">	<span class="meta">@GetMapping</span>(<span class="string">"/level3/&#123;path&#125;"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">level3</span><span class="params">(@PathVariable(<span class="string">"path"</span>)</span>String path) </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">return</span> PREFIX+<span class="string">"level3/"</span>+path;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">51</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">52</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<p>效果如下</p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf1b3168f3d9f?w=588&h=169&f=png&s=23537" alt="1567690834513"></p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf1b4d8b8f03b?w=550&h=206&f=png&s=17120" alt="1567690845934"></p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf1b9c6d341d3?w=813&h=453&f=png&s=38163" alt="1567690853749"></p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf1bb687cd443?w=832&h=441&f=png&s=37615" alt="1567690873816"></p>
-
+<p><strong>WebSecurityConfigurerAdapter</strong>：自定义Security策略</p>
+<p><strong>AuthenticationManagerBuilder</strong>：自定义认证策略</p>
+<p><strong>@EnableWebSecurity</strong>：开启WebSecurity模式</p>
+        
+          <a class="article-more-a" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/#more">more >></a>
+        
       
 
       
@@ -282,6 +263,147 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-任务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">异步任务</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/07/%E4%BB%BB%E5%8A%A1/" class="archive-article-date">
+  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在Java应用中，绝大多数情况下都是通过同步的方式来实现交互处理的；但是在处理与第三方系统交互的时候，容易造成响应迟缓的情况，之前大部分都是使用多线程来完成此类任务，其实，在<code>Spring 3.x</code>之后，就已经内置了<code>@Async</code>来完美解决这个问题。</p>
+<p>两个注解：</p>
+<p><strong>@EnableAysnc</strong>、<strong>@Aysnc</strong></p>
+        
+          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Yapi部署文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">Yapi部署文档</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/" class="archive-article-date">
+  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong><code>Yapi</code></strong> 由 <code>YMFE</code>开源，旨在为开发、产品、测试人员提供更优雅的接口管理服务，可以帮助开发者轻松创建、发布、维护<code>API</code>。</p>
+<ul>
+<li><strong>权限管理</strong><br><strong>YApi</strong>成熟的团队管理扁平化项目权限配置满足各类企业的需求</li>
+<li><strong>可视化接口管理</strong><br>基于 <strong>websocket</strong>的多人协作接口编辑功能和类 postman 测试工具，让多人协作成倍提升开发效率</li>
+<li><strong>Mock Server</strong><br>易用的 <strong>Mock Server</strong>，再也不用担心 <strong>mock</strong> 数据的生成了</li>
+<li><strong>自动化测试</strong><br>完善的接口自动化测试,保证数据的正确性</li>
+<li><strong>数据导入</strong><br>支持导入<strong>*swagger, postman, har</strong>数据格式，方便迁移旧项目</li>
+<li><strong>插件机制</strong><br>强大的插件机制，满足各类业务需求</li>
+</ul>
+<p><strong>Yapi</strong>支持内网部署，只需在管理员或内网某台机器上<strong>安装部署一次</strong>，团队其他成员不需要部署，访问相应的地址即可使用。本部分内容只需负责配置环境人员阅读，需要相关人员具有基本的<code>node</code>与<code>mongodb</code>知识。</p>
+        
+          <a class="article-more-a" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">展开全文 >></a>
         </p>
       
 
@@ -389,177 +511,6 @@
 
 
   
-    <article id="post-Yapi部署文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">Yapi部署文档</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong><code>Yapi</code></strong> 由 <code>YMFE</code>开源，旨在为开发、产品、测试人员提供更优雅的接口管理服务，可以帮助开发者轻松创建、发布、维护<code>API</code>。</p>
-<ul>
-<li><strong>权限管理</strong><figure class="highlight plain"><figcaption><span>成熟的团队管理扁平化项目权限配置满足各类企业的需求</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">- **可视化接口管理**</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  基于 &#96;&#96;&#96;websocket &#96;&#96;&#96;的多人协作接口编辑功能和类 postman 测试工具，让多人协作成倍提升开发效率</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">- **Mock Server**</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  易用的 &#96;&#96;&#96;Mock Server&#96;&#96;&#96;，再也不用担心 &#96;&#96;&#96;mock&#96;&#96;&#96; 数据的生成了</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">- **自动化测试**</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  完善的接口自动化测试,保证数据的正确性</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">- **数据导入**</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  支持导入&#96;&#96;&#96; swagger, postman, har &#96;&#96;&#96;数据格式，方便迁移旧项目</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">- **插件机制**</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">  强大的插件机制，满足各类业务需求</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;Yapi&#96;&#96;&#96;支持内网部署，只需在管理员或内网某台机器上**安装部署一次**，团队其他成员不需要部署，访问相应的地址即可使用。本部分内容只需负责配置环境人员阅读，需要相关人员具有基本的&#96;&#96;&#96;node&#96;&#96;&#96;与&#96;&#96;&#96;mongodb&#96;&#96;&#96;知识。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">### 环境要求</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">- &#96;&#96;&#96;nodejs(7.6+)&#96;&#96;&#96;•            </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">  [nodejs、npm 环境配置步骤(windows版本)](https:&#x2F;&#x2F;juejin.im&#x2F;post&#x2F;5a92b735f265da4e761fea22)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">- &#96;&#96;&#96;mongodb(2.6+)&#96;&#96;&#96;•            </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">  [Windows下安装MongoDB](https:&#x2F;&#x2F;my.oschina.net&#x2F;u&#x2F;3754001&#x2F;blog&#x2F;1842293)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">- &#96;&#96;&#96;git&#96;&#96;&#96;•            </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">  [Git安装教程（Windows安装超详细教程)](https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;414ccd423efc)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">### 使用Docker构建Yapi(Ubuntu环境)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">1. 启动&#96;&#96;&#96;mongodb</span></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker run -d --name mongo-yapi -p <span class="number">27017</span>:<span class="number">27017</span> mongo</span></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>获取 <code>Yapi</code> 镜像，版本信息可在 阿里云镜像仓库查看</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker pull registry.cn-hangzhou.aliyuncs.com/anoy/yapi</span></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>自定义配置文件挂载到目录<code>/api/config.json</code>,官方自定义配置文件 -&gt; <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2FYMFE%2Fyapi%2Fblob%2Fmaster%2Fconfig_example.json" target="_blank" rel="noopener">传送门</a>， 宿主机<code>/config/config.json</code>内容为</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="string">"port"</span>: <span class="string">"3000"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="string">"adminAccount"</span>: <span class="string">"1159011520@qq.com"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="string">"db"</span>: &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"servername"</span>: <span class="string">"mongo-yapi"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"DATABASE"</span>: <span class="string">"yapi"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"port"</span>: <span class="number">27017</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  &#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">  <span class="string">"mail"</span>: &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"enable"</span>: <span class="keyword">true</span>,<span class="comment">//邮件通知</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"host"</span>: <span class="string">"smtp.qq.com"</span>,<span class="comment">//邮箱服务器</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"port"</span>: <span class="number">465</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"from"</span>: <span class="string">"1159011520@qq.com"</span>,<span class="comment">//发件人邮箱</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"auth"</span>: &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">      <span class="string">"user"</span>: <span class="string">"1159011520@qq.com"</span>,<span class="comment">//邮箱服务器账号</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">      <span class="string">"pass"</span>: <span class="string">"bvbmeiieuuczjdaj"</span><span class="comment">//邮箱服务器密码</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>初始化 <code>Yapi</code> 数据库索引及管理员账号</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker run -it --rm \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  -v /config/config.json:/api/config.json \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  --link mongo-yapi:mongo \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  --entrypoint npm \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  --workdir /api/vendors \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  registry.cn-hangzhou.aliyuncs.com/anoy/yapi \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  run install-server</span></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>启动<code>Yapi</code>服务</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker run -d \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  -v /config/config.json:/api/config.json \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  --name yapi \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  --link mongo-yapi:mongo \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  --workdir /api/vendors \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  -p <span class="number">3000</span>:<span class="number">3000</span> \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  registry.cn-hangzhou.aliyuncs.com/anoy/yapi \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  server/app.js</span></pre></td></tr></table></figure>
-
-<h3 id="使用Yapi"><a href="#使用Yapi" class="headerlink" title="使用Yapi"></a>使用Yapi</h3><p>访问 <a href="https://links.jianshu.com/go?to=http%3A%2F%2Flocalhost%3A3000" target="_blank" rel="noopener">http://localhost:3000</a> 登录账号 <strong><code>1159011520@glodon.com</code></strong>，密码 <strong><code>ymfe.org</code></strong></p>
-<p>不更改配置文件的话，默认配置文件为</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="string">"port"</span>: <span class="string">"3000"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="string">"adminAccount"</span>: <span class="string">"admin@admin.com"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  <span class="string">"db"</span>: &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"servername"</span>: <span class="string">"127.0.0.1"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"DATABASE"</span>: <span class="string">"yapi"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"port"</span>: <span class="number">27017</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"user"</span>: <span class="string">"test1"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"pass"</span>: <span class="string">"test1"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"authSource"</span>: <span class="string">""</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">  &#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">  <span class="string">"mail"</span>: &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"enable"</span>: <span class="keyword">true</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"host"</span>: <span class="string">"smtp.163.com"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"port"</span>: <span class="number">465</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"from"</span>: <span class="string">"***@163.com"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"auth"</span>: &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">      <span class="string">"user"</span>: <span class="string">"***@163.com"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">      <span class="string">"pass"</span>: <span class="string">"*****"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<p>默认为登录账号 <strong><code>admin@admin.com</code></strong>，密码 <strong><code>ymfe.org</code></strong></p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf200f102ea49?w=1913&h=744&f=png&s=489990" alt="1571063248254"></p>
-<p><strong>请参考</strong>：</p>
-<ul>
-<li><a href="https://www.jianshu.com/p/a97d2efb23c5" target="_blank" rel="noopener">https://www.jianshu.com/p/a97d2efb23c5</a></li>
-<li><a href="https://www.cnblogs.com/Don/p/10523617.html" target="_blank" rel="noopener">https://www.cnblogs.com/Don/p/10523617.html</a></li>
-<li><a href="https://github.com/YMFE/yapi" target="_blank" rel="noopener">https://github.com/YMFE/yapi</a></li>
-<li><a href="https://www.cnblogs.com/qgc1995/p/9549896.html" target="_blank" rel="noopener">https://www.cnblogs.com/qgc1995/p/9549896.html</a></li>
-</ul>
-<h3 id="文档地址"><a href="#文档地址" class="headerlink" title="文档地址"></a>文档地址</h3><p><a href="https://hellosean1025.github.io/yapi/documents/" target="_blank" rel="noopener">https://hellosean1025.github.io/yapi/documents/</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-任务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">异步任务</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/07/%E4%BB%BB%E5%8A%A1/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在Java应用中，绝大多数情况下都是通过同步的方式来实现交互处理的；但是在处理与第三方系统交互的时候，容易造成响应迟缓的情况，之前大部分都是使用多线程来完成此类任务，其实，在<code>Spring 3.x</code>之后，就已经内置了<code>@Async</code>来完美解决这个问题。</p>
-<p>两个注解：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;java</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">@SpringBootApplication</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">@EnableAsync&#x2F;&#x2F;开启异步注解功能</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">public class Springboot04TaskApplication &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    public static void main(String[] args) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        SpringApplication.run(Springboot04TaskApplication.class, args);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-注册Servlet三大组件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -581,7 +532,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>由于SpringBoot默认是以jar包的方式启动嵌入式的Servlet容器来启动SpringBoot的web应用，没有web.xml文件。<br>注册三大组件用以下方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;java</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">public class MyServlet extends HttpServlet &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &#x2F;&#x2F;处理get请求</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    @Override</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        doPost(req,resp);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    @Override</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        resp.getWriter().write(&quot;Hello MyServlet&quot;);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p><strong>ServletRegistrationBean</strong></p>
         
           <a class="article-more-a" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/#more">more >></a>
         
@@ -626,19 +577,19 @@
 
 
   
-    <article id="post-JAVA并发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Http和Https" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">JAVA并发</a>
+      <a class="article-title" href="/2019/12/07/Http%E5%92%8CHttps/">Http和Https</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/" class="archive-article-date">
+        <a href="/2019/12/07/Http%E5%92%8CHttps/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -646,10 +597,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="线程与进程的区别"><a href="#线程与进程的区别" class="headerlink" title="线程与进程的区别"></a>线程与进程的区别</h3><p>线程，程序执行流的最小执行单位，是行程中的实际运作单位，经常容易和进程这个概念混淆。那么，线程和进程究竟有什么区别呢？首先，进程是一个动态的过程，是一个活动的实体。简单来说，一个应用程序的运行就可以被看做是一个进程，而线程，是运行中的实际的任务执行者。可以说，进程中包含了多个可以同时运行的线程。</p>
-<h3 id="线程的基本概念"><a href="#线程的基本概念" class="headerlink" title="线程的基本概念"></a>线程的基本概念</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf199915321a4?w=808&h=293&f=png&s=53728" alt="img"></p>
+        <p>超文本传输协议HTTP协议被用于在Web浏览器和网站服务器之间传递信息，HTTP协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。</p>
+<p>为了解决HTTP协议的这一缺陷，需要使用另一种协议：安全套接字层超文本传输协议HTTPS，为了数据传输的安全，HTTPS在HTTP的基础上加入了SSL协议，SSL依靠证书来验证服务器的身份，并为浏览器和服务器之间的通信加密。</p>
+<h3 id="Http和Https的基本概念"><a href="#Http和Https的基本概念" class="headerlink" title="Http和Https的基本概念"></a>Http和Https的基本概念</h3><p>HTTP：是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少。</p>
+<p>HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</p>
         
-          <a class="article-more-a" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/Http%E5%92%8CHttps/#more">more >></a>
         
       
 
@@ -662,7 +615,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/Http%E5%92%8CHttps/">展开全文 >></a>
         </p>
       
 

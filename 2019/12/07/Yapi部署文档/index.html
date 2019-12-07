@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://www.buhuiwy.cn">
   <title>Yapi部署文档 | Chamberlan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Yapi 由 YMFE开源，旨在为开发、产品、测试人员提供更优雅的接口管理服务，可以帮助开发者轻松创建、发布、维护API。  权限管理成熟的团队管理扁平化项目权限配置满足各类企业的需求1- **可视化接口管理**2  基于 &amp;#96;&amp;#96;&amp;#96;websocket &amp;#96;&amp;#96;&amp;#96;的多人协作接口编辑功能和类 postman 测试工具，让多人协作成倍提升开发效率3- **Moc">
+  <meta name="description" content="Yapi 由 YMFE开源，旨在为开发、产品、测试人员提供更优雅的接口管理服务，可以帮助开发者轻松创建、发布、维护API。  权限管理YApi成熟的团队管理扁平化项目权限配置满足各类企业的需求 可视化接口管理基于 websocket的多人协作接口编辑功能和类 postman 测试工具，让多人协作成倍提升开发效率 Mock Server易用的 Mock Server，再也不用担心 mock 数据的生">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Yapi部署文档">
 <meta property="og:url" content="http:&#x2F;&#x2F;www.buhuiwy.cn&#x2F;2019&#x2F;12&#x2F;07&#x2F;Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3&#x2F;index.html">
 <meta property="og:site_name" content="Chamberlan">
-<meta property="og:description" content="Yapi 由 YMFE开源，旨在为开发、产品、测试人员提供更优雅的接口管理服务，可以帮助开发者轻松创建、发布、维护API。  权限管理成熟的团队管理扁平化项目权限配置满足各类企业的需求1- **可视化接口管理**2  基于 &amp;#96;&amp;#96;&amp;#96;websocket &amp;#96;&amp;#96;&amp;#96;的多人协作接口编辑功能和类 postman 测试工具，让多人协作成倍提升开发效率3- **Moc">
+<meta property="og:description" content="Yapi 由 YMFE开源，旨在为开发、产品、测试人员提供更优雅的接口管理服务，可以帮助开发者轻松创建、发布、维护API。  权限管理YApi成熟的团队管理扁平化项目权限配置满足各类企业的需求 可视化接口管理基于 websocket的多人协作接口编辑功能和类 postman 测试工具，让多人协作成倍提升开发效率 Mock Server易用的 Mock Server，再也不用担心 mock 数据的生">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf200f102ea49?w&#x3D;1913&amp;h&#x3D;744&amp;f&#x3D;png&amp;s&#x3D;489990">
-<meta property="og:updated_time" content="2019-12-07T11:14:58.306Z">
+<meta property="og:updated_time" content="2019-12-07T11:46:16.678Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf200f102ea49?w&#x3D;1913&amp;h&#x3D;744&amp;f&#x3D;png&amp;s&#x3D;489990">
   
@@ -180,11 +180,27 @@
       
         <p><strong><code>Yapi</code></strong> 由 <code>YMFE</code>开源，旨在为开发、产品、测试人员提供更优雅的接口管理服务，可以帮助开发者轻松创建、发布、维护<code>API</code>。</p>
 <ul>
-<li><strong>权限管理</strong><figure class="highlight plain"><figcaption><span>成熟的团队管理扁平化项目权限配置满足各类企业的需求</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">- **可视化接口管理**</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  基于 &#96;&#96;&#96;websocket &#96;&#96;&#96;的多人协作接口编辑功能和类 postman 测试工具，让多人协作成倍提升开发效率</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">- **Mock Server**</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  易用的 &#96;&#96;&#96;Mock Server&#96;&#96;&#96;，再也不用担心 &#96;&#96;&#96;mock&#96;&#96;&#96; 数据的生成了</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">- **自动化测试**</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  完善的接口自动化测试,保证数据的正确性</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">- **数据导入**</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  支持导入&#96;&#96;&#96; swagger, postman, har &#96;&#96;&#96;数据格式，方便迁移旧项目</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">- **插件机制**</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">  强大的插件机制，满足各类业务需求</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;Yapi&#96;&#96;&#96;支持内网部署，只需在管理员或内网某台机器上**安装部署一次**，团队其他成员不需要部署，访问相应的地址即可使用。本部分内容只需负责配置环境人员阅读，需要相关人员具有基本的&#96;&#96;&#96;node&#96;&#96;&#96;与&#96;&#96;&#96;mongodb&#96;&#96;&#96;知识。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">### 环境要求</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">- &#96;&#96;&#96;nodejs(7.6+)&#96;&#96;&#96;•            </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">  [nodejs、npm 环境配置步骤(windows版本)](https:&#x2F;&#x2F;juejin.im&#x2F;post&#x2F;5a92b735f265da4e761fea22)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">- &#96;&#96;&#96;mongodb(2.6+)&#96;&#96;&#96;•            </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">  [Windows下安装MongoDB](https:&#x2F;&#x2F;my.oschina.net&#x2F;u&#x2F;3754001&#x2F;blog&#x2F;1842293)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">- &#96;&#96;&#96;git&#96;&#96;&#96;•            </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">  [Git安装教程（Windows安装超详细教程)](https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;414ccd423efc)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">### 使用Docker构建Yapi(Ubuntu环境)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">1. 启动&#96;&#96;&#96;mongodb</span></pre></td></tr></table></figure>
-
-</li>
+<li><strong>权限管理</strong><br><strong>YApi</strong>成熟的团队管理扁平化项目权限配置满足各类企业的需求</li>
+<li><strong>可视化接口管理</strong><br>基于 <strong>websocket</strong>的多人协作接口编辑功能和类 postman 测试工具，让多人协作成倍提升开发效率</li>
+<li><strong>Mock Server</strong><br>易用的 <strong>Mock Server</strong>，再也不用担心 <strong>mock</strong> 数据的生成了</li>
+<li><strong>自动化测试</strong><br>完善的接口自动化测试,保证数据的正确性</li>
+<li><strong>数据导入</strong><br>支持导入<strong>*swagger, postman, har</strong>数据格式，方便迁移旧项目</li>
+<li><strong>插件机制</strong><br>强大的插件机制，满足各类业务需求</li>
 </ul>
+<p><strong>Yapi</strong>支持内网部署，只需在管理员或内网某台机器上<strong>安装部署一次</strong>，团队其他成员不需要部署，访问相应的地址即可使用。本部分内容只需负责配置环境人员阅读，需要相关人员具有基本的<code>node</code>与<code>mongodb</code>知识。</p>
+<a id="more"></a>
+
+<h3 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h3><ul>
+<li><code>nodejs(7.6+)</code>•<br><a href="https://juejin.im/post/5a92b735f265da4e761fea22" target="_blank" rel="noopener">nodejs、npm 环境配置步骤(windows版本)</a></li>
+<li><code>mongodb(2.6+)</code>•<br><a href="https://my.oschina.net/u/3754001/blog/1842293" target="_blank" rel="noopener">Windows下安装MongoDB</a></li>
+<li><code>git</code>•<br><a href="https://www.jianshu.com/p/414ccd423efc" target="_blank" rel="noopener">Git安装教程（Windows安装超详细教程)</a></li>
+</ul>
+<h3 id="使用Docker构建Yapi-Ubuntu环境"><a href="#使用Docker构建Yapi-Ubuntu环境" class="headerlink" title="使用Docker构建Yapi(Ubuntu环境)"></a>使用Docker构建Yapi(Ubuntu环境)</h3><ol>
+<li>启动<code>mongodb</code></li>
+</ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker run -d --name mongo-yapi -p <span class="number">27017</span>:<span class="number">27017</span> mongo</span></pre></td></tr></table></figure>
+
+<!--more-->
 
 <ol start="2">
 <li>获取 <code>Yapi</code> 镜像，版本信息可在 阿里云镜像仓库查看</li>
@@ -313,18 +329,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/07/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/12/07/%E4%BB%BB%E5%8A%A1/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Vue学习笔记
+          异步任务
         
       </div>
     </a>
   
   
-    <a href="/2019/12/07/%E4%BB%BB%E5%8A%A1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">异步任务</div>
+    <a href="/2019/12/07/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue学习笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
