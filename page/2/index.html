@@ -157,164 +157,36 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-微服务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-消息" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a>
+      <a class="article-title" href="/2019/12/07/%E6%B6%88%E6%81%AF/">消息</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:49:00.184Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+        <a href="/2019/12/07/%E6%B6%88%E6%81%AF/" class="archive-article-date">
+  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<hr>
-<h2 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h2><p>微服务架构是一种架构模式或者说是一种架构风格，它提倡将单一应用程序划分成一组小的服务，每个服务运行在其独立的进程中，服务之间互相协调，互相配合，为用户提供最终价值。</p>
-<ul>
-<li><code>Dubbo</code>是基于<code>rpc</code>服务通信</li>
-<li><code>Cloud</code>是基于<code>REST</code>服务通信</li>
-</ul>
-<p>微服务化的核心就是将传统的一站式应用，根据业务拆分成一个一个的服务，彻底地去耦合,每一个微服务提供单个业务功能的服务，一个服务做一件事，从技术角度看就是一种小而独立的处理过程，类似进程概念，能够自行单独启动或销毁，拥有自己独立的数据库。</p>
-<h2 id="微服务与微服务架构"><a href="#微服务与微服务架构" class="headerlink" title="微服务与微服务架构"></a>微服务与微服务架构</h2><ul>
-<li>微服务强调的是服务的大小，它关注的是某一个点，是具体解决某一个问题/提供落地对应服务的一个服务应用,狭意的看,可以看作Eclipse里面的一个个微服务工程/或者Module   <ul>
-<li>强调的是个体</li>
-</ul>
-</li>
-<li>微服务架构 微服务架构是⼀种架构模式，它提倡将单⼀应⽤程序划分成⼀组⼩的服务，服务之间互相协调、互相配合，为⽤户提供最终价值。每个服务运⾏在其独⽴的进程中，服务与服务间采⽤轻量级的通信机制互相协作（通常是基于<code>HTTP</code>协议的<code>RESTful API</code>）。每个服务都围绕着具体业务进⾏构建，并且能够被独⽴的部署到⽣产环境、类⽣产环境等。另外，应当尽量避免统⼀的、集中式的服务管理机制，对具体的⼀个服务⽽⾔，应根据业务上下⽂，选择合适的语⾔、⼯具对其进⾏构建。<ul>
-<li>强调的是宏观</li>
-</ul>
-</li>
-</ul>
-<h2 id="微服务优缺点"><a href="#微服务优缺点" class="headerlink" title="微服务优缺点"></a>微服务优缺点</h2><p>优点</p>
-<ul>
-<li>每个服务足够内聚，足够小，代码容易理解这样能聚焦一个指定的业务功能或业务需求</li>
-<li>开发简单、开发效率提高，一个服务可能就是专一的只干一件事。</li>
-<li>微服务能够被小团队单独开发，这个小团队是2到5人的开发人员组成。</li>
-<li>微服务是松耦合的，是有功能意义的服务，无论是在开发阶段或部署阶段都是独立的。</li>
-<li>微服务能使用不同的语言开发。</li>
-<li>易于和第三方集成，微服务允许容易且灵活的方式集成自动部署，通过持续集成工具，如<code>Jenkins, Hudson, bamboo</code>。</li>
-<li>微服务易于被一个开发人员理解，修改和维护，这样小团队能够更关注自己的工作成果。</li>
-<li>无需通过合作才能体现价值。</li>
-<li>微服务允许你利用融合最新技术。</li>
-<li>微服务只是业务逻辑的代码，不会和<code>HTML,CSS</code>或其他界面组件混合。</li>
-<li>每个微服务都有自己的存储能力，可以有自己的数据库。也可以有统一数据库。</li>
-</ul>
-<p>缺点</p>
-<ul>
-<li>开发人员要处理分布式系统的复杂性多服务运维难度，随着服务的增加，运维的压力也在增大系统部署依赖服务间通信成本数据一致性系统集成测试性能监控…… </li>
-</ul>
-<h2 id="微服务技术栈有哪些"><a href="#微服务技术栈有哪些" class="headerlink" title="微服务技术栈有哪些"></a>微服务技术栈有哪些</h2><table>
-<thead>
-<tr>
-<th>微服务条目</th>
-<th>落地技术</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>服务开发</td>
-<td><code>Springboot、Spring、SpringMVC</code></td>
-</tr>
-<tr>
-<td>服务配置与管理</td>
-<td><code>Netflix</code>公司的<code>Archaius</code>、阿里的<code>Diamond</code>等</td>
-</tr>
-<tr>
-<td>服务注册与发现</td>
-<td><code>Eureka、Consul、Zookeeper</code>等</td>
-</tr>
-<tr>
-<td>服务调用</td>
-<td><code>Rest、RPC、gRPC</code></td>
-</tr>
-<tr>
-<td>服务熔断器</td>
-<td><code>Hystrix、Envoy</code>等</td>
-</tr>
-<tr>
-<td>负载均衡</td>
-<td><code>Ribbon、Nginx</code>等</td>
-</tr>
-<tr>
-<td>服务接口调用(客户端调用服务的简化工 具)</td>
-<td><code>Feign</code>等</td>
-</tr>
-<tr>
-<td>消息队列</td>
-<td><code>Kafka、RabbitMQ、ActiveMQ</code>等</td>
-</tr>
-<tr>
-<td>服务配置中心管理</td>
-<td><code>SpringCloudConfig、Chef</code>等</td>
-</tr>
-<tr>
-<td>服务路由（<code>API</code>网关）</td>
-<td><code>Zuul</code>等</td>
-</tr>
-<tr>
-<td>服务监控</td>
-<td><code>Zabbix、Nagios、Metrics、Spectator</code>等</td>
-</tr>
-<tr>
-<td>全链路追踪</td>
-<td><code>Zipkin，Brave、Dapper</code>等</td>
-</tr>
-<tr>
-<td>服务部署</td>
-<td><code>Docker、OpenStack、Kubernetes</code>等</td>
-</tr>
-<tr>
-<td>数据流操作开发包</td>
-<td><code>SpringCloud Stream</code>（封装与<code>Redis,Rabbit、Kafka</code>等发送接收消息）</td>
-</tr>
-<tr>
-<td>事件消息总线</td>
-<td><code>Spring Cloud Bus......</code></td>
-</tr>
-</tbody></table>
-<h2 id="为什么选择Spring-Cloud作为微服务机构"><a href="#为什么选择Spring-Cloud作为微服务机构" class="headerlink" title="为什么选择Spring Cloud作为微服务机构"></a>为什么选择Spring Cloud作为微服务机构</h2><h3 id="选型依据"><a href="#选型依据" class="headerlink" title="选型依据"></a>选型依据</h3><ul>
-<li>整体解决方案和框架成熟度</li>
-<li>社区热度</li>
-<li>可维护性</li>
-<li>学习曲线</li>
-</ul>
-<h3 id="当前各大IT公司用的微服务架构有哪些"><a href="#当前各大IT公司用的微服务架构有哪些" class="headerlink" title="当前各大IT公司用的微服务架构有哪些"></a>当前各大IT公司用的微服务架构有哪些</h3><ul>
-<li>阿里<code>Dubbo/HSF</code></li>
-<li>京东<code>JSF</code></li>
-<li>新浪微博<code>Motan</code></li>
-<li>当当网<code>DubboX</code></li>
-<li>…</li>
-</ul>
-<h3 id="各微服务框架对比"><a href="#各微服务框架对比" class="headerlink" title="各微服务框架对比"></a>各微服务框架对比</h3><h2 id="Spring-Cloud入门概述"><a href="#Spring-Cloud入门概述" class="headerlink" title="Spring Cloud入门概述"></a>Spring Cloud入门概述</h2><h3 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h3><ul>
-<li><code>SpringCloud</code>，基于<code>SpringBoot</code>提供了一套微服务解决方案，包括服务注册与发现，配置中心，全链路监控，服务网关，负载均衡，熔断器等组件，除了基于<code>NetFlix</code>的开源组件做高度抽象封装之外，还有一些选型中立的开源组件。</li>
-<li><code>SpringCloud</code>利用<code>SpringBoot</code>的开发便利性巧妙地简化了分布式系统基础设施的开发，<code>SpringCloud</code>为开发人员提供了快速构建分布式系统的一些工具，包括配置管理、服务发现、断路器、路由、微代理、事件总线、全局锁、决策竞选、分布式会话等等,它们都可以用<code>SpringBoot</code>的开发风格做到一键启动和部署。</li>
-<li><code>SpringBoot</code>并没有重复制造轮子，它只是将目前各家公司开发的比较成熟、经得起实际考验的服务框架组合起来，通过<code>SpringBoot</code>风格进行再封装屏蔽掉了复杂的配置和实现原理，最终给开发者留出了一套简单易懂、易部署和易维护的分布式系统开发工具包  。</li>
-</ul>
-<h3 id="Spring-Cloud和Spring-Boot是什么关系"><a href="#Spring-Cloud和Spring-Boot是什么关系" class="headerlink" title="Spring Cloud和Spring Boot是什么关系"></a>Spring Cloud和Spring Boot是什么关系</h3><ul>
-<li><code>SpringBoot</code>专注于快速方便的开发单个个体微服务。 </li>
-<li><code>SpringCloud</code>是关注全局的微服务协调整理治理框架，它将<code>SpringBoot</code>开发的一个个单体微服务整合并管理起来，为各个微服务之间提供，配置管理、服务发现、断路器、路由、微代理、事件总线、全局锁、决策竞选、分布式会话等等集成服务</li>
-<li><code>SpringBoot</code>可以离开<code>SpringCloud</code>独立使用开发项目，但是<code>SpringCloud</code>离不开<code>SpringBoot</code>，属于依赖的关系.</li>
-<li><code>SpringBoot</code>专注于快速、方便的开发单个微服务个体，<code>SpringCloud</code>关注全局的服务治理框架。      </li>
-</ul>
-<h2 id="Dubbo和Spring-Cloud的区别"><a href="#Dubbo和Spring-Cloud的区别" class="headerlink" title="Dubbo和Spring Cloud的区别"></a>Dubbo和Spring Cloud的区别</h2><p>最大区别：</p>
-<ul>
-<li><code>SpringCloud</code>抛弃了<code>Dubbo</code>的<code>RPC</code>通信，采用的是基于HTTP的REST方式。</li>
-<li>严格来说，这两种方式各有优劣。虽然从一定程度上来说，后者牺牲了服务调用的性能，但也避免了上面提到的原生<code>RPC</code>带来的问题。</li>
-<li>而且<code>REST相比RPC</code>更为灵活，服务提供方和调用方的依赖只依靠一纸契约，不存在代码级别的强依赖，这在强调快速演化的微服务环境下，显得更加合适。 </li>
-<li>品牌机与组装机的区别很明显，Spring Cloud的功能比<code>DUBBO</code>更加强大，涵盖面更广，而且作为Spring的拳头项目，它也能够与Spring Framework、Spring Boot、Spring Data、Spring Batch等其他Spring项目完美融合，这些对于微服务而言是至关重要的。</li>
-<li>使用<code>Dubbo</code>构建的微服务架构就像组装电脑，各环节我们的选择自由度很高，但是最终结果很有可能因为一条内存质量不行就点不亮了，总是让人不怎么放心，但是如果你是一名高手，那这些都不是问题；而Spring Cloud就像品牌机，在Spring Source的整合下，做了大量的兼容性测试，保证了机器拥有更高的稳定性，但是如果要在使用非原装组件外的东西，就需要对其基础有足够的了解。 </li>
-<li>社区支持与更新力度最为重要的是，<code>DUBBO</code>停止了5年左右的更新，虽然2017.7重启了。对于技术发展的新需求，需要由开发者自行拓展升级（比如当当网弄出了<code>DubboX</code>），这对于很多想要采用微服务架构的中小软件组织，显然是不太合适的，中小公司没有这么强大的技术能力去修改<code>Dubbo</code>源码+周边的一整套解决方案，并不是每一个公司都有阿里的大牛+真实的线上生产环境测试过。                             </li>
-</ul>
-
+        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>1.大多应用中，可通过消息服务中间件来提升系统异步通信、扩展解耦能力</p>
+<p>2.消息服务中两个重要概念：</p>
+<pre><code>消息代理（message broker）和目的地（destination）</code></pre><p>当消息发送者发送消息以后，将由消息代理接管，消息代理保证消息传递到指定目的地。</p>
+<p>3.消息队列主要有两种形式的目的地</p>
+<p>1.队列（queue）：点对点消息通信（point-to-point）</p>
+<p>2.主题（topic）：发布（publish）/订阅（subscribe）消息通信</p>
+<h3 id="异步处理"><a href="#异步处理" class="headerlink" title="异步处理"></a>异步处理</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf0c36f055568?w=519&h=132&f=png&s=12978" alt="1567674440906"></p>
+        
+          <a class="article-more-a" href="/2019/12/07/%E6%B6%88%E6%81%AF/#more">more >></a>
+        
       
 
       
@@ -326,179 +198,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-任务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">任务</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/07/%E4%BB%BB%E5%8A%A1/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:48:42.495Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="异步任务"><a href="#异步任务" class="headerlink" title="异步任务"></a>异步任务</h2><p>在Java应用中，绝大多数情况下都是通过同步的方式来实现交互处理的；但是在处理与第三方系统交互的时候，容易造成响应迟缓的情况，之前大部分都是使用多线程来完成此类任务，其实，在<code>Spring 3.x</code>之后，就已经内置了<code>@Async</code>来完美解决这个问题。</p>
-<p>两个注解：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;java</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">@SpringBootApplication</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">@EnableAsync&#x2F;&#x2F;开启异步注解功能</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">public class Springboot04TaskApplication &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    public static void main(String[] args) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        SpringApplication.run(Springboot04TaskApplication.class, args);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AsyncService</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">//告诉spring这是一个异步方法</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Async</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">hello</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">try</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">            Thread.sleep(<span class="number">3000</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">            e.printStackTrace();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        System.out.println(<span class="string">"处理数据中···"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AsyncController</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Autowired</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    AsyncService asyncService;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/hello"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">hello</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        asyncService.hello();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> <span class="string">"success"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<p>会发现在前端调用<code>/hello</code>请求的时候会立即执行，同时三秒后service方法在控制台打印</p>
-<h2 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h2><p>项目开发中经常需要执行一些定时任务，比如需要在每天凌晨时候，分析一次前一天的日志信息。Spring为我们提供了异步执行任务调度的方式，提供<code>TaskExecutor</code> 、<code>TaskScheduler</code>接口。</p>
-<p><strong>两个注解</strong>：<code>@EnableScheduling</code>、<code>@Scheduled</code></p>
-<p><strong>cron</strong>表达式：</p>
-<table>
-<thead>
-<tr>
-<th><strong>字段</strong></th>
-<th><strong>允许值</strong></th>
-<th><strong>允许的特殊字符</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>秒</td>
-<td>0-59</td>
-<td>, -   * /</td>
-</tr>
-<tr>
-<td>分</td>
-<td>0-59</td>
-<td>, -   * /</td>
-</tr>
-<tr>
-<td>小时</td>
-<td>0-23</td>
-<td>, -   * /</td>
-</tr>
-<tr>
-<td>日期</td>
-<td>1-31</td>
-<td>, -   * ? / L W C</td>
-</tr>
-<tr>
-<td>月份</td>
-<td>1-12</td>
-<td>, -   * /</td>
-</tr>
-<tr>
-<td>星期</td>
-<td>0-7或SUN-SAT   0,7是SUN</td>
-<td>, -   * ? / L C #</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th><strong>特殊字符</strong></th>
-<th><strong>代表含义</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>,</td>
-<td>枚举</td>
-</tr>
-<tr>
-<td>-</td>
-<td>区间</td>
-</tr>
-<tr>
-<td>*</td>
-<td>任意</td>
-</tr>
-<tr>
-<td>/</td>
-<td>步长</td>
-</tr>
-<tr>
-<td>?</td>
-<td>日/星期冲突匹配</td>
-</tr>
-<tr>
-<td>L</td>
-<td>最后</td>
-</tr>
-<tr>
-<td>W</td>
-<td>工作日</td>
-</tr>
-<tr>
-<td>C</td>
-<td>和calendar联系后计算过的值</td>
-</tr>
-<tr>
-<td>#</td>
-<td>星期，4#2，第2个星期四</td>
-</tr>
-</tbody></table>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@EnableAsync</span><span class="comment">//开启异步注解功能</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@EnableScheduling</span><span class="comment">//开启给予注解的定时任务</span></span></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ScheduledService</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     * second（秒）, minute（分）, hour（时）, day of month（日）, month（月）, day of week（周几）.</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     * 0 * * * * MON-FRI</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     * 周一到周五，无论哪月，哪日，哪时，哪分，整秒启动</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">/*@Scheduled(cron = "0 * * * * MON-FRI")*/</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">/*@Scheduled(cron = "0,1,2,3,4 * * * * MON-FRI")*/</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Scheduled</span>(cron = <span class="string">"0/4 * * * * MON-FRI"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">hello</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        System.out.println(<span class="string">"hello...."</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<h2 id="邮件任务"><a href="#邮件任务" class="headerlink" title="邮件任务"></a>邮件任务</h2><ul>
-<li>邮件发送需要引入<code>spring-boot-starter-mail</code></li>
-<li>Spring Boot 自动配置<code>MailSenderAutoConfiguration</code></li>
-<li>定义<code>MailProperties</code>内容，配置在<code>application.yml</code>中</li>
-<li>自动装配<code>JavaMailSender</code></li>
-<li>测试邮件发送</li>
-</ul>
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf14af04c2e42?w=472&h=218&f=png&s=5916" alt="1567682433162"></p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf14f82d5784f?w=752&h=251&f=png&s=41891" alt="1567682496011"></p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">spring.mail.username</span>=<span class="string">1159011520@qq.com</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">spring.mail.password</span>=<span class="string">tugkyugdegclgefc</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="meta">spring.mail.host</span>=<span class="string">smtp.qq.com</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="meta">spring.mail.properties.mail.smtp.ssl.enable</span>=<span class="string">true</span></span></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringRunner<span class="class">.<span class="keyword">class</span>)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="class">@<span class="title">SpringBootTest</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="title">public</span> <span class="title">class</span> <span class="title">Springboot04TaskApplicationTests</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Autowired</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    JavaMailSenderImpl javaMailSender;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">//发送简单邮件</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Test</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextLoads</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        SimpleMailMessage simpleMailMessage = <span class="keyword">new</span> SimpleMailMessage();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//邮件设置</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        simpleMailMessage.setSubject(<span class="string">"老婆找你"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        simpleMailMessage.setText(<span class="string">"今晚必须回家"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        simpleMailMessage.setTo(<span class="string">"18821713427@163.com"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">        simpleMailMessage.setFrom(<span class="string">"1159011520@qq.com"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">        javaMailSender.send(simpleMailMessage);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">//发送复杂邮件带附件</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Test</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> <span class="keyword">throws</span> MessagingException </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//创建一个复杂的消息邮件</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">        MimeMessage mimeMessage = javaMailSender.createMimeMessage();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">        MimeMessageHelper helper = <span class="keyword">new</span> MimeMessageHelper(mimeMessage, <span class="keyword">true</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//邮件设置</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">        helper.setSubject(<span class="string">"女神来信"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">        helper.setText(<span class="string">"今晚一起吃饭好吗"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">        helper.setTo(<span class="string">"18821713427@163.com"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">        helper.setFrom(<span class="string">"1159011520@qq.com"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//上传文件</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">        helper.addAttachment(<span class="string">"1.jpg"</span>, <span class="keyword">new</span> File(<span class="string">"E:\\Pictures\\1.jpg"</span>));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">        helper.addAttachment(<span class="string">"2.jpg"</span>, <span class="keyword">new</span> File(<span class="string">"E:\\Pictures\\2.jpg"</span>));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">        javaMailSender.send(mimeMessage);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/%E6%B6%88%E6%81%AF/">展开全文 >></a>
         </p>
       
 
@@ -541,14 +241,14 @@
 
         
         <a href="/2019/12/07/%E7%BC%93%E5%AD%98/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:48:21.828Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h2><h3 id="搭建数据库环境"><a href="#搭建数据库环境" class="headerlink" title="搭建数据库环境"></a>搭建数据库环境</h3><ul>
+        <h3 id="搭建数据库环境"><a href="#搭建数据库环境" class="headerlink" title="搭建数据库环境"></a>搭建数据库环境</h3><ul>
 <li><p>导入数据库文件</p>
 </li>
 <li><p>创建出department和employee表</p>
@@ -576,27 +276,10 @@
 </ul>
 </li>
 </ul>
-<pre><code><figure class="highlight plain"><figcaption><span>```如下</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;java</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">@Select(&quot;SELECT * FROM employee WHERE id &#x3D; #&#123;id&#125;&quot;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    public Employee getEmpById(Integer id);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    @Update(&quot;UPDATE employee SET lastName&#x3D;#&#123;lastName&#125;,email&#x3D;#&#123;email&#125;,gender&#x3D;#&#123;gender&#125;,d_id&#x3D;#&#123;dId&#125; WHERE id&#x3D;#&#123;id&#125;&quot;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    public void updateEmp(Employee employee);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    @Delete(&quot;DELETE FROM employee WHERE id&#x3D;#&#123;id&#125;&quot;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    public void deleteEmpById(Integer id);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    @Insert(&quot;INSERT INTO employee(lastName,email,gender,d_id) VALUES(#&#123;lastName&#125;,#&#123;email&#125;,#&#123;gender&#125;,#&#123;dId&#125;)&quot;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    public void insertEmployee(Employee employee);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    @Select(&quot;SELECT * FROM employee WHERE lastName &#x3D; #&#123;lastName&#125;&quot;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    Employee getEmpByLastName(String lastName);</span></pre></td></tr></table></figure></code></pre><h3 id="快速体验缓存"><a href="#快速体验缓存" class="headerlink" title="快速体验缓存"></a>快速体验缓存</h3><p>步骤</p>
-<ul>
-<li>开启基于注解的缓存<code>@EnableCaching</code></li>
-<li>标注缓存注解即可:<code>@Cacheable</code>, <code>@CacheEvict</code>,<code>@CachePut</code></li>
-</ul>
-<p>默认使用的是<code>ConcurrentMapCacheManager==ConcurrentMapCache</code>；将数据保存在    <code>ConcurrentMap&lt;Object, Object&gt;</code>中</p>
-<p>在<code>EmployeeService</code>中缓存设置如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@CacheConfig</span>(cacheNames=<span class="string">"emp"</span><span class="comment">/*,cacheManager = "employeeCacheManager"*/</span>) <span class="comment">//抽取缓存的公共配置</span></span></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@CacheConfig</span>(cacheNames=<span class="string">"emp"</span><span class="comment">/*,cacheManager = "employeeCacheManager"*/</span>) <span class="comment">//抽取缓存的公共配置</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EmployeeService</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Autowired</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    EmployeeMapper employeeMapper;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     * 将方法的运行结果进行缓存；以后再要相同的数据，直接从缓存中获取，不用调用方法；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     * CacheManager管理多个Cache组件的，对缓存的真正CRUD操作在Cache组件中，每一个缓存组件有自己唯一一个名字；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="comment"></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     * 原理：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   1、自动配置类；CacheAutoConfiguration</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   2、缓存的配置类</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   org.springframework.boot.autoconfigure.cache.JCacheCacheConfiguration</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   org.springframework.boot.autoconfigure.cache.EhCacheCacheConfiguration</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   org.springframework.boot.autoconfigure.cache.HazelcastCacheConfiguration</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   org.springframework.boot.autoconfigure.cache.InfinispanCacheConfiguration</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   org.springframework.boot.autoconfigure.cache.CouchbaseCacheConfiguration</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   org.springframework.boot.autoconfigure.cache.CaffeineCacheConfiguration</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   org.springframework.boot.autoconfigure.cache.GuavaCacheConfiguration</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration【默认】</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   3、哪个配置类默认生效：SimpleCacheConfiguration；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   4、给容器中注册了一个CacheManager：ConcurrentMapCacheManager</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   5、可以获取和创建ConcurrentMapCache类型的缓存组件；他的作用将数据保存在ConcurrentMap中；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   运行流程：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   <span class="doctag">@Cacheable</span>：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   1、方法运行之前，先去查询Cache（缓存组件），按照cacheNames指定的名字获取；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      （CacheManager先获取相应的缓存），第一次获取缓存如果没有Cache组件会自动创建。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   2、去Cache中查找缓存的内容，使用一个key，默认就是方法的参数；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      key是按照某种策略生成的；默认是使用keyGenerator生成的，默认使用SimpleKeyGenerator生成key；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *          SimpleKeyGenerator生成key的默认策略；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *                  如果没有参数；key=new SimpleKey()；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *                  如果有一个参数：key=参数的值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *                  如果有多个参数：key=new SimpleKey(params)；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   3、没有查到缓存就调用目标方法；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   4、将目标方法返回的结果，放进缓存中</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   <span class="doctag">@Cacheable</span>标注的方法执行之前先来检查缓存中有没有这个数据，默认按照参数的值作为key去查询缓存，</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   如果没有就运行方法并将结果放入缓存；以后再来调用就可以直接使用缓存中的数据；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   核心：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      1）、使用CacheManager【ConcurrentMapCacheManager】按照名字得到Cache【ConcurrentMapCache】组件</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">51</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      2）、key使用keyGenerator生成的，默认是SimpleKeyGenerator</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">52</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">53</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">54</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *   几个属性：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">55</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      cacheNames/value：指定缓存组件的名字;将方法的返回结果放在哪个缓存中，是数组的方式，可以指定多个缓存；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">56</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">57</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      key：缓存数据使用的key；可以用它来指定。默认是使用方法参数的值  1-方法的返回值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">58</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *              编写SpEL； #i d;参数id的值   #a0  #p0  #root.args[0]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">59</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *              getEmp[2]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">60</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">61</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      keyGenerator：key的生成器；可以自己指定key的生成器的组件id</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">62</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *              key/keyGenerator：二选一使用;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">63</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">64</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">65</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      cacheManager：指定缓存管理器；或者cacheResolver指定获取解析器</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">66</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">67</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      condition：指定符合条件的情况下才缓存；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">68</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *              ,condition = "#id&gt;0"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">69</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *          condition = "#a0&gt;1"：第一个参数的值》1的时候才进行缓存</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">70</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">71</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      unless:否定缓存；当unless指定的条件为true，方法的返回值就不会被缓存；可以获取到结果进行判断</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">72</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *              unless = "#result == null"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">73</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *              unless = "#a0==2":如果第一个参数的值是2，结果不缓存；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">74</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      sync：是否使用异步模式</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">75</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     * <span class="doctag">@param</span> id</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">76</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">77</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">78</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">79</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Cacheable</span>(value = &#123;<span class="string">"emp"</span>&#125;<span class="comment">/*,keyGenerator = "myKeyGenerator",condition = "#a0&gt;1",unless = "#a0==2"*/</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">80</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> Employee <span class="title">getEmp</span><span class="params">(Integer id)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">81</span></pre></td><td class="code"><pre><span class="line">        System.out.println(<span class="string">"查询"</span>+id+<span class="string">"号员工"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">82</span></pre></td><td class="code"><pre><span class="line">        Employee emp = employeeMapper.getEmpById(id);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">83</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> emp;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">84</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">85</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">86</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">87</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     * <span class="doctag">@CachePut</span>：既调用方法，又更新缓存数据；同步更新缓存</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">88</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     * 修改了数据库的某个数据，同时更新缓存；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">89</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     * 运行时机：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">90</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *  1、先调用目标方法</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">91</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *  2、将目标方法的结果缓存起来</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">92</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">93</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     * 测试步骤：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">94</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *  1、查询1号员工；查到的结果会放在缓存中；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">95</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *          key：1  value：lastName：张三</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">96</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *  2、以后查询还是之前的结果</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">97</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *  3、更新1号员工；【lastName:zhangsan；gender:0】</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">98</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *          将方法的返回值也放进缓存了；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">99</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *          key：传入的employee对象  值：返回的employee对象；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">100</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *  4、查询1号员工？</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">101</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      应该是更新后的员工；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">102</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *          key = "#employee.id":使用传入的参数的员工id；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">103</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *          key = "#result.id"：使用返回后的id</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">104</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *             <span class="doctag">@Cacheable</span>的key是不能用#result</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">105</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      为什么是没更新前的？【1号员工没有在缓存中更新】</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">106</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">107</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">108</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@CachePut</span>(<span class="comment">/*value = "emp",*/</span>key = <span class="string">"#result.id"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">109</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> Employee <span class="title">updateEmp</span><span class="params">(Employee employee)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">110</span></pre></td><td class="code"><pre><span class="line">        System.out.println(<span class="string">"updateEmp:"</span>+employee);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">111</span></pre></td><td class="code"><pre><span class="line">        employeeMapper.updateEmp(employee);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">112</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> employee;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">113</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">114</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">115</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">116</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     * <span class="doctag">@CacheEvict</span>：缓存清除</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">117</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *  key：指定要清除的数据</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">118</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *  allEntries = true：指定清除这个缓存中所有的数据</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">119</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *  beforeInvocation = false：缓存的清除是否在方法之前执行</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">120</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      默认代表缓存清除操作是在方法执行之后执行;如果出现异常缓存就不会清除</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">121</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">122</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *  beforeInvocation = true：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">123</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *      代表清除缓存操作是在方法运行之前执行，无论方法是否出现异常，缓存都清除</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">124</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">125</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">126</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">127</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@CacheEvict</span>(value=<span class="string">"emp"</span>,beforeInvocation = <span class="keyword">true</span><span class="comment">/*key = "#id",*/</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">128</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteEmp</span><span class="params">(Integer id)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">129</span></pre></td><td class="code"><pre><span class="line">        System.out.println(<span class="string">"deleteEmp:"</span>+id);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">130</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">//employeeMapper.deleteEmpById(id);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">131</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> i = <span class="number">10</span>/<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">132</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">133</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">134</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">// @Caching 定义复杂的缓存规则</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">135</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Caching</span>(</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">136</span></pre></td><td class="code"><pre><span class="line">         cacheable = &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">137</span></pre></td><td class="code"><pre><span class="line">             <span class="meta">@Cacheable</span>(<span class="comment">/*value="emp",*/</span>key = <span class="string">"#lastName"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">138</span></pre></td><td class="code"><pre><span class="line">         &#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">139</span></pre></td><td class="code"><pre><span class="line">         put = &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">140</span></pre></td><td class="code"><pre><span class="line">             <span class="meta">@CachePut</span>(<span class="comment">/*value="emp",*/</span>key = <span class="string">"#result.id"</span>),</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">141</span></pre></td><td class="code"><pre><span class="line">             <span class="meta">@CachePut</span>(<span class="comment">/*value="emp",*/</span>key = <span class="string">"#result.email"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">142</span></pre></td><td class="code"><pre><span class="line">         &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">143</span></pre></td><td class="code"><pre><span class="line">    )</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">144</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> Employee <span class="title">getEmpByLastName</span><span class="params">(String lastName)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">145</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> employeeMapper.getEmpByLastName(lastName);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">146</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">147</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-
-
-<p>开发中使用缓存中间件；<code>redis</code>、<code>memcached</code>、<code>ehcache</code>；</p>
-<h3 id="整合redis作为缓存"><a href="#整合redis作为缓存" class="headerlink" title="整合redis作为缓存"></a>整合redis作为缓存</h3><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">spring.redis.host</span>=<span class="string">localhost</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#指定redis的主机地址</span></span></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/** Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> * 	1、安装redis：使用docker；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> * 	2、引入redis的starter</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> * 	3、配置redis</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> * 	4、测试缓存</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> * 		原理：CacheManager===Cache 缓存组件来实际给缓存中存取数据</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *		1）、引入redis的starter，容器中保存的是 RedisCacheManager；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *		2）、RedisCacheManager 帮我们创建 RedisCache 来作为缓存组件；RedisCache通过操作redis缓存数据的</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *		3）、默认保存数据 k-v 都是Object；利用序列化保存；如何保存为json</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *   			1、引入了redis的starter，cacheManager变为 RedisCacheManager；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *   			2、默认创建的 RedisCacheManager 操作redis的时候使用的是 RedisTemplate&lt;Object, Object&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *   			3、RedisTemplate&lt;Object, Object&gt; 是 默认使用jdk的序列化机制</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *      4）、自定义CacheManager；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@MapperScan</span>(<span class="string">"com.atguigu.cache.mapper"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@EnableCaching</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Springboot01CacheApplication</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">		SpringApplication.run(Springboot01CacheApplication<span class="class">.<span class="keyword">class</span>, <span class="title">args</span>)</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;java</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">@Configuration</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">public class MyRedisConfig &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    @Bean</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    public RedisTemplate&lt;Object, Employee&gt; empRedisTemplate(</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">            RedisConnectionFactory redisConnectionFactory)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">            throws UnknownHostException &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        RedisTemplate&lt;Object, Employee&gt; template &#x3D; new RedisTemplate&lt;Object, Employee&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        template.setConnectionFactory(redisConnectionFactory);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        Jackson2JsonRedisSerializer&lt;Employee&gt; ser &#x3D; new Jackson2JsonRedisSerializer&lt;Employee&gt;(Employee.class);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        template.setDefaultSerializer(ser);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        return template;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    @Bean</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    public RedisTemplate&lt;Object, Department&gt; deptRedisTemplate(</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">            RedisConnectionFactory redisConnectionFactory)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">            throws UnknownHostException &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">        RedisTemplate&lt;Object, Department&gt; template &#x3D; new RedisTemplate&lt;Object, Department&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">        template.setConnectionFactory(redisConnectionFactory);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">        Jackson2JsonRedisSerializer&lt;Department&gt; ser &#x3D; new Jackson2JsonRedisSerializer&lt;Department&gt;(Department.class);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">        template.setDefaultSerializer(ser);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">        return template;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">    &#x2F;&#x2F;CacheManagerCustomizers可以来定制缓存的一些规则</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">    @Primary  &#x2F;&#x2F;将某个缓存管理器作为默认的</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">    @Bean</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">    public RedisCacheManager employeeCacheManager(RedisTemplate&lt;Object, Employee&gt; empRedisTemplate)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">        RedisCacheManager cacheManager &#x3D; new RedisCacheManager(empRedisTemplate);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">        &#x2F;&#x2F;key多了一个前缀</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">        &#x2F;&#x2F;使用前缀，默认会将CacheName作为key的前缀</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">        cacheManager.setUsePrefix(true);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">        return cacheManager;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">    @Bean</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line">    public RedisCacheManager deptCacheManager(RedisTemplate&lt;Object, Department&gt; deptRedisTemplate)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">        RedisCacheManager cacheManager &#x3D; new RedisCacheManager(deptRedisTemplate);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line">        &#x2F;&#x2F;key多了一个前缀</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line">        &#x2F;&#x2F;使用前缀，默认会将CacheName作为key的前缀</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line">        cacheManager.setUsePrefix(true);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line">        return cacheManager;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">51</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">52</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">53</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">54</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<pre><code><figure class="highlight plain"><figcaption><span>```如下</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;java</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">@Select(&quot;SELECT * FROM employee WHERE id &#x3D; #&#123;id&#125;&quot;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    public Employee getEmpById(Integer id);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    @Update(&quot;UPDATE employee SET lastName&#x3D;#&#123;lastName&#125;,email&#x3D;#&#123;email&#125;,gender&#x3D;#&#123;gender&#125;,d_id&#x3D;#&#123;dId&#125; WHERE id&#x3D;#&#123;id&#125;&quot;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    public void updateEmp(Employee employee);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    @Delete(&quot;DELETE FROM employee WHERE id&#x3D;#&#123;id&#125;&quot;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    public void deleteEmpById(Integer id);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    @Insert(&quot;INSERT INTO employee(lastName,email,gender,d_id) VALUES(#&#123;lastName&#125;,#&#123;email&#125;,#&#123;gender&#125;,#&#123;dId&#125;)&quot;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    public void insertEmployee(Employee employee);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    @Select(&quot;SELECT * FROM employee WHERE lastName &#x3D; #&#123;lastName&#125;&quot;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    Employee getEmpByLastName(String lastName);</span></pre></td></tr></table></figure></code></pre>
+        
+          <a class="article-more-a" href="/2019/12/07/%E7%BC%93%E5%AD%98/#more">more >></a>
+        
       
 
       
@@ -638,168 +321,36 @@
 
 
   
-    <article id="post-消息" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-HttpClient工具类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/%E6%B6%88%E6%81%AF/">消息</a>
+      <a class="article-title" href="/2019/12/07/HttpClient%E5%B7%A5%E5%85%B7%E7%B1%BB/">HttpClient工具类</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/%E6%B6%88%E6%81%AF/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:47:52.958Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+        <a href="/2019/12/07/HttpClient%E5%B7%A5%E5%85%B7%E7%B1%BB/" class="archive-article-date">
+  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="消息"><a href="#消息" class="headerlink" title="消息"></a>消息</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>1.大多应用中，可通过消息服务中间件来提升系统异步通信、扩展解耦能力</p>
-<p>2.消息服务中两个重要概念：</p>
-<pre><code>消息代理（message broker）和目的地（destination）</code></pre><p>当消息发送者发送消息以后，将由消息代理接管，消息代理保证消息传递到指定目的地。</p>
-<p>3.消息队列主要有两种形式的目的地</p>
-<p>1.队列（queue）：点对点消息通信（point-to-point）</p>
-<p>2.主题（topic）：发布（publish）/订阅（subscribe）消息通信</p>
-<h3 id="异步处理"><a href="#异步处理" class="headerlink" title="异步处理"></a>异步处理</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf0c36f055568?w=519&h=132&f=png&s=12978" alt="1567674440906"></p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf0cdb3f74d33?w=399&h=212&f=png&s=14834" alt="1567674447393"></p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf0d52f63099e?w=570&h=189&f=png&s=19261" alt="1567674453936"></p>
-<h3 id="应用解耦"><a href="#应用解耦" class="headerlink" title="应用解耦"></a>应用解耦</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf0e9c632f9db?w=363&h=138&f=png&s=17493" alt="1567674474592"></p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf0e9c66f117d?w=365&h=189&f=png&s=16351" alt="1567674479016"></p>
-<h3 id="流量削峰"><a href="#流量削峰" class="headerlink" title="流量削峰"></a>流量削峰</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf0efea4040f1?w=525&h=136&f=png&s=26613" alt="1567674507555"></p>
-<p>4.点对点式：</p>
-<ul>
-<li>消息发送者发送消息，消息代理将其放入一个队列中，消息接收者从队列中获取消息内容，消息读取后被移出队列</li>
-<li>消息只有唯一的发送者和接受者，但并不是说只能有一个接收者</li>
+        <h2 id="1-什么是HttpClient"><a href="#1-什么是HttpClient" class="headerlink" title="1. 什么是HttpClient"></a>1. 什么是HttpClient</h2><p>HTTP 协议可能是现在 Internet 上使用得最多、最重要的协议了，越来越多的 Java 应用程序需要直接通过 HTTP 协议来访问网络资源。虽然在 JDK 的 java net包中已经提供了访问 HTTP 协议的基本功能，但是对于大部分应用程序来说，JDK 库本身提供的功能还不够丰富和灵活。HttpClient 是Apache HttpComponents 下的子项目，用来提供高效的、最新的、功能丰富的支持 <strong>HTTP 协议的客户端编程工具包</strong>，并且它支持 HTTP 协议最新的版本和建议。</p>
+<h2 id="2-功能介绍"><a href="#2-功能介绍" class="headerlink" title="2. 功能介绍"></a>2. 功能介绍</h2><ul>
+<li>实现了所有 HTTP 的方法（GET,POST,PUT,DELETE 等）</li>
+<li>支持自动转向</li>
+<li>支持 HTTPS 协议</li>
+<li>支持代理服务器等</li>
 </ul>
-<p>5.发布订阅式：</p>
-<ul>
-<li>发送者（发布者）发送消息到主题，多个接收者（订阅者）监听（订阅）这个主题，那么就会在消息到达时同时收到消息</li>
-</ul>
-<p>6.JMS（Java Message Service）JAVA消息服务：</p>
-<ul>
-<li>基于JVM消息代理的规范。ActiveMQ、HornetMQ是JMS实现</li>
-</ul>
-<p>7.AMQP（Advanced Message Queuing Protocol）</p>
-<ul>
-<li>高级消息队列协议，也是一个消息代理的规范，兼容JMS</li>
-<li>RabbitMQ是AMQP的实现</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>JMS</th>
-<th>AMQP</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>定义</td>
-<td>Java   api</td>
-<td>网络线级协议</td>
-</tr>
-<tr>
-<td>跨语言</td>
-<td>否</td>
-<td>是</td>
-</tr>
-<tr>
-<td>跨平台</td>
-<td>否</td>
-<td>是</td>
-</tr>
-<tr>
-<td>Model</td>
-<td>提供两种消息模型：   （1）、Peer-2-Peer   （2）、Pub/sub</td>
-<td>提供了五种消息模型：   （1）、direct   exchange   （2）、fanout exchange   （3）、topic   change   （4）、headers   exchange   （5）、system   exchange   本质来讲，后四种和JMS的pub/sub模型没有太大差别，仅是在路由机制上做了更详细的划分；</td>
-</tr>
-<tr>
-<td>支持消息类型</td>
-<td>多种消息类型：   TextMessage   MapMessage   BytesMessage   StreamMessage   ObjectMessage   Message   （只有消息头和属性）</td>
-<td>byte[]   当实际应用时，有复杂的消息，可以将消息序列化后发送。</td>
-</tr>
-<tr>
-<td>综合评价</td>
-<td>JMS   定义了JAVA   API层面的标准；在java体系中，多个client均可以通过JMS进行交互，不需要应用修改代码，但是其对跨平台的支持较差；</td>
-<td>AMQP定义了wire-level层的协议标准；天然具有跨平台、跨语言特性。</td>
-</tr>
-</tbody></table>
-<p>8.Spring支持</p>
-<ul>
-<li><strong>spring-**</strong>jms<strong><strong>提供了对</strong></strong>JMS<strong>**的支持</strong></li>
-<li><strong>spring-rabbit**</strong>提供了对<strong><strong>AMQP</strong></strong>的支持**</li>
-<li><strong>需要**</strong>ConnectionFactory<strong>**的实现来连接消息代理</strong></li>
-<li><strong>提供**</strong>JmsTemplate<strong><strong>、</strong></strong>RabbitTemplate<strong>**来发送消息</strong></li>
-<li><strong>@**</strong>JmsListener<strong><strong>（</strong></strong>JMS<strong><strong>）、</strong></strong>@<strong><strong>RabbitListener</strong></strong>（<strong><strong>AMQP</strong></strong>）注解在方法上监听消息代理发布的消息**</li>
-<li><strong>@**</strong>EnableJms<strong><strong>、</strong></strong>@<strong><strong>EnableRabbit</strong></strong>开启支持**</li>
-</ul>
-<p>9.Spring Boot自动配置</p>
-<ul>
-<li><strong>JmsAutoConfiguration</strong></li>
-<li><strong>RabbitAutoConfiguration</strong></li>
-</ul>
-<h2 id="RabbitMQ简介"><a href="#RabbitMQ简介" class="headerlink" title="RabbitMQ简介"></a>RabbitMQ简介</h2><p><strong>RabbitMQ**</strong>简介：**</p>
-<p>RabbitMQ是一个由erlang开发的AMQP(Advanved Message Queue Protocol)的开源实现。</p>
-<h3 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h3><p><strong>Message</strong></p>
-<p>消息，消息是不具名的，它由消息头和消息体组成。消息体是不透明的，而消息头则由一系列的可选属性组成，这些属性包括routing-key（路由键）、priority（相对于其他消息的优先权）、delivery-mode（指出该消息可能需要持久性存储）等。</p>
-<p><strong>Publisher</strong></p>
-<p>消息的生产者，也是一个向交换器发布消息的客户端应用程序。</p>
-<p><strong>Exchange</strong></p>
-<p>交换器，用来接收生产者发送的消息并将这些消息路由给服务器中的队列。</p>
-<p>Exchange有4种类型：direct(默认)，fanout, topic, 和headers，不同类型的Exchange转发消息的策略有所区别</p>
-<p><strong>Queue</strong></p>
-<p>消息队列，用来保存消息直到发送给消费者。它是消息的容器，也是消息的终点。一个消息可投入一个或多个队列。消息一直在队列里面，等待消费者连接到这个队列将其取走。</p>
-<p><strong>Binding</strong></p>
-<p>绑定，用于消息队列和交换器之间的关联。一个绑定就是基于路由键将交换器和消息队列连接起来的路由规则，所以可以将交换器理解成一个由绑定构成的路由表。</p>
-<p>Exchange 和Queue的绑定可以是多对多的关系。</p>
-<p><strong>Connection</strong></p>
-<p>网络连接，比如一个TCP连接。</p>
-<p><strong>Channel</strong></p>
-<p>信道，多路复用连接中的一条独立的双向数据流通道。信道是建立在真实的TCP连接内的虚拟连接，AMQP 命令都是通过信道发出去的，不管是发布消息、订阅队列还是接收消息，这些动作都是通过信道完成。因为对于操作系统来说建立和销毁 TCP 都是非常昂贵的开销，所以引入了信道的概念，以复用一条 TCP 连接。</p>
-<p><strong>Consumer</strong></p>
-<p>消息的消费者，表示一个从消息队列中取得消息的客户端应用程序。</p>
-<p><strong>Virtual Host</strong></p>
-<p>虚拟主机，表示一批交换器、消息队列和相关对象。虚拟主机是共享相同的身份认证和加密环境的独立服务器域。每个 vhost 本质上就是一个 mini 版的 RabbitMQ 服务器，拥有自己的队列、交换器、绑定和权限机制。vhost 是 AMQP 概念的基础，必须在连接时指定，RabbitMQ 默认的 vhost 是 / 。</p>
-<p><strong>Broker</strong></p>
-<p>表示消息队列服务器实体</p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf0f79a35443e?w=804&h=229&f=png&s=52480" alt="1567674697302"></p>
-<h2 id="RabbitMQ运行机制"><a href="#RabbitMQ运行机制" class="headerlink" title="RabbitMQ运行机制"></a>RabbitMQ运行机制</h2><h3 id="AMQP-中的消息路由"><a href="#AMQP-中的消息路由" class="headerlink" title="AMQP 中的消息路由"></a>AMQP 中的消息路由</h3><ul>
-<li>AMQP 中消息的路由过程和 Java 开发者熟悉的 JMS 存在一些差别，AMQP 中增加了 <strong>Exchange</strong> 和 <strong>Binding</strong> 的角色。生产者把消息发布到 Exchange 上，消息最终到达队列并被消费者接收，而 Binding 决定交换器的消息应该发送到那个队列。</li>
-</ul>
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf0fee7a74e66?w=484&h=390&f=png&s=41335" alt="1567674729346"></p>
-<h3 id="Exchange类型"><a href="#Exchange类型" class="headerlink" title="Exchange类型"></a>Exchange类型</h3><ul>
-<li><strong>Exchange</strong>分发消息时根据类型的不同分发策略有区别，目前共四种类型：<strong>direct</strong>、<strong>fanout</strong>、<strong>topic</strong>、<strong>headers</strong> 。<strong>headers</strong> 匹配 AMQP 消息的 header 而不是路由键， headers 交换器和 direct 交换器完全一致，但性能差很多，目前几乎用不到了，所以直接看另外三种类型：</li>
-</ul>
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf104e3d992fb?w=453&h=270&f=png&s=17523" alt="1567674832488"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">消息中的路由键（routing key）如果和 Binding 中的 binding key 一致， 交换器就将消息发到对应的队列中。路由键与队列名完全匹配，如果一个队列绑定到交换机要求路由键为“dog”，则只转发 routing key 标记为“dog”的消息，不会转发“dog.puppy”，也不会转发“dog.guard”等等。它是完全匹配、单播的模式。</span></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf10a435ed604?w=453&h=310&f=png&s=20924" alt="1567674909610"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">每个发到 fanout 类型交换器的消息都会分到所有绑定的队列上去。fanout 交换器不处理路由键，只是简单的将队列绑定到交换器上，每个发送到交换器的消息都会被转发到与该交换器绑定的所有队列上。很像子网广播，每台子网内的主机都获得了一份复制的消息。fanout 类型转发消息是最快的。</span></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf1101e974ac6?w=549&h=295&f=png&s=53795" alt="1567674953601"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">topic 交换器通过模式匹配分配消息的路由键属性，将路由键和某个模式进行匹配，此时队列需要绑定到一个模式上。它将路由键和绑定键的字符串切分成单词，这些单词之间用点隔开。它同样也会识别两个通配符：符号“#”和符号“*”。#匹配0个或多个单词，*匹配一个单词。</span></pre></td></tr></table></figure>
-
-<h2 id="RabbitMQ整合"><a href="#RabbitMQ整合" class="headerlink" title="RabbitMQ整合"></a>RabbitMQ整合</h2><p>1.<strong>引入</strong> spring-boot-starter-amqp</p>
-<p>2.<strong>application.yml</strong>配置</p>
-<p>3.测试<strong>RabbitMQ</strong></p>
-<pre><code>1.**AmqpAdmin**：管理组件
-
-2.**RabbitTemplate**：消息发送处理组件</code></pre><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf118d925cef9?w=1248&h=348&f=png&s=56406" alt="1567675039923"></p>
-<h2 id="SpringBoot整合RabbitMQ"><a href="#SpringBoot整合RabbitMQ" class="headerlink" title="SpringBoot整合RabbitMQ"></a>SpringBoot整合RabbitMQ</h2><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">spring.rabbitmq.host</span>=<span class="string">localhost</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">spring.rabbitmq.username</span>=<span class="string">guest</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="meta">spring.rabbitmq.password</span>=<span class="string">guest</span></span></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> * 自动配置</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *  1、RabbitAutoConfiguration</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *  2、有自动配置了连接工厂ConnectionFactory；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *  3、RabbitProperties 封装了 RabbitMQ的配置</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *  4、 RabbitTemplate ：给RabbitMQ发送和接受消息；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *  5、 AmqpAdmin ： RabbitMQ系统管理功能组件;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *  	AmqpAdmin：创建和删除 Queue，Exchange，Binding</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *  6、<span class="doctag">@EnableRabbit</span> +  <span class="doctag">@RabbitListener</span> 监听消息队列的内容</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@EnableRabbit</span>  <span class="comment">//开启基于注解的RabbitMQ模式</span></span></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//自定义配置类</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAMQPConfig</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Bean</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">//自定义消息转换方式，转为json格式</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> MessageConverter <span class="title">messageConverter</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Jackson2JsonMessageConverter();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	RabbitTemplate rabbitTemplate;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	<span class="meta">@Autowired</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	AmqpAdmin amqpAdmin;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * 1、单播（点对点）</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	<span class="meta">@Test</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextLoads</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		<span class="comment">//Message需要自己构造一个;定义消息体内容和消息头</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">		<span class="comment">//rabbitTemplate.send(exchage,routeKey,message);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">		<span class="comment">//object默认当成消息体，只需要传入要发送的对象，自动序列化发送给rabbitmq；</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">		<span class="comment">//rabbitTemplate.convertAndSend(exchage,routeKey,object);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">		Map&lt;String,Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">		map.put(<span class="string">"msg"</span>,<span class="string">"这是第一个消息"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">		map.put(<span class="string">"data"</span>, Arrays.asList(<span class="string">"helloworld"</span>,<span class="number">123</span>,<span class="keyword">true</span>));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">		<span class="comment">//对象被默认序列化以后发送出去</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">		rabbitTemplate.convertAndSend(<span class="string">"exchange.direct"</span>,<span class="string">"atguigu.news"</span>,<span class="keyword">new</span> Book(<span class="string">"西游记"</span>,<span class="string">"吴承恩"</span>));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">	<span class="comment">//接受数据,如何将数据自动的转为json发送出去</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">	<span class="meta">@Test</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">receive</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">		Object o = rabbitTemplate.receiveAndConvert(<span class="string">"atguigu.news"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">		System.out.println(o.getClass());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">		System.out.println(o);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">	<span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 * 广播</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line"><span class="comment">	 */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">	<span class="meta">@Test</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sendMsg</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">		rabbitTemplate.convertAndSend(<span class="string">"exchange.fanout"</span>,<span class="string">""</span>,<span class="keyword">new</span> Book(<span class="string">"红楼梦"</span>,<span class="string">"曹雪芹"</span>));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr></table></figure>
-
-<p>注解版<code>RabbitMQ</code>开发，利用</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BookService</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	<span class="comment">//监听器，监听atguigu.news队列</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@RabbitListener</span>(queues = <span class="string">"atguigu.news"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">receive</span><span class="params">(Book book)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        System.out.println(<span class="string">"收到消息："</span>+book);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@RabbitListener</span>(queues = <span class="string">"atguigu"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">receive02</span><span class="params">(Message message)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        System.out.println(message.getBody());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        System.out.println(message.getMessageProperties());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createExchange</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建exchange</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//		amqpAdmin.declareExchange(new DirectExchange("amqpadmin.exchange"));</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//		System.out.println("创建完成");</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建queue</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//		amqpAdmin.declareQueue(new Queue("amqpadmin.queue",true));</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">		<span class="comment">//创建绑定规则</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//绑定</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//		amqpAdmin.declareBinding(new Binding("amqpadmin.queue", Binding.DestinationType.QUEUE,"amqpadmin.exchange","amqp.haha",null));</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/12/07/HttpClient%E5%B7%A5%E5%85%B7%E7%B1%BB/#more">more >></a>
+        
       
 
       
@@ -811,7 +362,75 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/%E6%B6%88%E6%81%AF/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/HttpClient%E5%B7%A5%E5%85%B7%E7%B1%BB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Docker简介" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/07/Docker%E7%AE%80%E4%BB%8B/">Docker简介</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/07/Docker%E7%AE%80%E4%BB%8B/" class="archive-article-date">
+  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf229706e1108?w=657&h=326&f=png&s=31681" alt="1572521577002"></p>
+<h3 id="Docker出现的原因？"><a href="#Docker出现的原因？" class="headerlink" title="Docker出现的原因？"></a>Docker出现的原因？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">一款产品从开发到上线，从操作系统，到运行环境，再到应用配置。作为开发+运维之间的协作我们需要关心很多东西，这也是很多互联网公司都不得不面对的问题，特别是各种版本的迭代之后，不同版本环境的兼容，对运维人员都是考验.</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">Docker之所以发展如此迅速，也是因为它对此给出了一个标准化的解决方案。</span></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">环境配置如此麻烦，换一台机器，就要重来一次，费力费时。很多人想到，能不能从根本上解决问题，软件可以带环境安装？也就是说，安装的时候，把原始环境一模一样地复制过来。开发人员利用 Docker 可以消除协作编码时“在我的机器上可正常工作”的问题。</span></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/12/07/Docker%E7%AE%80%E4%BB%8B/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/07/Docker%E7%AE%80%E4%BB%8B/">展开全文 >></a>
         </p>
       
 
