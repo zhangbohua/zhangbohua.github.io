@@ -161,7 +161,7 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-JAVA并发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Swagger2整合SpringBoot" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -170,12 +170,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">JAVA并发</a>
+      <a class="article-title" href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/">Swagger2整合SpringBoot</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/" class="archive-article-date">
+        <a href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -183,10 +183,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="线程与进程的区别"><a href="#线程与进程的区别" class="headerlink" title="线程与进程的区别"></a>线程与进程的区别</h3><p>线程，程序执行流的最小执行单位，是行程中的实际运作单位，经常容易和进程这个概念混淆。那么，线程和进程究竟有什么区别呢？首先，进程是一个动态的过程，是一个活动的实体。简单来说，一个应用程序的运行就可以被看做是一个进程，而线程，是运行中的实际的任务执行者。可以说，进程中包含了多个可以同时运行的线程。</p>
-<h3 id="线程的基本概念"><a href="#线程的基本概念" class="headerlink" title="线程的基本概念"></a>线程的基本概念</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf199915321a4?w=808&h=293&f=png&s=53728" alt="img"></p>
+        <h2 id="Swagger2注解详细"><a href="#Swagger2注解详细" class="headerlink" title="Swagger2注解详细"></a>Swagger2注解详细</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Api</span>：用在请求的类上，表示对类的说明</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    tags=<span class="string">"说明该类的作用，可以在UI界面上看到的注解"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    value=<span class="string">"该参数没什么意义，在UI界面上也看到，所以不需要配置"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiOperation</span>：用在请求的方法上，说明方法的用途、作用</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    value=<span class="string">"说明方法的用途、作用"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    notes=<span class="string">"方法的备注说明"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiImplicitParams</span>：用在请求的方法上，表示一组参数说明</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@ApiImplicitParam</span>：用在<span class="meta">@ApiImplicitParams</span>注解中，指定一个请求参数的各个方面</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        name：参数名</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        value：参数的汉字说明、解释</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        required：参数是否必须传</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        paramType：参数放在哪个地方</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">            · header --&gt; 请求参数的获取：<span class="meta">@RequestHeader</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">            · query --&gt; 请求参数的获取：<span class="meta">@RequestParam</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">            · path（用于restful接口）--&gt; 请求参数的获取：<span class="meta">@PathVariable</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">            · body（不常用）</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">            · form（不常用）    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">        dataType：参数类型，默认String，其它值dataType=<span class="string">"Integer"</span>       </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">        defaultValue：参数的默认值</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiResponses</span>：用在请求的方法上，表示一组响应</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@ApiResponse</span>：用在<span class="meta">@ApiResponses</span>中，一般用于表达一个错误的响应信息</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">        code：数字，例如<span class="number">400</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">        message：信息，例如<span class="string">"请求参数没填好"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">        response：抛出异常的类</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiModel</span>：用于响应类上，表示一个返回响应数据的信息</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">            （这种一般用在post创建的时候，使用<span class="meta">@RequestBody</span>这样的场景，</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">            请求参数无法使用<span class="meta">@ApiImplicitParam</span>注解进行描述的时候）</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@ApiModelProperty</span>：用在属性上，描述响应类的属性</span></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/#more">more >></a>
         
       
 
@@ -199,7 +198,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/">展开全文 >></a>
         </p>
       
 
@@ -380,6 +379,75 @@
 
 
   
+    <article id="post-任务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+
+
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">异步任务</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/07/%E4%BB%BB%E5%8A%A1/" class="archive-article-date">
+  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在Java应用中，绝大多数情况下都是通过同步的方式来实现交互处理的；但是在处理与第三方系统交互的时候，容易造成响应迟缓的情况，之前大部分都是使用多线程来完成此类任务，其实，在<code>Spring 3.x</code>之后，就已经内置了<code>@Async</code>来完美解决这个问题。</p>
+<p>两个注解：</p>
+<p><strong>@EnableAysnc</strong>、<strong>@Aysnc</strong></p>
+        
+          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Yapi部署文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -427,75 +495,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-任务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-
-
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">异步任务</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/07/%E4%BB%BB%E5%8A%A1/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在Java应用中，绝大多数情况下都是通过同步的方式来实现交互处理的；但是在处理与第三方系统交互的时候，容易造成响应迟缓的情况，之前大部分都是使用多线程来完成此类任务，其实，在<code>Spring 3.x</code>之后，就已经内置了<code>@Async</code>来完美解决这个问题。</p>
-<p>两个注解：</p>
-<p><strong>@EnableAysnc</strong>、<strong>@Aysnc</strong></p>
-        
-          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">展开全文 >></a>
         </p>
       
 
@@ -734,7 +733,7 @@
 
 
   
-    <article id="post-Swagger2整合SpringBoot" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JAVA并发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -743,12 +742,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/">Swagger2整合SpringBoot</a>
+      <a class="article-title" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">JAVA并发</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/" class="archive-article-date">
+        <a href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -756,9 +755,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Swagger2注解详细"><a href="#Swagger2注解详细" class="headerlink" title="Swagger2注解详细"></a>Swagger2注解详细</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Api</span>：用在请求的类上，表示对类的说明</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    tags=<span class="string">"说明该类的作用，可以在UI界面上看到的注解"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    value=<span class="string">"该参数没什么意义，在UI界面上也看到，所以不需要配置"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiOperation</span>：用在请求的方法上，说明方法的用途、作用</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    value=<span class="string">"说明方法的用途、作用"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    notes=<span class="string">"方法的备注说明"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiImplicitParams</span>：用在请求的方法上，表示一组参数说明</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@ApiImplicitParam</span>：用在<span class="meta">@ApiImplicitParams</span>注解中，指定一个请求参数的各个方面</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        name：参数名</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        value：参数的汉字说明、解释</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        required：参数是否必须传</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        paramType：参数放在哪个地方</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">            · header --&gt; 请求参数的获取：<span class="meta">@RequestHeader</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">            · query --&gt; 请求参数的获取：<span class="meta">@RequestParam</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">            · path（用于restful接口）--&gt; 请求参数的获取：<span class="meta">@PathVariable</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">            · body（不常用）</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">            · form（不常用）    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">        dataType：参数类型，默认String，其它值dataType=<span class="string">"Integer"</span>       </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">        defaultValue：参数的默认值</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiResponses</span>：用在请求的方法上，表示一组响应</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@ApiResponse</span>：用在<span class="meta">@ApiResponses</span>中，一般用于表达一个错误的响应信息</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">        code：数字，例如<span class="number">400</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">        message：信息，例如<span class="string">"请求参数没填好"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">        response：抛出异常的类</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiModel</span>：用于响应类上，表示一个返回响应数据的信息</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">            （这种一般用在post创建的时候，使用<span class="meta">@RequestBody</span>这样的场景，</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">            请求参数无法使用<span class="meta">@ApiImplicitParam</span>注解进行描述的时候）</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@ApiModelProperty</span>：用在属性上，描述响应类的属性</span></pre></td></tr></table></figure>
+        <h3 id="线程与进程的区别"><a href="#线程与进程的区别" class="headerlink" title="线程与进程的区别"></a>线程与进程的区别</h3><p>线程，程序执行流的最小执行单位，是行程中的实际运作单位，经常容易和进程这个概念混淆。那么，线程和进程究竟有什么区别呢？首先，进程是一个动态的过程，是一个活动的实体。简单来说，一个应用程序的运行就可以被看做是一个进程，而线程，是运行中的实际的任务执行者。可以说，进程中包含了多个可以同时运行的线程。</p>
+<h3 id="线程的基本概念"><a href="#线程的基本概念" class="headerlink" title="线程的基本概念"></a>线程的基本概念</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf199915321a4?w=808&h=293&f=png&s=53728" alt="img"></p>
         
-          <a class="article-more-a" href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/#more">more >></a>
         
       
 
@@ -771,7 +771,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">展开全文 >></a>
         </p>
       
 
@@ -801,7 +801,7 @@
 
 
   
-    <article id="post-微服务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-消息" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -810,12 +810,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a>
+      <a class="article-title" href="/2019/12/07/%E6%B6%88%E6%81%AF/">消息</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" class="archive-article-date">
+        <a href="/2019/12/07/%E6%B6%88%E6%81%AF/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -823,24 +823,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>微服务架构是一种架构模式或者说是一种架构风格，它提倡将单一应用程序划分成一组小的服务，每个服务运行在其独立的进程中，服务之间互相协调，互相配合，为用户提供最终价值。</p>
-<ul>
-<li><code>Dubbo</code>是基于<code>rpc</code>服务通信</li>
-<li><code>Cloud</code>是基于<code>REST</code>服务通信</li>
-</ul>
-<p>微服务化的核心就是将传统的一站式应用，根据业务拆分成一个一个的服务，彻底地去耦合,每一个微服务提供单个业务功能的服务，一个服务做一件事，从技术角度看就是一种小而独立的处理过程，类似进程概念，能够自行单独启动或销毁，拥有自己独立的数据库。</p>
-<h2 id="微服务与微服务架构"><a href="#微服务与微服务架构" class="headerlink" title="微服务与微服务架构"></a>微服务与微服务架构</h2><ul>
-<li>微服务强调的是服务的大小，它关注的是某一个点，是具体解决某一个问题/提供落地对应服务的一个服务应用,狭意的看,可以看作Eclipse里面的一个个微服务工程/或者Module   <ul>
-<li>强调的是个体</li>
-</ul>
-</li>
-<li>微服务架构 微服务架构是⼀种架构模式，它提倡将单⼀应⽤程序划分成⼀组⼩的服务，服务之间互相协调、互相配合，为⽤户提供最终价值。每个服务运⾏在其独⽴的进程中，服务与服务间采⽤轻量级的通信机制互相协作（通常是基于<code>HTTP</code>协议的<code>RESTful API</code>）。每个服务都围绕着具体业务进⾏构建，并且能够被独⽴的部署到⽣产环境、类⽣产环境等。另外，应当尽量避免统⼀的、集中式的服务管理机制，对具体的⼀个服务⽽⾔，应根据业务上下⽂，选择合适的语⾔、⼯具对其进⾏构建。<ul>
-<li>强调的是宏观</li>
-</ul>
-</li>
-</ul>
+        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>1.大多应用中，可通过消息服务中间件来提升系统异步通信、扩展解耦能力</p>
+<p>2.消息服务中两个重要概念：</p>
+<pre><code>消息代理（message broker）和目的地（destination）</code></pre><p>当消息发送者发送消息以后，将由消息代理接管，消息代理保证消息传递到指定目的地。</p>
+<p>3.消息队列主要有两种形式的目的地</p>
+<p>1.队列（queue）：点对点消息通信（point-to-point）</p>
+<p>2.主题（topic）：发布（publish）/订阅（subscribe）消息通信</p>
+<h3 id="异步处理"><a href="#异步处理" class="headerlink" title="异步处理"></a>异步处理</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf0c36f055568?w=519&h=132&f=png&s=12978" alt="1567674440906"></p>
         
-          <a class="article-more-a" href="/2019/12/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/%E6%B6%88%E6%81%AF/#more">more >></a>
         
       
 
@@ -853,7 +844,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/%E6%B6%88%E6%81%AF/">展开全文 >></a>
         </p>
       
 
