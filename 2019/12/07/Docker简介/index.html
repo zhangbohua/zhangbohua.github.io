@@ -6,16 +6,43 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.buhuiwy.cn">
-  <title>Archives: 2019/12 | Chamberlan</title>
+  <title>Docker简介 | Chamberlan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不念过往，不惧将来！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Chamberlan">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.buhuiwy.cn&#x2F;archives&#x2F;2019&#x2F;12&#x2F;index.html">
+  <meta name="description" content="Docker简介 Docker出现的原因？1一款产品从开发到上线，从操作系统，到运行环境，再到应用配置。作为开发+运维之间的协作我们需要关心很多东西，这也是很多互联网公司都不得不面对的问题，特别是各种版本的迭代之后，不同版本环境的兼容，对运维人员都是考验.2Docker之所以发展如此迅速，也是因为它对此给出了一个标准化的解决方案。  1环境配置如此麻烦，换一台机器，就要重来一次，费力费时。很多人想">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker简介">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.buhuiwy.cn&#x2F;2019&#x2F;12&#x2F;07&#x2F;Docker%E7%AE%80%E4%BB%8B&#x2F;index.html">
 <meta property="og:site_name" content="Chamberlan">
-<meta property="og:description" content="不念过往，不惧将来！">
+<meta property="og:description" content="Docker简介 Docker出现的原因？1一款产品从开发到上线，从操作系统，到运行环境，再到应用配置。作为开发+运维之间的协作我们需要关心很多东西，这也是很多互联网公司都不得不面对的问题，特别是各种版本的迭代之后，不同版本环境的兼容，对运维人员都是考验.2Docker之所以发展如此迅速，也是因为它对此给出了一个标准化的解决方案。  1环境配置如此麻烦，换一台机器，就要重来一次，费力费时。很多人想">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf229706e1108?w&#x3D;657&amp;h&#x3D;326&amp;f&#x3D;png&amp;s&#x3D;31681">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf22b6c96c67d?w&#x3D;711&amp;h&#x3D;350&amp;f&#x3D;png&amp;s&#x3D;168782">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf22e340402ae?w&#x3D;645&amp;h&#x3D;290&amp;f&#x3D;png&amp;s&#x3D;115317">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf23116061a0d?w&#x3D;901&amp;h&#x3D;676&amp;f&#x3D;png&amp;s&#x3D;174300">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf2332238139e?w&#x3D;507&amp;h&#x3D;352&amp;f&#x3D;png&amp;s&#x3D;88049">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf2332238139e?w&#x3D;507&amp;h&#x3D;352&amp;f&#x3D;png&amp;s&#x3D;88049">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf23c98237d2d?w&#x3D;689&amp;h&#x3D;382&amp;f&#x3D;png&amp;s&#x3D;78783">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf2416ca9e6eb?w&#x3D;526&amp;h&#x3D;313&amp;f&#x3D;png&amp;s&#x3D;245571">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf2434cc241c3?w&#x3D;436&amp;h&#x3D;299&amp;f&#x3D;png&amp;s&#x3D;145440">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf247e0df039d?w&#x3D;951&amp;h&#x3D;309&amp;f&#x3D;png&amp;s&#x3D;218301">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf24ad7bf4f8d?w&#x3D;576&amp;h&#x3D;543&amp;f&#x3D;png&amp;s&#x3D;321820">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf250ea0a82ee?w&#x3D;543&amp;h&#x3D;561&amp;f&#x3D;png&amp;s&#x3D;71948">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edee5be34b2836?w&#x3D;1064&amp;h&#x3D;582&amp;f&#x3D;jpeg&amp;s&#x3D;31278">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf2585c0d61ce?w&#x3D;732&amp;h&#x3D;129&amp;f&#x3D;png&amp;s&#x3D;29597">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf259e06554b2?w&#x3D;721&amp;h&#x3D;400&amp;f&#x3D;png&amp;s&#x3D;62727">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf25cfed34391?w&#x3D;901&amp;h&#x3D;635&amp;f&#x3D;png&amp;s&#x3D;133918">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf25ff9174a78?w&#x3D;734&amp;h&#x3D;401&amp;f&#x3D;png&amp;s&#x3D;30140">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf2620a2cb9ba?w&#x3D;624&amp;h&#x3D;261&amp;f&#x3D;png&amp;s&#x3D;87698">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf264d6e24ed7?w&#x3D;708&amp;h&#x3D;567&amp;f&#x3D;png&amp;s&#x3D;265030">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf267d585d4f0?w&#x3D;500&amp;h&#x3D;327&amp;f&#x3D;png&amp;s&#x3D;81636">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf26b096e906d?w&#x3D;879&amp;h&#x3D;369&amp;f&#x3D;png&amp;s&#x3D;142691">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf26cd9d1132a?w&#x3D;875&amp;h&#x3D;453&amp;f&#x3D;png&amp;s&#x3D;372303">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf26e828af284?w&#x3D;902&amp;h&#x3D;746&amp;f&#x3D;png&amp;s&#x3D;307926">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf27032bfd58f?w&#x3D;589&amp;h&#x3D;363&amp;f&#x3D;png&amp;s&#x3D;111123">
+<meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf2721bedf69b?w&#x3D;620&amp;h&#x3D;509&amp;f&#x3D;png&amp;s&#x3D;169241">
+<meta property="og:updated_time" content="2019-12-07T10:51:29.338Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;7&#x2F;16edf229706e1108?w&#x3D;657&amp;h&#x3D;326&amp;f&#x3D;png&amp;s&#x3D;31681">
   
     <link rel="alternative" href="/atom.xml" title="Chamberlan" type="application/atom+xml">
   
@@ -155,295 +182,427 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Docker简介" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:52:53.435Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Vue学习笔记</a>
+    <h1 class="article-title" itemprop="name">
+      Docker简介
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:51:44.121Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">Yapi部署文档</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/Docker%E7%AE%80%E4%BB%8B/" class="archive-article-date">
+        
+        <a href="/2019/12/07/Docker%E7%AE%80%E4%BB%8B/" class="archive-article-date">
   	<time datetime="2019-12-07T10:51:29.105Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/Docker%E7%AE%80%E4%BB%8B/">Docker简介</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Docker简介"><a href="#Docker简介" class="headerlink" title="Docker简介"></a>Docker简介</h2><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf229706e1108?w=657&h=326&f=png&s=31681" alt="1572521577002"></p>
+<h3 id="Docker出现的原因？"><a href="#Docker出现的原因？" class="headerlink" title="Docker出现的原因？"></a>Docker出现的原因？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">一款产品从开发到上线，从操作系统，到运行环境，再到应用配置。作为开发+运维之间的协作我们需要关心很多东西，这也是很多互联网公司都不得不面对的问题，特别是各种版本的迭代之后，不同版本环境的兼容，对运维人员都是考验.</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">Docker之所以发展如此迅速，也是因为它对此给出了一个标准化的解决方案。</span></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">环境配置如此麻烦，换一台机器，就要重来一次，费力费时。很多人想到，能不能从根本上解决问题，软件可以带环境安装？也就是说，安装的时候，把原始环境一模一样地复制过来。开发人员利用 Docker 可以消除协作编码时“在我的机器上可正常工作”的问题。</span></pre></td></tr></table></figure>
 
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf22b6c96c67d?w=711&h=350&f=png&s=168782" alt="1572521727090"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">传统上认为，软件编码开发/测试结束后，所产出的成果即是程序或是能够编译执行的二进制字节码等(java为例)。而为了让这些程序可以顺利执行，开发团队也得准备完整的部署文件，让维运团队得以部署应用程式，开发需要清楚的告诉运维部署团队，用的全部配置文件+所有软件环境。不过，即便如此，仍然常常发生部署失败的状况。Docker镜像的设计，使得Docker得以打破过去「程序即应用」的观念。透过镜像(images)将作业系统核心除外，运作应用程式所需要的系统环境，由下而上打包，达到应用程式跨平台间的无缝接轨运作。</span></pre></td></tr></table></figure>
+
+<h3 id="什么是Docker"><a href="#什么是Docker" class="headerlink" title="什么是Docker?"></a>什么是Docker?</h3><ul>
+<li>Docker是世界领先的软件容器平台。</li>
+<li>Docker使用Google公司推出的Go语言进行开发实现，基于Linux内核的cgroup，namespace，以及AUFS类的UnionFS等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。 由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。Docke最初实现是基于LXC。</li>
+<li>Docker能够自动执行重复性任务，例如搭建和配置开发环境，从而解放了开发人员以便他们专注在真正重要的事情上：构建杰出的软件。</li>
+<li>用户可以方便地创建和使用容器，把自己的应用放入容器。容器还可以进行版本管理、复制、分享、修改，就像管理普通的代码一样。</li>
+<li>Docker的主要目标是“Build，Ship and Run Any App,Anywhere”，也就是通过对应用组件的封装、分发、部署、运行等生命周期的管理，使用户的APP（可以是一个WEB应用或数据库应用等等）及其运行环境能够做到“一次封装，到处运行”。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">简单的理解，Docker类似于集装箱，各式各样的货物，经过集装箱的标准化进行托管，而集装箱和集装箱之间没有影响。也就是说，Docker平台就是一个软件集装箱化平台，这就意味着我们自己可以构建应用程序，将其依赖关系一起打包到一个容器中，然后这容器就很容易运送到其他的机器上进行运行，而且非常易于装载、复制、移除，非常适合软件弹性架构。</span></pre></td></tr></table></figure>
+
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf22e340402ae?w=645&h=290&f=png&s=115317" alt="1572523176700"></p>
+<h3 id="虚拟机技术"><a href="#虚拟机技术" class="headerlink" title="虚拟机技术"></a>虚拟机技术</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">虚拟机(virtual machine)就是带环境安装的一种解决方案。它可以在一种操作系统里面运行另一种操作系统，比如在Windows系统里面运行Linux系统。应用程序对此毫无感知，因为虚拟机看上去跟真实系统一模一样，而对于底层系统来说，虚拟机就是一个普通文件，不需要了就删掉，对其它部分毫无影响。</span></pre></td></tr></table></figure>
+
+<p>虚拟机的缺点</p>
+<ul>
+<li>资源占用多：虚拟机会独占一部分内存和磁盘空间。它运行的时候，其他程序就不能使用这些资源了。哪怕学你机里面的应用程序，真正使用的内存只有1M，虚拟机依然需要几百MB的内容才能运行。</li>
+<li>冗余步骤多：虚拟机是完整的操作系统，一些系统级别的操作步骤，往往无法跳过，比如用户登录。</li>
+<li>启动慢：启动操作系统需要多久，启动虚拟机就需要多久。可能要等几分钟，应用程序才能真正运行。</li>
+</ul>
+<h3 id="容器虚拟化技术"><a href="#容器虚拟化技术" class="headerlink" title="容器虚拟化技术"></a>容器虚拟化技术</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">由于虚拟机存在这个缺点，Linux发展出了另一种虚拟化技术：Linux容器(Linux Containers,缩写为LXC)。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">Linux容器不是模拟一个完整的操作系统，而是对进程进行隔离。或者说，在正常进程的外面套了一个保护层。对于容器里面的进程来说，它接触到的各种资源都是虚拟的，从而实现与底层系统的隔离。由于容器是进程级别的，相比虚拟机又很多优势。</span></pre></td></tr></table></figure>
+
+<ul>
+<li>启动快：容器里面的应用，直接就是底层系统的一个进程，而不是虚拟机内部的进程。所以，启动容器相当于启动本机的一个进程，而不是启动一个操作系统，速度就快很多。</li>
+<li>资源占用少：容器只占用需要的资源，不占用哪些没有用到的资源；虚拟机由于是完整的操作系统，不可避免要占用所有资源。另外，多个容器可以共享资源，虚拟机都是独享资源。</li>
+<li>体积小：容器只要包含用到的组件即可，而虚拟机是整个操作系统的打包，所以容器文件比虚拟机文件要小的多。总之，容器有点像轻量级的虚拟机，能提供虚拟化的环境，但是成本开销小的多。</li>
+</ul>
+<h3 id="容器VS虚拟机"><a href="#容器VS虚拟机" class="headerlink" title="容器VS虚拟机"></a>容器VS虚拟机</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf23116061a0d?w=901&h=676&f=png&s=174300" alt="1572523664717"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker有着比虚拟机更少的抽象层。由亍docker不需要Hypervisor实现硬件资源虚拟化,运行在docker容器上的程序直接使用的都是实际物理机的硬件资源。因此在CPU、内存利用率上docker将会在效率上有明显优势。</span></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker利用的是宿主机的内核,而不需要Guest OS。因此,当新建一个容器时,docker不需要和虚拟机一样重新加载一个操作系统内核。仍而避免引寻、加载操作系统内核返个比较费时费资源的过程,当新建一个虚拟机时,虚拟机软件需要加载Guest OS,返个新建过程是分钟级别的。而docker由于直接利用宿主机的操作系统,则省略了返个过程,因此新建一个docker容器只需要几秒钟。</span></pre></td></tr></table></figure>
+
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf2332238139e?w=507&h=352&f=png&s=88049" alt="1572523993811"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf2332238139e?w=507&h=352&f=png&s=88049" alt="1572524011818"></p>
+<h3 id="Docker能干嘛"><a href="#Docker能干嘛" class="headerlink" title="Docker能干嘛"></a>Docker能干嘛</h3><p>一次构建、随处运行</p>
+<ul>
+<li>更快速的应用交付和部署</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">传统的应用开发完成后，需要提供一堆安装程序和配置说明文档，安装部署后需根据配置文档进行繁杂的配置才能正常运行。Docker化之后只需要交付少量容器镜像文件，在正式生产环境加载镜像并运行即可，应用安装配置在镜像里已经内置好，大大节省部署配置和测试验证时间。</span></pre></td></tr></table></figure>
+
+<ul>
+<li>更便捷的升级和扩缩容</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">随着微服务架构和Docker的发展，大量的应用会通过微服务方式架构，应用的开发构建将变成搭乐高积木一样，每个Docker容器将变成一块“积木”，应用的升级将变得非常容易。当现有的容器不足以支撑业务处理时，可通过镜像运行新的容器进行快速扩容，使应用系统的扩容从原先的天级变成分钟级甚至秒级。</span></pre></td></tr></table></figure>
+
+<ul>
+<li>更简单的系统运维</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">应用容器化运行后，生产环境运行的应用可与开发、测试环境的应用高度一致，容器会将应用程序相关的环境和状态完全封装起来，不会因为底层基础架构和操作系统的不一致性给应用带来影响，产生新的BUG。当出现程序异常时，也可以通过测试环境的相同容器进行快速定位和修复。</span></pre></td></tr></table></figure>
+
+<ul>
+<li>更高效的计算资源利用</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Docker是内核级虚拟化，其不像传统的虚拟化技术一样需要额外的Hypervisor支持，所以在一台物理机上可以运行很多个容器实例，可大大提升物理服务器的CPU和内存的利用率。</span></pre></td></tr></table></figure>
+
+<h2 id="Docker的基本组成"><a href="#Docker的基本组成" class="headerlink" title="Docker的基本组成"></a>Docker的基本组成</h2><h3 id="Docker架构图"><a href="#Docker架构图" class="headerlink" title="Docker架构图"></a>Docker架构图</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf23c98237d2d?w=689&h=382&f=png&s=78783" alt="1572527255094"></p>
+<h3 id="镜像：一个特殊的文件系统"><a href="#镜像：一个特殊的文件系统" class="headerlink" title="镜像：一个特殊的文件系统"></a>镜像：一个特殊的文件系统</h3><h4 id="UnionFS（联合文件系统）"><a href="#UnionFS（联合文件系统）" class="headerlink" title="UnionFS（联合文件系统）"></a>UnionFS（联合文件系统）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">UnionFS（联合文件系统）：Union文件系统（UnionFS）是一种分层、轻量级并且高性能的文件系统，它支持对文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下(unite several directories into a single virtual filesystem)。Union 文件系统是 Docker 镜像的基础。镜像可以通过分层来进行继承，基于基础镜像（没有父镜像），可以制作各种具体的应用镜像。</span></pre></td></tr></table></figure>
+
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf2416ca9e6eb?w=526&h=313&f=png&s=245571" alt="1572525769818"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">特性：一次同时加载多个文件系统，但从外面看起来，只能看到一个文件系统，联合加载会把各层文件系统叠加起来，这样最终的文件系统会包含所有底层的文件和目录</span></pre></td></tr></table></figure>
+
+<h4 id="Dcoker镜像加载原理"><a href="#Dcoker镜像加载原理" class="headerlink" title="Dcoker镜像加载原理"></a>Dcoker镜像加载原理</h4><p>操作系统由内核空间和用户空间组成，如下图所示：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf2434cc241c3?w=436&h=299&f=png&s=145440" alt="1572526057974"></p>
+<p>Docker镜像是由文件系统叠加而成。</p>
+<ul>
+<li>最底端是一个引导文件系统，即bootfs:<ul>
+<li>这很像典型的Linux/Unix的引导文件系统。Docker用户几乎永远不会和引导文件系统有什么交互。实际上，当一个容器启动后，它将会被移到内存中，而引导文件系统则会被卸载。</li>
+</ul>
+</li>
+<li>Docker镜像的第二层是root文件系统rootfs:<ul>
+<li>它位于引导文件系统之上。rootfs可以是一种或多种操作系统（如Debian或者Ubuntu文件系统）。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">在传统的Linux引导过程中，root文件系统会最先以只读的方式加载，当引导结束并完成了完整性检查之后，它才会被切换为读写模式。但是在Docker里，root文件系统永远只能是只读状态，并且Docker利用联合加载（union mount）技术又会在root文件系统层上加载更多的只读文件系统。联合加载指的是一次同时加载多个文件系统，但是在外面看起来只能看到一个文件系统。联合加载会将各层文件系统叠加到一起，这样最终的文件系统会包含所有底层的文件和目录。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">Docker将这样的文件系统称为镜像。一个镜像可以放到另一个镜像的顶部。位于下面的镜像称为父镜像（parent image），可以一次类推，直到镜像栈的最底部，最底部的镜像称为基础镜像（base image）。</span></pre></td></tr></table></figure>
+
+<p>比如构建一个新的镜像，Dockerfile如下</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">From</span> debian</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install emacs</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install apache2</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">"/bin/bash"</span>]</span></span></pre></td></tr></table></figure>
+
+<p>① 新镜像不再是从 scratch 开始，而是直接在 Debian base 镜像上构建。<br>② 安装 emacs 编辑器。<br>③ 安装 apache2。<br>④ 容器启动时运行 bash。</p>
+<p>构建过程如下：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf247e0df039d?w=951&h=309&f=png&s=218301" alt="1572572830634"></p>
+<p>可以看到，新镜像是从 base 镜像一层一层叠加生成的。每安装一个软件，就在现有镜像的基础上增加一层。</p>
+<h4 id="为什么Docker镜像要使用这种分层结构"><a href="#为什么Docker镜像要使用这种分层结构" class="headerlink" title="为什么Docker镜像要使用这种分层结构"></a>为什么Docker镜像要使用这种分层结构</h4><p>最大的一个好处就是 - 共享资源</p>
+<p>比如：有多个镜像都从相同的 base 镜像构建而来，那么宿主机只需在磁盘上保存一份base镜像，同时内存中也只需加载一份 base 镜像，就可以为所有容器服务了。而且镜像的每一层都可以被共享。</p>
+<h3 id="容器：镜像运行时的实体"><a href="#容器：镜像运行时的实体" class="headerlink" title="容器：镜像运行时的实体"></a>容器：镜像运行时的实体</h3><p>镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的类和实例一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等 。</p>
+<p>容器的实质是进程，但与直接在宿主执行的进程不同，容器进程运行于属于自己的独立的命名空间。前面讲过镜像使用的是分层存储，容器也是如此。</p>
+<h4 id="容器原理"><a href="#容器原理" class="headerlink" title="容器原理"></a>容器原理</h4><p>当从一个镜像启动容器时，Docker会在该镜像的最顶层加载一个读写文件系统。我们想在Docker中运行的程序就是在这个读写层中执行。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf24ad7bf4f8d?w=576&h=543&f=png&s=321820" alt="1572572329906"></p>
+<p>当Docker第一次启动一个容器时，初始的读写层是空的。当文件系统发生变化时，这些变化都会应用到这一层上。比如，如果想要修改一个文件，这个文件首先会从该读写层下面的只读层复制到读写层。该文件的只读层版本依然存在，但是已经被读写层中的该文件副本所隐藏。通常这种机制被称为写时复制（copy on write），这也是使Docker如此强大的技术之一。每个只读镜像层都是只读的，并且以后永远不会变化。当创建一个新容器时，Docker会构建出一个镜像栈，并在栈的最顶端添加一个读写层。这个读写层再加上其下面的镜像层以及一些配置数据，就构成了一个容器。</p>
+<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p><strong>容器只能使用 Host 的 kernel，并且不能修改。所有容器都共用 host 的 kernel，在容器中没办法对 kernel 升级。如果容器对 kernel 版本有要求（比如应用只能在某个 kernel 版本下运行），则不建议用容器，这种场景虚拟机可能更合适。</strong></p>
+<h3 id="仓库：集中存放镜像文件的地方"><a href="#仓库：集中存放镜像文件的地方" class="headerlink" title="仓库：集中存放镜像文件的地方"></a>仓库：集中存放镜像文件的地方</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">镜像构建完成后，可以很容易的在当前宿主上运行，但是， 如果需要在其他服务器上使用这个镜像，我们就需要一个集中的存储、分发镜像的服务，Docker Registry 就是这样的服务。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">一个 Docker Registry 中可以包含多个仓库（Repository）；每个仓库可以包含多个标签（Tag）；每个标签对应一个镜像。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">所以说，镜像仓库是 Docker 用来集中存放镜像文件的地方，类似于我们之前常用的代码仓库。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">通常，一个仓库会包含同一个软件不同版本的镜像，而标签就常用于对应该软件的各个版本 。</span></pre></td></tr></table></figure>
+
+<h4 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h4><ul>
+<li>仓库<ul>
+<li>Docker Hub官网：<a href="https://hub.docker.com/" target="_blank" rel="noopener">https://hub.docker.com/</a></li>
+</ul>
+</li>
+<li>官网<ul>
+<li>Dcoker官网：<a href="http://www.docker.com" target="_blank" rel="noopener">http://www.docker.com</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Docker 本身是一个容器运行载体或称之为管理引擎。我们把应用程序和配置依赖打包好形成一个可交付的运行环境，这个打包好的运行环境就似乎 image镜像文件。只有通过这个镜像文件才能生成 Docker 容器。image 文件可以看作是容器的模板。Docker 根据 image 文件生成容器的实例。同一个 image 文件，可以生成多个同时运行的容器实例。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">*  image 文件生成的容器实例，本身也是一个文件，称为镜像文件。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">*  一个容器运行一种服务，当我们需要的时候，就可以通过docker客户端创建一个对应的运行实例，也就是我们的容器</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">* 至于仓储，就是放了一堆镜像的地方，我们可以把镜像发布到仓储中，需要的时候从仓储中拉下来就可以了。</span></pre></td></tr></table></figure>
+
+<h2 id="Docker底层原理介绍"><a href="#Docker底层原理介绍" class="headerlink" title="Docker底层原理介绍"></a>Docker底层原理介绍</h2><h3 id="Docker是如何工作的"><a href="#Docker是如何工作的" class="headerlink" title="Docker是如何工作的"></a>Docker是如何工作的</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Docker是一个Client-Server结构的系统，Docker守护进程运行在主机上， 然后通过Socket连接从客户端访问，守护进程从客户端接受命令并管理运行在主机上的容器。 容器，是一个运行时环境，就是我们前面说到的集装箱。</span></pre></td></tr></table></figure>
+
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf250ea0a82ee?w=543&h=561&f=png&s=71948" alt="1572528540354"></p>
+<h3 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h3><p>Docker依赖Linux内核的nameSpace和cgroup</p>
+<h4 id="namespace作用"><a href="#namespace作用" class="headerlink" title="namespace作用"></a>namespace作用</h4><p>提供系统资源（进程、网络、文件系统）的隔离；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">PID,IPC,Network等系统资源不再是全局性的，而是属于某个特定的Namespace。每个namespace下的资源对于其他namespace下的资源都是透明，不可见的。因此在操作系统层面上看，就会出现多个相同pid的进程。系统中可以同时存在两个进程号为<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>的进程，由于属于不同的namespace，所以它们之间并不冲突。而在用户层面上只能看到属于用户自己namespace下的资源，例如使用ps命令只能列出自己namespace下的进程。这样每个namespace看上去就像一个单独的Linux系统。</span></pre></td></tr></table></figure>
+
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edee5be34b2836?w=1064&h=582&f=jpeg&s=31278" alt="img"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">命名空间建立系统的不同视图， 对于每一个命名空间，从用户看起来，应该像一台单独的Linux计算机一样，有自己的init进程(PID为<span class="number">0</span>)，其他进程的PID依次递增，A和B空间都有PID为<span class="number">0</span>的init进程，子容器的进程映射到父容器的进程上，父容器可以知道每一个子容器的运行状态，而子容器与子容器之间是隔离的。</span></pre></td></tr></table></figure>
+
+<h4 id="namespace目的"><a href="#namespace目的" class="headerlink" title="namespace目的"></a>namespace目的</h4><p>就是为了实现轻量级虚拟化服务，也就是我们说的容器，在同一个命名空间下的进程，可以感知彼此的变化，而对其他命名空间中的进程一无所知，这样就可以让容器中的进程产生一个错觉，仿佛他置身于一个独立的系统环境中，以此达到独立和隔离的目的。</p>
+<h4 id="Docker提供的以下命名空间"><a href="#Docker提供的以下命名空间" class="headerlink" title="Docker提供的以下命名空间"></a>Docker提供的以下命名空间</h4><ul>
+<li>PID（Process ID） 进程ID</li>
+<li>NET（NetWork） 管理网络接口</li>
+<li>IPC（interProcessCommunication）管理跨进程通信的访问</li>
+<li>MNT（Mount）管理挂载点</li>
+<li>UTS（Unix Timesharing System）隔离内核和版本标识</li>
+</ul>
+<h3 id="cgroup"><a href="#cgroup" class="headerlink" title="cgroup"></a>cgroup</h3><h4 id="有了namespace为什么还要cgroup"><a href="#有了namespace为什么还要cgroup" class="headerlink" title="有了namespace为什么还要cgroup"></a>有了namespace为什么还要cgroup</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Docker 容器使用 linux namespace 来隔离其运行环境，使得容器中的进程看起来就像一个独立环境中运行一样。但是，光有运行环境隔离还不够，因为这些进程还是可以不受限制地使用系统资源，比如网络、磁盘、CPU以及内存 等。关于其目的，一方面，是为了防止它占用了太多的资源而影响到其它进程；另一方面，在系统资源耗尽的时候，linux 内核会触发 OOM，这会让一些被杀掉的进程成了无辜的替死鬼。因此，为了让容器中的进程更加可控，Docker 使用 Linux cgroups 来限制容器中的进程允许使用的系统资源。</span></pre></td></tr></table></figure>
+
+<p>也可以这么说：<strong>Cgroup就是为了容器而生的，没有CGroup就没有容器技术的今天！</strong></p>
+<h4 id="cgroup作用"><a href="#cgroup作用" class="headerlink" title="cgroup作用"></a>cgroup作用</h4><ul>
+<li>资源限制：比如可以为进程组设置内存上限，一旦进程组内存达到上限，在申请内存就回发出oom</li>
+<li>优先级设定：设定哪些进程组可以使用更大的cup或者是磁盘IO的资源</li>
+<li>资源计量：计算进程组使用了多少资源</li>
+<li>资源控制：可以将进程组挂起和恢复</li>
+</ul>
+<h2 id="Docker-示例"><a href="#Docker-示例" class="headerlink" title="Docker 示例"></a>Docker 示例</h2><h3 id="hello-world"><a href="#hello-world" class="headerlink" title="hello-world"></a>hello-world</h3><h4 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h4><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf2585c0d61ce?w=732&h=129&f=png&s=29597" alt="1572570915955"></p>
+<h4 id="运行容器"><a href="#运行容器" class="headerlink" title="运行容器"></a>运行容器</h4><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf259e06554b2?w=721&h=400&f=png&s=62727" alt="1572570969599"></p>
+<h3 id="Docker常用命令"><a href="#Docker常用命令" class="headerlink" title="Docker常用命令"></a>Docker常用命令</h3><ul>
+<li>docker images：列出本地主机上的镜像</li>
+<li>docker search 镜像名：仓库查找镜像</li>
+<li>docker pull 镜像名：拉取镜像到本地</li>
+<li>docker rmi 镜像ID：删除镜像</li>
+<li>docker run [OPTIONS] IMAGE [COMMAND]：新建并启动容器<ul>
+<li>OPTIONS说明（常用）：有些是一个减号，有些是两个减号</li>
+<li>name=”容器新名字”: 为容器指定一个名称；</li>
+<li>-d: 后台运行容器，并返回容器ID，也即启动守护式容器；</li>
+<li>-i：以交互模式运行容器，通常与 -t 同时使用；</li>
+<li>-t：为容器重新分配一个伪输入终端，通常与 -i 同时使用；</li>
+<li>-P: 随机端口映射；</li>
+<li>-p: 指定端口映射；      </li>
+</ul>
+</li>
+<li>docker start 容器ID或者容器名：启动容器</li>
+<li>docker restart 容器ID或者容器名：重启容器</li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf25cfed34391?w=901&h=635&f=png&s=133918" alt="1572529441047"></p>
+<h3 id="Docker镜像commit操作"><a href="#Docker镜像commit操作" class="headerlink" title="Docker镜像commit操作"></a>Docker镜像commit操作</h3><p>docker commit提交容器副本使之成为一个新的镜像。</p>
+<p>docker commit -m=”提交的描述信息” -a=”作者” 容器ID要创建的目标镜像名：[标签名]</p>
+<h2 id="Docker容器数据卷"><a href="#Docker容器数据卷" class="headerlink" title="Docker容器数据卷"></a>Docker容器数据卷</h2><h3 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h3><ul>
+<li>将运用与运行的环境打包形成容器运行，运行可以伴随着容器，但是我们对数据的要求希望是持久化的</li>
+<li>容器之间希望有可能共享数据</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Docker容器产生的数据，如果不通过docker commit生成新的镜像，使得数据做为镜像的一部分保存下来，</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">那么当容器删除后，数据自然也就没有了。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">为了能保存数据在docker中我们使用卷。</span></pre></td></tr></table></figure>
+
+<h3 id="能干嘛？"><a href="#能干嘛？" class="headerlink" title="能干嘛？"></a>能干嘛？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">卷就是目录或文件，存在于一个或多个容器中，由docker挂载到容器，但不属于联合文件系统，因此能够绕过Union File System提供一些用于持续存储或共享数据的特性：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">卷的设计目的就是数据的持久化，完全独立于容器的生存周期，因此Docker不会在容器删除时删除其挂载的数据卷</span></pre></td></tr></table></figure>
+
+<p>特点：</p>
+<ul>
+<li>数据卷可在容器之间共享或重用数据</li>
+<li>卷中的更改可以直接生效</li>
+<li>数据卷中的更改不会包含在镜像的更新中</li>
+<li>数据卷的生命周期一致持续到没有容器使用它为止</li>
+</ul>
+<h3 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h3><p>容器内添加有以下方式：</p>
+<ul>
+<li>直接命令添加：docker run -it -v /宿主机目录:/容器内目录 centos /bin/bash</li>
+<li>Dockerfile添加：可在Dockerfile中使用VOLUME指令来给镜像添加一个或多个数据卷：VOLUME[“/dataVolumeContainer”,”/dataVolumeContainer2”,”/dataVolumeContainer3”]</li>
+</ul>
+<h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><h3 id="是什么？-1"><a href="#是什么？-1" class="headerlink" title="是什么？"></a>是什么？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Dockerfile是用来构建Docker镜像的构建文件，是由一系列命令和参数构成的脚本。</span></pre></td></tr></table></figure>
+
+<p>构建三步骤：</p>
+<ul>
+<li>编写Dockerfile文件</li>
+<li>docker build</li>
+<li>docker run</li>
+</ul>
+<p>文件什么样？</p>
+<p>以centos为例</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf25ff9174a78?w=734&h=401&f=png&s=30140" alt="1572572944046"></p>
+<h3 id="Dockerfile构建解析过程"><a href="#Dockerfile构建解析过程" class="headerlink" title="Dockerfile构建解析过程"></a>Dockerfile构建解析过程</h3><h4 id="Dockerfile内容基础知识"><a href="#Dockerfile内容基础知识" class="headerlink" title="Dockerfile内容基础知识"></a>Dockerfile内容基础知识</h4><ul>
+<li>每条保留字指令都必须为大写字母且后面要跟随至少一个参数</li>
+<li>指令按照从上到下，顺序执行</li>
+<li>#标识注释</li>
+<li>每条指令都会创建一个新的镜像层，并对镜像进行提交</li>
+</ul>
+<h4 id="Docker执行Dockerfile的大致流程"><a href="#Docker执行Dockerfile的大致流程" class="headerlink" title="Docker执行Dockerfile的大致流程"></a>Docker执行Dockerfile的大致流程</h4><ul>
+<li>docker从基础镜像运行一个容器</li>
+<li>执行一条指令并对容器进行修改</li>
+<li>执行类似docker commit的操作提交一个新的镜像层</li>
+<li>docke再基于刚提交的镜像运行一个新容器</li>
+<li>执行dockerfile中的下一条指令直到所以指令都执行完成</li>
+</ul>
+<h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p>从应用软件的角度来看，Dockerfile、Docker镜像与Docker容器分别代表软件的三个不同阶段：</p>
+<ul>
+<li>Dockerfile是软件的原材料</li>
+<li>Docker镜像是软件的交付品</li>
+<li>Docker容器则可以认为是软件的运行态。</li>
+</ul>
+<p>Dockerfile面向开发，Docker镜像成为交付标准，Docker容器则涉及部署与运维，三者缺一不可，合力充当Docker体系的基石。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf2620a2cb9ba?w=624&h=261&f=png&s=87698" alt="1572573501292"></p>
+<ul>
+<li>Dockerfile：需要定义一个Dockerfile，Dockerfile定义了进程需要的一切东西。Dockerfile涉及的内容包括执行代码或者是文件、环境变量、依赖包、运行时环境、动态链接库、操作系统的发行版、服务进程和内核进程(当应用进程需要和系统服务和内核进程打交道，这时需要考虑如何设计namespace的权限控制)等等;</li>
+<li>Docker镜像：在用Dockerfile定义一个文件之后，docker build时会产生一个Docker镜像，当运行 Docker镜像时，会真正开始提供服务;</li>
+<li>Docker容器：容器是直接提供服务的。</li>
+</ul>
+<h3 id="Dockerfile体系机构（保留字指令）"><a href="#Dockerfile体系机构（保留字指令）" class="headerlink" title="Dockerfile体系机构（保留字指令）"></a>Dockerfile体系机构（保留字指令）</h3><ul>
+<li>FROM：基础镜像，当前新镜像是基于哪个镜像的</li>
+<li>MATINTAINER：镜像维护者的姓名和邮箱地址</li>
+<li>RUN：容器构建时需要运行的命令</li>
+<li>EXPOSE：当前容器对外暴露出的端口</li>
+<li>WORKDIR：指定在创建容器后，终端默认登录的进来工作目录，一个落脚点</li>
+<li>ENV：用来构建镜像过程中设置环境变量</li>
+<li>ADD：将宿主机目录下的文件拷贝进镜像且ADD命令会自动处理URL和解压tar压缩包</li>
+<li>COPY：类似ADD，拷贝文件和目录到镜像中</li>
+<li>VOLUME：容器数据卷，用于数据保存和持久化工作</li>
+<li>CMD：指定一个容器启动时要运行的命令</li>
+<li>ENTRYPOINT：指定一个容器启动时要运行的命令</li>
+<li>ONBUILD：当构建一个被继承的Dockerfile时运行命令，父镜像在被子继承后父镜像的onbuild被触发</li>
+</ul>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span>         centos</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">MAINTAINER</span>    zhangbh&lt;zhangbh-b@glodon.com&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#把宿主机当前上下文的c.txt拷贝到容器/usr/local/路径下</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">COPY</span><span class="bash"> c.txt /usr/<span class="built_in">local</span>/cincontainer.txt</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#把java与tomcat添加到容器中</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">ADD</span><span class="bash"> jdk-8u171-linux-x64.tar.gz /usr/<span class="built_in">local</span>/</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">ADD</span><span class="bash"> apache-tomcat-9.0.8.tar.gz /usr/<span class="built_in">local</span>/</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装vim编辑器</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="bash"> yum -y install vim</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置工作访问时候的WORKDIR路径，登录落脚点</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">ENV</span> MYPATH /usr/local</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> <span class="variable">$MYPATH</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#配置java与tomcat环境变量</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">ENV</span> JAVA_HOME /usr/local/jdk1.<span class="number">8.0</span>_171</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">ENV</span> CLASSPATH $JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">ENV</span> CATALINA_HOME /usr/local/apache-tomcat-<span class="number">9.0</span>.<span class="number">8</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">ENV</span> CATALINA_BASE /usr/local/apache-tomcat-<span class="number">9.0</span>.<span class="number">8</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">ENV</span> PATH $PATH:$JAVA_HOME/bin:$CATALINA_HOME/lib:$CATALINA_HOME/bin</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#容器运行时监听的端口</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXPOSE</span>  <span class="number">8080</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#启动时运行tomcat</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># ENTRYPOINT ["/usr/local/apache-tomcat-9.0.8/bin/startup.sh" ]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># CMD ["/usr/local/apache-tomcat-9.0.8/bin/catalina.sh","run"]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">CMD</span><span class="bash"> /usr/<span class="built_in">local</span>/apache-tomcat-9.0.8/bin/startup.sh &amp;&amp; tail -F /usr/<span class="built_in">local</span>/apache-tomcat-9.0.8/bin/logs/catalina.out</span></span></pre></td></tr></table></figure>
+
+
+
+<h3 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf264d6e24ed7?w=708&h=567&f=png&s=265030" alt="1572573701895"></p>
+<h2 id="镜像发布到阿里云"><a href="#镜像发布到阿里云" class="headerlink" title="镜像发布到阿里云"></a>镜像发布到阿里云</h2><p><a href="https://blog.csdn.net/jacksonary/article/details/78961612" target="_blank" rel="noopener">https://blog.csdn.net/jacksonary/article/details/78961612</a></p>
+<h2 id="Docker容器编排工具"><a href="#Docker容器编排工具" class="headerlink" title="Docker容器编排工具"></a>Docker容器编排工具</h2><h3 id="K8S"><a href="#K8S" class="headerlink" title="K8S"></a>K8S</h3><h2 id="Docker的主要应用场景"><a href="#Docker的主要应用场景" class="headerlink" title="Docker的主要应用场景"></a>Docker的主要应用场景</h2><h3 id="简化配置"><a href="#简化配置" class="headerlink" title="简化配置"></a>简化配置</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">虚拟机的最大好处是能在你的硬件设施上运行各种配置不一样的平台（软件、系统），Docker在降低额外开销的情况下提供了同样的功能。它能让你将运行环境和配置放在代码中然后部署，同一个Docker的配置可以在不同的环境中使用，这样就降低了硬件要求和应用环境之间耦合度。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">简单的来说，容器镜像打包完成后，它就是个独立的个体了，丢到哪里都能跑，而无需针对各个平台去独立配置。</span></pre></td></tr></table></figure>
+
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf267d585d4f0?w=500&h=327&f=png&s=81636" alt="1572574163289"></p>
+<h3 id="代码流水线（Code-Pipeline）管理"><a href="#代码流水线（Code-Pipeline）管理" class="headerlink" title="代码流水线（Code Pipeline）管理"></a>代码流水线（Code Pipeline）管理</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">前一个场景对于管理代码的流水线起到了很大的帮助。代码从开发者的机器到最终在生产环境上的部署，需要经过很多的中间环境。而每一个中间环境都有自己微小的差别，Docker给应用提供了一个从开发到上线均一致的环境，让代码的流水线变得简单不少。</span></pre></td></tr></table></figure>
+
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf26b096e906d?w=879&h=369&f=png&s=142691" alt="1572574220382"></p>
+<h3 id="提高开发效率"><a href="#提高开发效率" class="headerlink" title="提高开发效率"></a>提高开发效率</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">不同的开发环境中，我们都想把两件事做好。一是我们想让开发环境尽量贴近生产环境，二是我们想快速搭建开发环境。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">使用Docker非常简单的就能够实现这两点，而且哪怕是开发环境的机器配置一般的情况下搭建多个生成服务应用。一台一般配置服务器或开发机也能轻松的跑起多个Docker应用，而无需额外增加机器配置。因为Docker有个非常NB的特性，拥有虚拟化的特性，而几乎没有额外的开销。</span></pre></td></tr></table></figure>
+
+<h3 id="隔离应用"><a href="#隔离应用" class="headerlink" title="隔离应用"></a>隔离应用</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">很多情况下，我们需要在一台服务器上运行多个不同的应用，比如上面提到的提高开发效率的场景等。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">我们经常需要考虑三点，一是因为要降低成本而进行服务器整合，二是将一个整体式的应用拆分成松耦合的单个服务（比如微服务架构），三是还需要考虑应用之间的兼容性。而对于Docker来说，支持起来就非常简单了。同一台机器，我可以同时运行N个Docker web应用，托管到不同的Web服务器（Kestrel、Ngnix、Tomcat），而无需担心他们会搞起<span class="number">3</span>Q大战，也无需担心我的开发机器会跑不起来。</span></pre></td></tr></table></figure>
+
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf26cd9d1132a?w=875&h=453&f=png&s=372303" alt="1572574304588"></p>
+<h3 id="整合服务器"><a href="#整合服务器" class="headerlink" title="整合服务器"></a>整合服务器</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">正如通过虚拟机来整合多个应用，Docker隔离应用的能力使得Docker可以整合多个服务器以降低成本。由于没有多个操作系统的内存占用，以及能在多个实例之间共享没有使用的内存，Docker可以比虚拟机提供更好的服务器整合解决方案。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">这就意味着资源得到更有效的利用——可以做更多衣服，而且还没有边角料，成本还更低。</span></pre></td></tr></table></figure>
+
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf26e828af284?w=902&h=746&f=png&s=307926" alt="1572574357173"></p>
+<h3 id="调试能力"><a href="#调试能力" class="headerlink" title="调试能力"></a>调试能力</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Docker提供了很多的工具，这些工具不一定只是针对容器，但是却适用于容器。它们提供了很多的功能，包括可以为容器设置检查点、设置版本和查看两个容器之间的差别，这些特性可以帮助调试Bug。</span></pre></td></tr></table></figure>
+
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf27032bfd58f?w=589&h=363&f=png&s=111123" alt="1572574406122"></p>
+<h3 id="多租户环境"><a href="#多租户环境" class="headerlink" title="多租户环境"></a>多租户环境</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">在多租户的应用中，它可以避免关键应用的重写。比如IoT（物联网）的应用中，开发一个快速、易用的多租户环境。这种多租户的基本代码非常复杂，很难处理，重新规划这样一个应用不但消耗时间，也浪费金钱。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">使用Docker，可以为每一个租户的应用层的多个实例创建隔离的环境，这不仅简单而且成本低廉，当然这一切得益于Docker环境的启动速度和其高效的diff命令。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">就如同我们现在写了一个不支持多租户的业务程序，而实际的业务中经常会出现需要支持多租户或者有新客户需要使用的场景，这是我们通常的简单做法是——部署一套新的代码。当站点达到一定量的适合，要么重写程序，要么维护人员Game over。</span></pre></td></tr></table></figure>
+
+<h3 id="快速部署"><a href="#快速部署" class="headerlink" title="快速部署"></a>快速部署</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">在虚拟机之前，引入新的硬件资源需要消耗几天的时间。虚拟化技术（Virtualization）将这个时间缩短到了分钟级别。而Docker通过为进程仅仅创建一个容器而无需启动一个操作系统，再次将这个过程缩短到了秒级。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">你可以在服务器中或云端创建销毁资源而无需担心重新启动带来的开销。通常情况下，服务器的资源利用率只有<span class="number">30</span>%，而通过使用Docker并进行有效的资源分配可以提高资源的利用率。</span></pre></td></tr></table></figure>
+
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf2721bedf69b?w=620&h=509&f=png&s=169241" alt="1572574493829"></p>
+<h2 id="QA"><a href="#QA" class="headerlink" title="QA"></a>QA</h2><p>Docker容器有自己的Kernel吗?</p>
+<p>没有，Docker和宿主机共享Kernel</p>
+<p>Docker的Kernel version由镜像确定还是由宿主机确定?</p>
+<p>由宿主机决定</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.buhuiwy.cn/2019/12/07/Docker%E7%AE%80%E4%BB%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:51:15.235Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Yapi部署文档
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Ubuntu18.04安装常用配置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">Ubuntu18.04安装常用配置</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:50:59.702Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/">Swagger2整合SpringBoot</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:50:35.141Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/">SpringBoot与安全</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:50:12.869Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">JAVA并发</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/HttpClient%E5%B7%A5%E5%85%B7%E7%B1%BB/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:49:56.347Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/HttpClient%E5%B7%A5%E5%85%B7%E7%B1%BB/">HttpClient工具类</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/Http%E5%92%8CHttps/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:49:40.915Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/Http%E5%92%8CHttps/">Http和Https</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:49:23.635Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/">注册Servlet三大组件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2019/12/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/12/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -467,8 +626,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
