@@ -183,7 +183,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>微服务架构是一种架构模式或者说是一种架构风格，它提倡将单一应用程序划分成一组小的服务，每个服务运行在其独立的进程中，服务之间互相协调，互相配合，为用户提供最终价值。</p>
+        <meta name="referrer" content="no-referrer"/>
+
+<p>微服务架构是一种架构模式或者说是一种架构风格，它提倡将单一应用程序划分成一组小的服务，每个服务运行在其独立的进程中，服务之间互相协调，互相配合，为用户提供最终价值。</p>
 <ul>
 <li><code>Dubbo</code>是基于<code>rpc</code>服务通信</li>
 <li><code>Cloud</code>是基于<code>REST</code>服务通信</li>
@@ -276,7 +278,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="搭建数据库环境"><a href="#搭建数据库环境" class="headerlink" title="搭建数据库环境"></a>搭建数据库环境</h3><ul>
+        <meta name="referrer" content="no-referrer"/>
+
+<h3 id="搭建数据库环境"><a href="#搭建数据库环境" class="headerlink" title="搭建数据库环境"></a>搭建数据库环境</h3><ul>
 <li><p>导入数据库文件</p>
 </li>
 <li><p>创建出department和employee表</p>
@@ -344,7 +348,7 @@
 
 
   
-    <article id="post-HttpClient工具类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-消息" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -353,12 +357,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/HttpClient%E5%B7%A5%E5%85%B7%E7%B1%BB/">HttpClient工具类</a>
+      <a class="article-title" href="/2019/12/07/%E6%B6%88%E6%81%AF/">消息</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/HttpClient%E5%B7%A5%E5%85%B7%E7%B1%BB/" class="archive-article-date">
+        <a href="/2019/12/07/%E6%B6%88%E6%81%AF/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -366,15 +370,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-什么是HttpClient"><a href="#1-什么是HttpClient" class="headerlink" title="1. 什么是HttpClient"></a>1. 什么是HttpClient</h2><p>HTTP 协议可能是现在 Internet 上使用得最多、最重要的协议了，越来越多的 Java 应用程序需要直接通过 HTTP 协议来访问网络资源。虽然在 JDK 的 java net包中已经提供了访问 HTTP 协议的基本功能，但是对于大部分应用程序来说，JDK 库本身提供的功能还不够丰富和灵活。HttpClient 是Apache HttpComponents 下的子项目，用来提供高效的、最新的、功能丰富的支持 <strong>HTTP 协议的客户端编程工具包</strong>，并且它支持 HTTP 协议最新的版本和建议。</p>
-<h2 id="2-功能介绍"><a href="#2-功能介绍" class="headerlink" title="2. 功能介绍"></a>2. 功能介绍</h2><ul>
-<li>实现了所有 HTTP 的方法（GET,POST,PUT,DELETE 等）</li>
-<li>支持自动转向</li>
-<li>支持 HTTPS 协议</li>
-<li>支持代理服务器等</li>
-</ul>
+        <meta name="referrer" content="no-referrer"/>
+
+<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>1.大多应用中，可通过消息服务中间件来提升系统异步通信、扩展解耦能力</p>
+<p>2.消息服务中两个重要概念：</p>
+<pre><code>消息代理（message broker）和目的地（destination）</code></pre><p>当消息发送者发送消息以后，将由消息代理接管，消息代理保证消息传递到指定目的地。</p>
+<p>3.消息队列主要有两种形式的目的地</p>
+<p>1.队列（queue）：点对点消息通信（point-to-point）</p>
+<p>2.主题（topic）：发布（publish）/订阅（subscribe）消息通信</p>
+<h3 id="异步处理"><a href="#异步处理" class="headerlink" title="异步处理"></a>异步处理</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf0c36f055568?w=519&h=132&f=png&s=12978" alt="1567674440906"></p>
         
-          <a class="article-more-a" href="/2019/12/07/HttpClient%E5%B7%A5%E5%85%B7%E7%B1%BB/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/%E6%B6%88%E6%81%AF/#more">more >></a>
         
       
 
@@ -388,7 +394,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">Http</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
         		</li>
       		
 		</ul>
@@ -398,7 +404,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/HttpClient%E5%B7%A5%E5%85%B7%E7%B1%BB/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/%E6%B6%88%E6%81%AF/">展开全文 >></a>
         </p>
       
 
@@ -450,7 +456,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf229706e1108?w=657&h=326&f=png&s=31681" alt="1572521577002"></p>
+        <meta name="referrer" content="no-referrer"/>
+
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf229706e1108?w=657&h=326&f=png&s=31681" alt="1572521577002"></p>
 <h3 id="Docker出现的原因？"><a href="#Docker出现的原因？" class="headerlink" title="Docker出现的原因？"></a>Docker出现的原因？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">一款产品从开发到上线，从操作系统，到运行环境，再到应用配置。作为开发+运维之间的协作我们需要关心很多东西，这也是很多互联网公司都不得不面对的问题，特别是各种版本的迭代之后，不同版本环境的兼容，对运维人员都是考验.</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">Docker之所以发展如此迅速，也是因为它对此给出了一个标准化的解决方案。</span></pre></td></tr></table></figure>
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">环境配置如此麻烦，换一台机器，就要重来一次，费力费时。很多人想到，能不能从根本上解决问题，软件可以带环境安装？也就是说，安装的时候，把原始环境一模一样地复制过来。开发人员利用 Docker 可以消除协作编码时“在我的机器上可正常工作”的问题。</span></pre></td></tr></table></figure>
@@ -618,14 +626,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">Vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">YApi</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Http</a>
               </li>
              
@@ -635,6 +635,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Swagger</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">YApi</a>
               </li>
              
               <li class="article-tag-list-item">
