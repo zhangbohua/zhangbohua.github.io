@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://www.buhuiwy.cn">
   <title>Docker部署FastDFS | Chamberlan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Docker 安装fastdfs挂载目录-v &#x2F;e&#x2F;fdfs&#x2F;tracker:&#x2F;var&#x2F;fdfs 12&amp;#96;&amp;#96;&amp;#96;&amp;#x2F;var&amp;#x2F;fdfs&amp;#96;&amp;#96;&amp;#96;为容器中的文件的绝对路径34### 查看网络56&amp;#96;&amp;#96;&amp;#96;shell7docker network ls # 网络列表 89docker network create --dr">
-<meta name="keywords" content="SpringBoot">
+  <meta name="description" content="Docker 安装fastdfs挂载目录-v &#x2F;e&#x2F;fdfs&#x2F;tracker:&#x2F;var&#x2F;fdfs &#x2F;e&#x2F;fdfs&#x2F;tracker在windows中的文件夹路径为E:\fdfs\tracker &#x2F;var&#x2F;fdfs为容器中的文件的绝对路径 查看网络1docker network ls # 网络列表 23docker network create --driver bridge --subnet&#x3D;1">
+<meta name="keywords" content="Docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker部署FastDFS">
 <meta property="og:url" content="http:&#x2F;&#x2F;www.buhuiwy.cn&#x2F;2019&#x2F;12&#x2F;19&#x2F;Docker%E9%83%A8%E7%BD%B2FastDFS&#x2F;index.html">
 <meta property="og:site_name" content="Chamberlan">
-<meta property="og:description" content="Docker 安装fastdfs挂载目录-v &#x2F;e&#x2F;fdfs&#x2F;tracker:&#x2F;var&#x2F;fdfs 12&amp;#96;&amp;#96;&amp;#96;&amp;#x2F;var&amp;#x2F;fdfs&amp;#96;&amp;#96;&amp;#96;为容器中的文件的绝对路径34### 查看网络56&amp;#96;&amp;#96;&amp;#96;shell7docker network ls # 网络列表 89docker network create --dr">
+<meta property="og:description" content="Docker 安装fastdfs挂载目录-v &#x2F;e&#x2F;fdfs&#x2F;tracker:&#x2F;var&#x2F;fdfs &#x2F;e&#x2F;fdfs&#x2F;tracker在windows中的文件夹路径为E:\fdfs\tracker &#x2F;var&#x2F;fdfs为容器中的文件的绝对路径 查看网络1docker network ls # 网络列表 23docker network create --driver bridge --subnet&#x3D;1">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;19&#x2F;16f1dfea09218a31?w&#x3D;1206&amp;h&#x3D;639&amp;f&#x3D;png&amp;s&#x3D;94958">
 <meta property="og:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;19&#x2F;16f1e01603f2ff46?w&#x3D;817&amp;h&#x3D;308&amp;f&#x3D;png&amp;s&#x3D;34805">
-<meta property="og:updated_time" content="2019-12-19T11:59:21.423Z">
+<meta property="og:updated_time" content="2019-12-19T12:06:23.991Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;user-gold-cdn.xitu.io&#x2F;2019&#x2F;12&#x2F;19&#x2F;16f1dfea09218a31?w&#x3D;1206&amp;h&#x3D;639&amp;f&#x3D;png&amp;s&#x3D;94958">
   
@@ -193,7 +193,9 @@
         <meta name="referrer" content="no-referrer"/>
 
 <h2 id="Docker-安装fastdfs"><a href="#Docker-安装fastdfs" class="headerlink" title="Docker 安装fastdfs"></a>Docker 安装fastdfs</h2><h3 id="挂载目录"><a href="#挂载目录" class="headerlink" title="挂载目录"></a>挂载目录</h3><p><strong>-v /e/fdfs/tracker:/var/fdfs</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;&#x2F;var&#x2F;fdfs&#96;&#96;&#96;为容器中的文件的绝对路径</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">### 查看网络</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;shell</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">docker network ls # 网络列表 </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">docker network create --driver bridge --subnet&#x3D;192.168.127.0&#x2F;24 fastdfs_fastdfs_net # 创建自定义网段 暂不使用</span></pre></td></tr></table></figure>
+<p><strong>/e/fdfs/tracker</strong>在<code>windows</code>中的文件夹路径为<code>E:\fdfs\tracker</code></p>
+<p><strong>/var/fdfs</strong>为容器中的文件的绝对路径</p>
+<h3 id="查看网络"><a href="#查看网络" class="headerlink" title="查看网络"></a>查看网络</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker network ls # 网络列表 </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">docker network create --driver bridge --subnet=192.168.127.0/24 fastdfs_fastdfs_net # 创建自定义网段 暂不使用</span></pre></td></tr></table></figure>
 
 <h3 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker pull season/fastdfs</span></pre></td></tr></table></figure>
 
@@ -304,7 +306,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">Docker</a>
         		</li>
       		
 		</ul>
@@ -506,15 +508,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">SpringBoot</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Ubuntu</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">Vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Ubuntu</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -535,10 +541,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Redis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Docker</a>
               </li>
             
             <div class="clearfix"></div>
