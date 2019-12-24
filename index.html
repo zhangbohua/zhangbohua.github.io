@@ -161,6 +161,184 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Windows下批量启动关闭java程序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+
+
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/">Windows下批量启动/关闭java程序</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2019-12-24T09:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer"/>
+
+<h2 id="Windows下批量启动-关闭java程序"><a href="#Windows下批量启动-关闭java程序" class="headerlink" title="Windows下批量启动/关闭java程序"></a>Windows下批量启动/关闭java程序</h2><p>最近公司要将一批微服务部署到<code>windows server</code>上，对于微服务项目来说，一次要部署多个<code>jar</code>包是让人崩溃的，所以这里想做一个批量运行\停止的脚本。</p>
+<h3 id="批量启动："><a href="#批量启动：" class="headerlink" title="批量启动："></a>批量启动：</h3><ul>
+<li>在<code>cmd</code>下，<code>java -jar ####.jar</code>运行后窗口不能关闭，但是有多个<code>jar</code>包，则会开启多个<code>cmd</code>窗口，非常难受。</li>
+<li>在<code>cmd</code>下，<code>javaw -jar ####.jar</code>运行后窗口可以关，但如果有多个<code>jar</code>，就回存在进程中有许多相同的<code>javaw</code>进程，无法区分是哪个<code>jar</code>，很难去关闭特定某个<code>jar</code>的进程。</li>
+</ul>
+<h3 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h3><ul>
+<li>为了解决多个<code>cmd</code>窗口的问题；通过<code>bat</code>文件批量执行<code>jar</code>文件，每个包用<code>start javaw -jar ####.jar</code>来运行。</li>
+<li>为了解决进程难以区分问题；通过复制<code>javaw.exe</code>为对应jar包的文件名称来执行<code>jar</code>包，比如<code>eureka.jar</code>，复制<code>javaw.exe</code>为<code>eureka.exe</code>，然后<code>start eureka -jar eureka.jar</code>，这样进程中就是<code>eureka</code>。</li>
+<li>如果<code>jar</code>之间有执行依赖，则通过<code>ping</code>来给前一个<code>jar</code>提供执行时间。</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Flyway使用说明" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+
+
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/24/Flyway%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">FlyWay入门</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/24/Flyway%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" class="archive-article-date">
+  	<time datetime="2019-12-24T09:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer"/>
+
+<h2 id="Flyway使用说明"><a href="#Flyway使用说明" class="headerlink" title="Flyway使用说明"></a>Flyway使用说明</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Flyway 是一款开源的数据库版本管理工具，它更倾向于规约优于配置的方式。Flyway 可以独立于应用实现管理并跟踪数据库变更，支持数据库版本自动升级，并且有一套默认的规约，不需要复杂的配置，Migrations 可以写成 SQL 脚本，也可以写在 Java 代码中，不仅支持 Command Line 和 Java API，还支持 Build 构建工具和 Spring Boot 等，同时在分布式环境下能够安全可靠地升级数据库，同时也支持失败恢复等。</p>
+<h3 id="运行原理"><a href="#运行原理" class="headerlink" title="运行原理"></a>运行原理</h3><p>当 Flyway 连接数据库中的 schema 后，会先检查是否已存在 <strong>flyway_schema_history</strong> 表，如果没有则创建。该表用于跟踪数据库的状态，如数据迁移的版本，迁移成功状态等信息。</p>
+<p>当 <strong>flyway_schema_history</strong> 存在后，Flyway 会扫描文件系统或应用中的 classpath 目录的数据迁移文件，然后根据它们的版本号进行按序迁移，如下图：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/3/22/169a42863d11fed2?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<h3 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h3><p>Flyway最核心的就是用于记录所有版本演化和状态的MetaData表，Flyway首次启动会创建默认名为SCHEMA_VERSION的元素局表。 表中保存了版本，描述，要执行的sql脚本等；</p>
+<p>sql脚本的格式：V+版本号 +双下划线+秒速+结束符 </p>
+<p>例如：V1__INIT_DATABASE.sql</p>
+<p>上面的V 是默认值， 可以通过</p>
+<p>flyway.sql-migration-prefix来指定前缀  ，</p>
+<h4 id="Migrate"><a href="#Migrate" class="headerlink" title="Migrate"></a>Migrate</h4>
+        
+          <a class="article-more-a" href="/2019/12/24/Flyway%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">FlyWay</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/24/Flyway%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Docker部署FastDFS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -219,6 +397,90 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/12/19/Docker%E9%83%A8%E7%BD%B2FastDFS/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Ubuntu18.04安装常用配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+
+
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">Ubuntu18.04安装常用配置</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
+  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer"/>
+
+<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><h3 id="Oracle下载JDK8"><a href="#Oracle下载JDK8" class="headerlink" title="Oracle下载JDK8"></a><a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">Oracle</a>下载JDK8</h3><h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk-8u221-linux-x64.tar.gz</span></pre></td></tr></table></figure>
+
+<h3 id="移动到自己想放的位置"><a href="#移动到自己想放的位置" class="headerlink" title="移动到自己想放的位置"></a>移动到自己想放的位置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">sudo mv jdk1.8.0_221 /usr/local/jdk1.8</span></pre></td></tr></table></figure>
+
+<h3 id="将文件从桌面目录移动到相放的位置"><a href="#将文件从桌面目录移动到相放的位置" class="headerlink" title="将文件从桌面目录移动到相放的位置"></a>将文件从桌面目录移动到相放的位置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#将文件从下载目录 挪到/usr/local下</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">sudo mv jdk1.8.0_221  /usr/local/jdk1.8</span></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">展开全文 >></a>
         </p>
       
 
@@ -331,183 +593,6 @@
 
 
   
-    <article id="post-SpringBoot与安全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-
-
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/">SpringBoot与安全</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer"/>
-
-<h3 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h3><p>Spring Security是针对Spring项目的安全框架，也是Spring Boot底层安全模块默认的技术选型。他可以实现强大的web安全控制。对于安全控制，我们仅需引入spring-boot-starter-security模块，进行少量的配置，即可实现强大的安全管理。</p>
-<p> 几个类：</p>
-<p><strong>WebSecurityConfigurerAdapter</strong>：自定义Security策略</p>
-<p><strong>AuthenticationManagerBuilder</strong>：自定义认证策略</p>
-<p><strong>@EnableWebSecurity</strong>：开启WebSecurity模式</p>
-        
-          <a class="article-more-a" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Vue学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-
-
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Vue学习笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/07/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer"/>
-
-<h3 id="node-js安装"><a href="#node-js安装" class="headerlink" title="node.js安装"></a>node.js安装</h3><p>首先下载安装<a href="**https://nodejs.org/en/**">nodejs</a>，一路点击next即可</p>
-<ul>
-<li><p>在nodejs安装路径下，新建node_global和global_cache两个文件夹</p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf21b9d07006d?w=701&h=309&f=png&s=36083" alt="1568875309767"></p>
-</li>
-<li><p>设置缓存文件夹</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm config set cache &quot;D:\vueProject\nodejs\node_cache&quot;</span></pre></td></tr></table></figure>
-
-<ul>
-<li>设置全局模块存放路径</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm config set prefix &quot;D:\vueProject\nodejs\node_global&quot;</span></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/12/07/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-任务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -561,6 +646,87 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-注册Servlet三大组件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+
+
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/">注册Servlet三大组件【Servlet、Filter、Listener】</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/" class="archive-article-date">
+  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer"/>
+
+<p>由于SpringBoot默认是以jar包的方式启动嵌入式的Servlet容器来启动SpringBoot的web应用，没有web.xml文件。<br>注册三大组件用以下方式</p>
+<p><strong>ServletRegistrationBean</strong></p>
+        
+          <a class="article-more-a" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/">展开全文 >></a>
         </p>
       
 
@@ -679,7 +845,7 @@
 
 
   
-    <article id="post-注册Servlet三大组件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-SpringBoot与安全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -688,12 +854,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/">注册Servlet三大组件【Servlet、Filter、Listener】</a>
+      <a class="article-title" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/">SpringBoot与安全</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/" class="archive-article-date">
+        <a href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -703,10 +869,13 @@
       
         <meta name="referrer" content="no-referrer"/>
 
-<p>由于SpringBoot默认是以jar包的方式启动嵌入式的Servlet容器来启动SpringBoot的web应用，没有web.xml文件。<br>注册三大组件用以下方式</p>
-<p><strong>ServletRegistrationBean</strong></p>
+<h3 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h3><p>Spring Security是针对Spring项目的安全框架，也是Spring Boot底层安全模块默认的技术选型。他可以实现强大的web安全控制。对于安全控制，我们仅需引入spring-boot-starter-security模块，进行少量的配置，即可实现强大的安全管理。</p>
+<p> 几个类：</p>
+<p><strong>WebSecurityConfigurerAdapter</strong>：自定义Security策略</p>
+<p><strong>AuthenticationManagerBuilder</strong>：自定义认证策略</p>
+<p><strong>@EnableWebSecurity</strong>：开启WebSecurity模式</p>
         
-          <a class="article-more-a" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/#more">more >></a>
         
       
 
@@ -730,7 +899,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/">展开全文 >></a>
         </p>
       
 
@@ -760,7 +929,7 @@
 
 
   
-    <article id="post-Ubuntu18.04安装常用配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JAVA并发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -769,12 +938,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">Ubuntu18.04安装常用配置</a>
+      <a class="article-title" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">JAVA并发</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
+        <a href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -784,13 +953,10 @@
       
         <meta name="referrer" content="no-referrer"/>
 
-<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><h3 id="Oracle下载JDK8"><a href="#Oracle下载JDK8" class="headerlink" title="Oracle下载JDK8"></a><a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">Oracle</a>下载JDK8</h3><h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk-8u221-linux-x64.tar.gz</span></pre></td></tr></table></figure>
-
-<h3 id="移动到自己想放的位置"><a href="#移动到自己想放的位置" class="headerlink" title="移动到自己想放的位置"></a>移动到自己想放的位置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">sudo mv jdk1.8.0_221 /usr/local/jdk1.8</span></pre></td></tr></table></figure>
-
-<h3 id="将文件从桌面目录移动到相放的位置"><a href="#将文件从桌面目录移动到相放的位置" class="headerlink" title="将文件从桌面目录移动到相放的位置"></a>将文件从桌面目录移动到相放的位置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#将文件从下载目录 挪到/usr/local下</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">sudo mv jdk1.8.0_221  /usr/local/jdk1.8</span></pre></td></tr></table></figure>
+<h3 id="线程与进程的区别"><a href="#线程与进程的区别" class="headerlink" title="线程与进程的区别"></a>线程与进程的区别</h3><p>线程，程序执行流的最小执行单位，是行程中的实际运作单位，经常容易和进程这个概念混淆。那么，线程和进程究竟有什么区别呢？首先，进程是一个动态的过程，是一个活动的实体。简单来说，一个应用程序的运行就可以被看做是一个进程，而线程，是运行中的实际的任务执行者。可以说，进程中包含了多个可以同时运行的线程。</p>
+<h3 id="线程的基本概念"><a href="#线程的基本概念" class="headerlink" title="线程的基本概念"></a>线程的基本概念</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf199915321a4?w=808&h=293&f=png&s=53728" alt="img"></p>
         
-          <a class="article-more-a" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/#more">more >></a>
         
       
 
@@ -804,7 +970,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -814,170 +980,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Http和Https" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-
-
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/Http%E5%92%8CHttps/">Http和Https</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/07/Http%E5%92%8CHttps/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer"/>
-
-<p>超文本传输协议HTTP协议被用于在Web浏览器和网站服务器之间传递信息，HTTP协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。</p>
-<p>为了解决HTTP协议的这一缺陷，需要使用另一种协议：安全套接字层超文本传输协议HTTPS，为了数据传输的安全，HTTPS在HTTP的基础上加入了SSL协议，SSL依靠证书来验证服务器的身份，并为浏览器和服务器之间的通信加密。</p>
-<h3 id="Http和Https的基本概念"><a href="#Http和Https的基本概念" class="headerlink" title="Http和Https的基本概念"></a>Http和Https的基本概念</h3><p>HTTP：是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少。</p>
-<p>HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</p>
-        
-          <a class="article-more-a" href="/2019/12/07/Http%E5%92%8CHttps/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">Http</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/Http%E5%92%8CHttps/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Swagger2整合SpringBoot" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-
-
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/">Swagger2整合SpringBoot</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer"/>
-
-<h2 id="Swagger2注解详细"><a href="#Swagger2注解详细" class="headerlink" title="Swagger2注解详细"></a>Swagger2注解详细</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Api</span>：用在请求的类上，表示对类的说明</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    tags=<span class="string">"说明该类的作用，可以在UI界面上看到的注解"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    value=<span class="string">"该参数没什么意义，在UI界面上也看到，所以不需要配置"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiOperation</span>：用在请求的方法上，说明方法的用途、作用</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    value=<span class="string">"说明方法的用途、作用"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    notes=<span class="string">"方法的备注说明"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiImplicitParams</span>：用在请求的方法上，表示一组参数说明</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@ApiImplicitParam</span>：用在<span class="meta">@ApiImplicitParams</span>注解中，指定一个请求参数的各个方面</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        name：参数名</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        value：参数的汉字说明、解释</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        required：参数是否必须传</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        paramType：参数放在哪个地方</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">            · header --&gt; 请求参数的获取：<span class="meta">@RequestHeader</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">            · query --&gt; 请求参数的获取：<span class="meta">@RequestParam</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">            · path（用于restful接口）--&gt; 请求参数的获取：<span class="meta">@PathVariable</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">            · body（不常用）</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">            · form（不常用）    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">        dataType：参数类型，默认String，其它值dataType=<span class="string">"Integer"</span>       </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">        defaultValue：参数的默认值</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiResponses</span>：用在请求的方法上，表示一组响应</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@ApiResponse</span>：用在<span class="meta">@ApiResponses</span>中，一般用于表达一个错误的响应信息</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">        code：数字，例如<span class="number">400</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">        message：信息，例如<span class="string">"请求参数没填好"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">        response：抛出异常的类</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiModel</span>：用于响应类上，表示一个返回响应数据的信息</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">            （这种一般用在post创建的时候，使用<span class="meta">@RequestBody</span>这样的场景，</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">            请求参数无法使用<span class="meta">@ApiImplicitParam</span>注解进行描述的时候）</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@ApiModelProperty</span>：用在属性上，描述响应类的属性</span></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">Swagger</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">展开全文 >></a>
         </p>
       
 
@@ -1112,7 +1115,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Ubuntu</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">FlyWay</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1120,7 +1123,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1128,7 +1135,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">Vue</a>
               </li>
              
               <li class="article-tag-list-item">
