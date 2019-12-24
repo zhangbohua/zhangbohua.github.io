@@ -426,7 +426,7 @@
 
 
   
-    <article id="post-Ubuntu18.04安装常用配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Yapi部署文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -435,12 +435,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">Ubuntu18.04安装常用配置</a>
+      <a class="article-title" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">Yapi部署文档</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
+        <a href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -450,13 +450,18 @@
       
         <meta name="referrer" content="no-referrer"/>
 
-<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><h3 id="Oracle下载JDK8"><a href="#Oracle下载JDK8" class="headerlink" title="Oracle下载JDK8"></a><a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">Oracle</a>下载JDK8</h3><h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk-8u221-linux-x64.tar.gz</span></pre></td></tr></table></figure>
-
-<h3 id="移动到自己想放的位置"><a href="#移动到自己想放的位置" class="headerlink" title="移动到自己想放的位置"></a>移动到自己想放的位置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">sudo mv jdk1.8.0_221 /usr/local/jdk1.8</span></pre></td></tr></table></figure>
-
-<h3 id="将文件从桌面目录移动到相放的位置"><a href="#将文件从桌面目录移动到相放的位置" class="headerlink" title="将文件从桌面目录移动到相放的位置"></a>将文件从桌面目录移动到相放的位置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#将文件从下载目录 挪到/usr/local下</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">sudo mv jdk1.8.0_221  /usr/local/jdk1.8</span></pre></td></tr></table></figure>
+<p><strong><code>Yapi</code></strong> 由 <code>YMFE</code>开源，旨在为开发、产品、测试人员提供更优雅的接口管理服务，可以帮助开发者轻松创建、发布、维护<code>API</code>。</p>
+<ul>
+<li><strong>权限管理</strong><br><strong>YApi</strong>成熟的团队管理扁平化项目权限配置满足各类企业的需求</li>
+<li><strong>可视化接口管理</strong><br>基于 <strong>websocket</strong>的多人协作接口编辑功能和类 postman 测试工具，让多人协作成倍提升开发效率</li>
+<li><strong>Mock Server</strong><br>易用的 <strong>Mock Server</strong>，再也不用担心 <strong>mock</strong> 数据的生成了</li>
+<li><strong>自动化测试</strong><br>完善的接口自动化测试,保证数据的正确性</li>
+<li><strong>数据导入</strong><br>支持导入<strong>*swagger, postman, har</strong>数据格式，方便迁移旧项目</li>
+<li><strong>插件机制</strong><br>强大的插件机制，满足各类业务需求</li>
+</ul>
+<p><strong>Yapi</strong>支持内网部署，只需在管理员或内网某台机器上<strong>安装部署一次</strong>，团队其他成员不需要部署，访问相应的地址即可使用。本部分内容只需负责配置环境人员阅读，需要相关人员具有基本的<code>node</code>与<code>mongodb</code>知识。</p>
         
-          <a class="article-more-a" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/#more">more >></a>
         
       
 
@@ -470,7 +475,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">YApi</a>
         		</li>
       		
 		</ul>
@@ -480,7 +485,184 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-SpringBoot与安全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+
+
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/">SpringBoot与安全</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/" class="archive-article-date">
+  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer"/>
+
+<h3 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h3><p>Spring Security是针对Spring项目的安全框架，也是Spring Boot底层安全模块默认的技术选型。他可以实现强大的web安全控制。对于安全控制，我们仅需引入spring-boot-starter-security模块，进行少量的配置，即可实现强大的安全管理。</p>
+<p> 几个类：</p>
+<p><strong>WebSecurityConfigurerAdapter</strong>：自定义Security策略</p>
+<p><strong>AuthenticationManagerBuilder</strong>：自定义认证策略</p>
+<p><strong>@EnableWebSecurity</strong>：开启WebSecurity模式</p>
+        
+          <a class="article-more-a" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Vue学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+
+
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/07/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Vue学习笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/07/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer"/>
+
+<h3 id="node-js安装"><a href="#node-js安装" class="headerlink" title="node.js安装"></a>node.js安装</h3><p>首先下载安装<a href="**https://nodejs.org/en/**">nodejs</a>，一路点击next即可</p>
+<ul>
+<li><p>在nodejs安装路径下，新建node_global和global_cache两个文件夹</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf21b9d07006d?w=701&h=309&f=png&s=36083" alt="1568875309767"></p>
+</li>
+<li><p>设置缓存文件夹</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm config set cache &quot;D:\vueProject\nodejs\node_cache&quot;</span></pre></td></tr></table></figure>
+
+<ul>
+<li>设置全局模块存放路径</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm config set prefix &quot;D:\vueProject\nodejs\node_global&quot;</span></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/12/07/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/07/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">展开全文 >></a>
         </p>
       
 
@@ -675,7 +857,7 @@
 
 
   
-    <article id="post-注册Servlet三大组件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Ubuntu18.04安装常用配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -684,12 +866,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/">注册Servlet三大组件【Servlet、Filter、Listener】</a>
+      <a class="article-title" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">Ubuntu18.04安装常用配置</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/" class="archive-article-date">
+        <a href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -699,10 +881,13 @@
       
         <meta name="referrer" content="no-referrer"/>
 
-<p>由于SpringBoot默认是以jar包的方式启动嵌入式的Servlet容器来启动SpringBoot的web应用，没有web.xml文件。<br>注册三大组件用以下方式</p>
-<p><strong>ServletRegistrationBean</strong></p>
+<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><h3 id="Oracle下载JDK8"><a href="#Oracle下载JDK8" class="headerlink" title="Oracle下载JDK8"></a><a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">Oracle</a>下载JDK8</h3><h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk-8u221-linux-x64.tar.gz</span></pre></td></tr></table></figure>
+
+<h3 id="移动到自己想放的位置"><a href="#移动到自己想放的位置" class="headerlink" title="移动到自己想放的位置"></a>移动到自己想放的位置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">sudo mv jdk1.8.0_221 /usr/local/jdk1.8</span></pre></td></tr></table></figure>
+
+<h3 id="将文件从桌面目录移动到相放的位置"><a href="#将文件从桌面目录移动到相放的位置" class="headerlink" title="将文件从桌面目录移动到相放的位置"></a>将文件从桌面目录移动到相放的位置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#将文件从下载目录 挪到/usr/local下</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">sudo mv jdk1.8.0_221  /usr/local/jdk1.8</span></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/#more">more >></a>
         
       
 
@@ -716,7 +901,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">Ubuntu</a>
         		</li>
       		
 		</ul>
@@ -726,180 +911,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Yapi部署文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-
-
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">Yapi部署文档</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer"/>
-
-<p><strong><code>Yapi</code></strong> 由 <code>YMFE</code>开源，旨在为开发、产品、测试人员提供更优雅的接口管理服务，可以帮助开发者轻松创建、发布、维护<code>API</code>。</p>
-<ul>
-<li><strong>权限管理</strong><br><strong>YApi</strong>成熟的团队管理扁平化项目权限配置满足各类企业的需求</li>
-<li><strong>可视化接口管理</strong><br>基于 <strong>websocket</strong>的多人协作接口编辑功能和类 postman 测试工具，让多人协作成倍提升开发效率</li>
-<li><strong>Mock Server</strong><br>易用的 <strong>Mock Server</strong>，再也不用担心 <strong>mock</strong> 数据的生成了</li>
-<li><strong>自动化测试</strong><br>完善的接口自动化测试,保证数据的正确性</li>
-<li><strong>数据导入</strong><br>支持导入<strong>*swagger, postman, har</strong>数据格式，方便迁移旧项目</li>
-<li><strong>插件机制</strong><br>强大的插件机制，满足各类业务需求</li>
-</ul>
-<p><strong>Yapi</strong>支持内网部署，只需在管理员或内网某台机器上<strong>安装部署一次</strong>，团队其他成员不需要部署，访问相应的地址即可使用。本部分内容只需负责配置环境人员阅读，需要相关人员具有基本的<code>node</code>与<code>mongodb</code>知识。</p>
-        
-          <a class="article-more-a" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">YApi</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/Yapi%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SpringBoot与安全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-
-
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/">SpringBoot与安全</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer"/>
-
-<h3 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h3><p>Spring Security是针对Spring项目的安全框架，也是Spring Boot底层安全模块默认的技术选型。他可以实现强大的web安全控制。对于安全控制，我们仅需引入spring-boot-starter-security模块，进行少量的配置，即可实现强大的安全管理。</p>
-<p> 几个类：</p>
-<p><strong>WebSecurityConfigurerAdapter</strong>：自定义Security策略</p>
-<p><strong>AuthenticationManagerBuilder</strong>：自定义认证策略</p>
-<p><strong>@EnableWebSecurity</strong>：开启WebSecurity模式</p>
-        
-          <a class="article-more-a" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">展开全文 >></a>
         </p>
       
 
@@ -1119,15 +1131,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">SpringBoot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Ubuntu</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1135,7 +1139,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">SpringBoot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
