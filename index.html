@@ -161,7 +161,7 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Windows下批量启动关闭java程序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-大型分布式网站架构设计与实践" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -170,13 +170,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/">Windows下批量启动/关闭java程序</a>
+      <a class="article-title" href="/2020/11/08/%E5%A4%A7%E5%9E%8B%E5%88%86%E5%B8%83%E5%BC%8F%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5/">大型网站技术架构-李智慧</a>
     </h1>
   
 
         
-        <a href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2019-12-24T09:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-24</time>
+        <a href="/2020/11/08/%E5%A4%A7%E5%9E%8B%E5%88%86%E5%B8%83%E5%BC%8F%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5/" class="archive-article-date">
+  	<time datetime="2020-11-08T06:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-08</time>
 </a>
         
       </header>
@@ -185,18 +185,10 @@
       
         <meta name="referrer" content="no-referrer"/>
 
-<h2 id="Windows下批量启动-关闭java程序"><a href="#Windows下批量启动-关闭java程序" class="headerlink" title="Windows下批量启动/关闭java程序"></a>Windows下批量启动/关闭java程序</h2><p>最近公司要将一批微服务部署到<code>windows server</code>上，对于微服务项目来说，一次要部署多个<code>jar</code>包是让人崩溃的，所以这里想做一个批量运行\停止的脚本。</p>
-<h3 id="批量启动："><a href="#批量启动：" class="headerlink" title="批量启动："></a>批量启动：</h3><ul>
-<li>在<code>cmd</code>下，<code>java -jar ####.jar</code>运行后窗口不能关闭，但是有多个<code>jar</code>包，则会开启多个<code>cmd</code>窗口，非常难受。</li>
-<li>在<code>cmd</code>下，<code>javaw -jar ####.jar</code>运行后窗口可以关，但如果有多个<code>jar</code>，就回存在进程中有许多相同的<code>javaw</code>进程，无法区分是哪个<code>jar</code>，很难去关闭特定某个<code>jar</code>的进程。</li>
-</ul>
-<h3 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h3><ul>
-<li>为了解决多个<code>cmd</code>窗口的问题；通过<code>bat</code>文件批量执行<code>jar</code>文件，每个包用<code>start javaw -jar ####.jar</code>来运行。</li>
-<li>为了解决进程难以区分问题；通过复制<code>javaw.exe</code>为对应jar包的文件名称来执行<code>jar</code>包，比如<code>eureka.jar</code>，复制<code>javaw.exe</code>为<code>eureka.exe</code>，然后<code>start eureka -jar eureka.jar</code>，这样进程中就是<code>eureka</code>。</li>
-<li>如果<code>jar</code>之间有执行依赖，则通过<code>ping</code>来给前一个<code>jar</code>提供执行时间。</li>
-</ul>
+<p>网站访问特点和现实世界的财富分配一样遵循二八定律：80%的业务访问集中在20%的数据上；</p>
+<h3 id="大型网站架构演化的价值观"><a href="#大型网站架构演化的价值观" class="headerlink" title="大型网站架构演化的价值观"></a>大型网站架构演化的价值观</h3><p>这个世界没有哪个网站从诞生起就是大型网站；也没有哪个网站第一次发布就拥有庞大的用户，高并发的访问，海量的数据；大型网站都是从小型网站发展而来。网站的价值在于它能为用户提供什么价值，在于网站能做什么，而不在于它是怎么做的，所以在网站还很小的时候就去追求网站的架构是舍本逐末，得不偿失的。小型网站最需要做的就是为用户提供好的服务来创造价值，得到用户的认可，活下去，野蛮生长；</p>
         
-          <a class="article-more-a" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/#more">more >></a>
+          <a class="article-more-a" href="/2020/11/08/%E5%A4%A7%E5%9E%8B%E5%88%86%E5%B8%83%E5%BC%8F%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5/#more">more >></a>
         
       
 
@@ -210,7 +202,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">架构</a>
         		</li>
       		
 		</ul>
@@ -220,7 +212,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/11/08/%E5%A4%A7%E5%9E%8B%E5%88%86%E5%B8%83%E5%BC%8F%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5/">展开全文 >></a>
         </p>
       
 
@@ -339,6 +331,95 @@
 
 
   
+    <article id="post-Windows下批量启动关闭java程序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+
+
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/">Windows下批量启动/关闭java程序</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2019-12-24T09:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer"/>
+
+<h2 id="Windows下批量启动-关闭java程序"><a href="#Windows下批量启动-关闭java程序" class="headerlink" title="Windows下批量启动/关闭java程序"></a>Windows下批量启动/关闭java程序</h2><p>最近公司要将一批微服务部署到<code>windows server</code>上，对于微服务项目来说，一次要部署多个<code>jar</code>包是让人崩溃的，所以这里想做一个批量运行\停止的脚本。</p>
+<h3 id="批量启动："><a href="#批量启动：" class="headerlink" title="批量启动："></a>批量启动：</h3><ul>
+<li>在<code>cmd</code>下，<code>java -jar ####.jar</code>运行后窗口不能关闭，但是有多个<code>jar</code>包，则会开启多个<code>cmd</code>窗口，非常难受。</li>
+<li>在<code>cmd</code>下，<code>javaw -jar ####.jar</code>运行后窗口可以关，但如果有多个<code>jar</code>，就回存在进程中有许多相同的<code>javaw</code>进程，无法区分是哪个<code>jar</code>，很难去关闭特定某个<code>jar</code>的进程。</li>
+</ul>
+<h3 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h3><ul>
+<li>为了解决多个<code>cmd</code>窗口的问题；通过<code>bat</code>文件批量执行<code>jar</code>文件，每个包用<code>start javaw -jar ####.jar</code>来运行。</li>
+<li>为了解决进程难以区分问题；通过复制<code>javaw.exe</code>为对应jar包的文件名称来执行<code>jar</code>包，比如<code>eureka.jar</code>，复制<code>javaw.exe</code>为<code>eureka.exe</code>，然后<code>start eureka -jar eureka.jar</code>，这样进程中就是<code>eureka</code>。</li>
+<li>如果<code>jar</code>之间有执行依赖，则通过<code>ping</code>来给前一个<code>jar</code>提供执行时间。</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Docker部署FastDFS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -426,7 +507,7 @@
 
 
   
-    <article id="post-JAVA并发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-任务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -435,12 +516,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">JAVA并发</a>
+      <a class="article-title" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">异步任务</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/" class="archive-article-date">
+        <a href="/2019/12/07/%E4%BB%BB%E5%8A%A1/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -450,10 +531,11 @@
       
         <meta name="referrer" content="no-referrer"/>
 
-<h3 id="线程与进程的区别"><a href="#线程与进程的区别" class="headerlink" title="线程与进程的区别"></a>线程与进程的区别</h3><p>线程，程序执行流的最小执行单位，是行程中的实际运作单位，经常容易和进程这个概念混淆。那么，线程和进程究竟有什么区别呢？首先，进程是一个动态的过程，是一个活动的实体。简单来说，一个应用程序的运行就可以被看做是一个进程，而线程，是运行中的实际的任务执行者。可以说，进程中包含了多个可以同时运行的线程。</p>
-<h3 id="线程的基本概念"><a href="#线程的基本概念" class="headerlink" title="线程的基本概念"></a>线程的基本概念</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf199915321a4?w=808&h=293&f=png&s=53728" alt="img"></p>
+<p>在Java应用中，绝大多数情况下都是通过同步的方式来实现交互处理的；但是在处理与第三方系统交互的时候，容易造成响应迟缓的情况，之前大部分都是使用多线程来完成此类任务，其实，在<code>Spring 3.x</code>之后，就已经内置了<code>@Async</code>来完美解决这个问题。</p>
+<p>两个注解：</p>
+<p><strong>@EnableAysnc</strong>、<strong>@Aysnc</strong></p>
         
-          <a class="article-more-a" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/#more">more >></a>
         
       
 
@@ -467,7 +549,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
         		</li>
       		
 		</ul>
@@ -477,7 +559,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">展开全文 >></a>
         </p>
       
 
@@ -689,7 +771,7 @@
 
 
   
-    <article id="post-任务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Docker简介" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -698,12 +780,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">异步任务</a>
+      <a class="article-title" href="/2019/12/07/Docker%E7%AE%80%E4%BB%8B/">Docker简介</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/%E4%BB%BB%E5%8A%A1/" class="archive-article-date">
+        <a href="/2019/12/07/Docker%E7%AE%80%E4%BB%8B/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -713,11 +795,12 @@
       
         <meta name="referrer" content="no-referrer"/>
 
-<p>在Java应用中，绝大多数情况下都是通过同步的方式来实现交互处理的；但是在处理与第三方系统交互的时候，容易造成响应迟缓的情况，之前大部分都是使用多线程来完成此类任务，其实，在<code>Spring 3.x</code>之后，就已经内置了<code>@Async</code>来完美解决这个问题。</p>
-<p>两个注解：</p>
-<p><strong>@EnableAysnc</strong>、<strong>@Aysnc</strong></p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf229706e1108?w=657&h=326&f=png&s=31681" alt="1572521577002"></p>
+<h3 id="Docker出现的原因？"><a href="#Docker出现的原因？" class="headerlink" title="Docker出现的原因？"></a>Docker出现的原因？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">一款产品从开发到上线，从操作系统，到运行环境，再到应用配置。作为开发+运维之间的协作我们需要关心很多东西，这也是很多互联网公司都不得不面对的问题，特别是各种版本的迭代之后，不同版本环境的兼容，对运维人员都是考验.</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">Docker之所以发展如此迅速，也是因为它对此给出了一个标准化的解决方案。</span></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">环境配置如此麻烦，换一台机器，就要重来一次，费力费时。很多人想到，能不能从根本上解决问题，软件可以带环境安装？也就是说，安装的时候，把原始环境一模一样地复制过来。开发人员利用 Docker 可以消除协作编码时“在我的机器上可正常工作”的问题。</span></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/Docker%E7%AE%80%E4%BB%8B/#more">more >></a>
         
       
 
@@ -731,7 +814,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">Docker</a>
         		</li>
       		
 		</ul>
@@ -741,7 +824,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/Docker%E7%AE%80%E4%BB%8B/">展开全文 >></a>
         </p>
       
 
@@ -936,90 +1019,6 @@
 
 
   
-    <article id="post-Ubuntu18.04安装常用配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-
-
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">Ubuntu18.04安装常用配置</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer"/>
-
-<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><h3 id="Oracle下载JDK8"><a href="#Oracle下载JDK8" class="headerlink" title="Oracle下载JDK8"></a><a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">Oracle</a>下载JDK8</h3><h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk-8u221-linux-x64.tar.gz</span></pre></td></tr></table></figure>
-
-<h3 id="移动到自己想放的位置"><a href="#移动到自己想放的位置" class="headerlink" title="移动到自己想放的位置"></a>移动到自己想放的位置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">sudo mv jdk1.8.0_221 /usr/local/jdk1.8</span></pre></td></tr></table></figure>
-
-<h3 id="将文件从桌面目录移动到相放的位置"><a href="#将文件从桌面目录移动到相放的位置" class="headerlink" title="将文件从桌面目录移动到相放的位置"></a>将文件从桌面目录移动到相放的位置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#将文件从下载目录 挪到/usr/local下</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">sudo mv jdk1.8.0_221  /usr/local/jdk1.8</span></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">Ubuntu</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1035,7 +1034,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 Mr.Right
+    		&copy; 2020 Mr.Right
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1154,6 +1153,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Swagger</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">架构</a>
               </li>
              
               <li class="article-tag-list-item">

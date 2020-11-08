@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.buhuiwy.cn">
-  <title>Tag: Ubuntu | Mr.Right</title>
+  <title>大型网站技术架构-李智慧 | Mr.Right</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不念过往，不惧将来！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mr.Right">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.buhuiwy.cn&#x2F;tags&#x2F;Ubuntu&#x2F;index.html">
+  <meta name="description" content="网站访问特点和现实世界的财富分配一样遵循二八定律：80%的业务访问集中在20%的数据上； 大型网站架构演化的价值观这个世界没有哪个网站从诞生起就是大型网站；也没有哪个网站第一次发布就拥有庞大的用户，高并发的访问，海量的数据；大型网站都是从小型网站发展而来。网站的价值在于它能为用户提供什么价值，在于网站能做什么，而不在于它是怎么做的，所以在网站还很小的时候就去追求网站的架构是舍本逐末，得不偿失的">
+<meta name="keywords" content="架构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大型网站技术架构-李智慧">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.buhuiwy.cn&#x2F;2020&#x2F;11&#x2F;08&#x2F;%E5%A4%A7%E5%9E%8B%E5%88%86%E5%B8%83%E5%BC%8F%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5&#x2F;index.html">
 <meta property="og:site_name" content="Mr.Right">
-<meta property="og:description" content="不念过往，不惧将来！">
+<meta property="og:description" content="网站访问特点和现实世界的财富分配一样遵循二八定律：80%的业务访问集中在20%的数据上； 大型网站架构演化的价值观这个世界没有哪个网站从诞生起就是大型网站；也没有哪个网站第一次发布就拥有庞大的用户，高并发的访问，海量的数据；大型网站都是从小型网站发展而来。网站的价值在于它能为用户提供什么价值，在于网站能做什么，而不在于它是怎么做的，所以在网站还很小的时候就去追求网站的架构是舍本逐末，得不偿失的">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-11-08T06:37:38.446Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Mr.Right" type="application/atom+xml">
@@ -159,60 +161,348 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-大型分布式网站架构设计与实践" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+
+
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/Ubuntu18.04%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">Ubuntu18.04安装常用配置</a>
+    <h1 class="article-title" itemprop="name">
+      大型网站技术架构-李智慧
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/11/08/%E5%A4%A7%E5%9E%8B%E5%88%86%E5%B8%83%E5%BC%8F%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5/" class="archive-article-date">
+  	<time datetime="2020-11-08T06:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer"/>
+
+<p>网站访问特点和现实世界的财富分配一样遵循二八定律：80%的业务访问集中在20%的数据上；</p>
+<h3 id="大型网站架构演化的价值观"><a href="#大型网站架构演化的价值观" class="headerlink" title="大型网站架构演化的价值观"></a>大型网站架构演化的价值观</h3><p>这个世界没有哪个网站从诞生起就是大型网站；也没有哪个网站第一次发布就拥有庞大的用户，高并发的访问，海量的数据；大型网站都是从小型网站发展而来。网站的价值在于它能为用户提供什么价值，在于网站能做什么，而不在于它是怎么做的，所以在网站还很小的时候就去追求网站的架构是舍本逐末，得不偿失的。小型网站最需要做的就是为用户提供好的服务来创造价值，得到用户的认可，活下去，野蛮生长；</p>
+<a id="more"></a>
+
+<p><strong>技术是用来解决业务问题的，而业务的问题，也可以通过业务的手段去解决。</strong></p>
+<h3 id="大型网站架构模式"><a href="#大型网站架构模式" class="headerlink" title="大型网站架构模式"></a>大型网站架构模式</h3><p>关于什么是模式，这个来自建筑学的词汇是这样定义的：<strong>”每一个模式描述了一个在我们周围不断重复发生的问题及该问题解决方案的核心。这样，你就能一次又一次地使用该方案而不必做重复工作。</strong></p>
+<ul>
+<li>分层</li>
+<li>分割</li>
+<li>分布式</li>
+<li>集群</li>
+<li>缓存</li>
+<li>异步</li>
+<li>冗余</li>
+<li>自动化<ul>
+<li>自动化发布</li>
+<li>自动化代码管理</li>
+<li>自动化测试</li>
+<li>自动化安全检测</li>
+<li>自动化部署</li>
+<li>自动化监控</li>
+<li>自动化报警</li>
+<li>自动化失效转移</li>
+<li>自动化失效恢复</li>
+<li>自动化降级</li>
+<li>自动化分配资源</li>
+</ul>
+</li>
+<li>安全</li>
+</ul>
+<p>访问和负载很小的服务也必须部署至少两台服务器构成一个集群，其目的就是通过冗余实现服务高可用。数据库除了定期备份，存档保存，实现冷备份外，为了保证在线业务高可用，还需要对数据库进行主从分离，实现同步实现热备份；</p>
+<p>异步架构是典型的生产者消费者模式，两者不存在直接调用，只要保持数据结构不变，彼此功能实现可以随意变化而不互相影响，这对网站扩展新功能非常便利。除此之外，使用异步消息队列还有如下特性:</p>
+<ul>
+<li>提高系统可用性</li>
+<li>加快网站响应速度</li>
+<li>消除并发访问高峰</li>
+</ul>
+<p>缓存就是将数据存放在距离计算最近的位置以加快处理速度。缓存是改善软件性能的第一手段，现代CPU越来越快的重要因素就是使用了更多的缓存。大型网站架构设计在很多方面都使用了缓存设计；</p>
+<ul>
+<li>CDN：内容分发网络，部署在距离终端用户最近的网络服务商，用户的网络请求总是先到达他的网络服务商那里，在这里缓存网站的一些静态资源。</li>
+<li>反向代理：属于网站前端架构的一部分，部署在网站的前端。</li>
+<li>本地缓存：应用服务器本地缓存热点数据；</li>
+<li>分布式缓存：数据缓存在一个专门的分布式缓存集群中，应用程序通过网络通信访问缓存数据；</li>
+</ul>
+<p>在网站应用中，常用的分布式方案有以下几种：</p>
+<ul>
+<li>分布式应用和服务：服务拆分-独立部署-服务复用</li>
+<li>分布式静态资源：动静分离</li>
+<li>分布式数据和存储：数据库分布式</li>
+<li>分布式计算</li>
+</ul>
+<h3 id="大型网站核心架构要素"><a href="#大型网站核心架构要素" class="headerlink" title="大型网站核心架构要素"></a>大型网站核心架构要素</h3><p>关于什么是架构，一种比较通俗的说法是“最高层次的规划，难以改变的决定”，这些规划和决定奠定了事务未来发展的方向和最终的蓝图。</p>
+<h3 id="大型网站核心架构要素-1"><a href="#大型网站核心架构要素-1" class="headerlink" title="大型网站核心架构要素"></a>大型网站核心架构要素</h3><p>关于什么是架构，一种比较通俗的说法是：<strong>“最高层次的规划，难以改变的决定”</strong>，这些规划和决定奠定了事务未来发展的方向和最终的蓝图。</p>
+<ul>
+<li>性能</li>
+<li>可用性</li>
+<li>伸缩性</li>
+<li>扩展性</li>
+<li>安全性</li>
+</ul>
+<h3 id="瞬时响应：网站的高性能架构"><a href="#瞬时响应：网站的高性能架构" class="headerlink" title="瞬时响应：网站的高性能架构"></a>瞬时响应：网站的高性能架构</h3><h4 id="网站性能测试"><a href="#网站性能测试" class="headerlink" title="网站性能测试"></a>网站性能测试</h4><ol>
+<li>开发人员视角的网站性能：开发人员关注的主要是应用程序本身及其相关子系统的性能，包括响应延迟、系统吞吐量、并发处理能力、系统稳定性等技术指标。主要的优化手段有使用缓存加速数据读取，使用集群提高吞吐能力，使用异步消息加快请求响应及实现削峰，使用代码优化手段改善程序性能；</li>
+<li>运维人员视角的网站性能：运维人员更关注基础设施性能和资源利用率，如网络运营商的带宽能力、服务器硬件的配置、数据中心网络架构、服务器和网络带宽的资源利用率等。主要优化手段有建设优化骨干网、使用高性价比定制服务器、利用虚拟化技术优化资源利用等；</li>
+</ol>
+<p>网站系统用户数&gt;&gt;网站在线用户数&gt;&gt;网站并发用户数</p>
+<h4 id="性能优化策略"><a href="#性能优化策略" class="headerlink" title="性能优化策略"></a>性能优化策略</h4><ol>
+<li>性能分析：排查一个网站的性能瓶颈和排查一个程序的性能瓶颈的手法基本相同；检查请求处理的各个环节的日志，分析哪个环节响应时间不合理、超过预期；然后检查监控数据，分析影响性能的主要因素是内存、磁盘、网络、还是CPU，是代码问题还是架构不合理，或者系统资源确实不足；</li>
+<li>性能优化：根据网站分层架构，可以分为Web前端性能优化、应用服务器性能优化、存储服务器性能优化3大类。</li>
+</ol>
+<h4 id="WEB前端性能优化"><a href="#WEB前端性能优化" class="headerlink" title="WEB前端性能优化"></a>WEB前端性能优化</h4><ul>
+<li>浏览器访问优化<ul>
+<li>减少http请求：合并CSS、合并JavaScript、合并图片</li>
+<li>使用浏览器缓存</li>
+<li>启用压缩</li>
+<li>CSS放在页面最上面、JavaScript放在页面最下面</li>
+<li>减少Cookie传输</li>
+</ul>
+</li>
+<li>CDN加速：本质仍然是一个缓存，而且将数据缓存在离用户最近的地方，使用户以最快速度获取数据，即所谓网络访问第一跳。CDN能够缓存的一般是静态资源；</li>
+<li>反向代理：代理缓存</li>
+</ul>
+<h4 id="应用服务器性能优化"><a href="#应用服务器性能优化" class="headerlink" title="应用服务器性能优化"></a>应用服务器性能优化</h4><p>应用服务器就是处理网站业务的服务器，网站的业务代码都部署在这里，是网站开发最复杂，变化最多的地方，优化手段主要有缓存、集群、异步等；</p>
+<blockquote>
+<p>网站性能优化第一定律：优先考虑使用缓存优化性能；</p>
+</blockquote>
+<ul>
+<li><p>分布式缓存</p>
+</li>
+<li><p>异步操作</p>
+<ul>
+<li>需要注意的是，由于数据写入消息队列后立即返回个用户，数据在后续的业务校验、写数据库等操作肯讷河失败，因此在使用消息队列进行业务异步处理后，需要适当修改业务流程进行配合，如订单提交后，订单数据写入消息队列，不能立即返回用户订单提交成功，小樱桃在消息队列的订单消费者进程真正处理完该订单，甚至商品出库后，在通过电子邮件或者SMS消息通知用户订单成功，以免交易纠纷。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>任何可以晚点做的事情都应该晚点再做</p>
+</blockquote>
+<ul>
+<li>使用集群</li>
+<li>代码优化<ul>
+<li>多线程<ul>
+<li>将对象设计为无状态对象</li>
+<li>使用局部对象</li>
+<li>并发访问资源时使用锁</li>
+</ul>
+</li>
+<li>资源复用</li>
+<li>数据结构</li>
+<li>垃圾回收</li>
+</ul>
+</li>
+</ul>
+<h4 id="存储性能优化"><a href="#存储性能优化" class="headerlink" title="存储性能优化"></a>存储性能优化</h4><ul>
+<li>机械硬盘 VS 固态硬盘</li>
+</ul>
+<blockquote>
+<p>归根结底，技术是为业务服务的，技术选型和机构决策依赖业务规划乃至企业战略规划，离开业务发展的支撑和驱动，技术走不远，甚至还会迷路。</p>
+</blockquote>
+<h3 id="万无一失：网站的高可用架构"><a href="#万无一失：网站的高可用架构" class="headerlink" title="万无一失：网站的高可用架构"></a>万无一失：网站的高可用架构</h3><blockquote>
+<p>事物总是先求生存，然后求发展；</p>
+</blockquote>
+<h3 id="永无止境：网站的伸缩性架构"><a href="#永无止境：网站的伸缩性架构" class="headerlink" title="永无止境：网站的伸缩性架构"></a>永无止境：网站的伸缩性架构</h3><blockquote>
+<p>高手定律：这个世界只有遇不到的问题，没有解决不了的问题，高手之所以成为高手，是因为他们遇到了常人很难遇到的问题，并解决了。</p>
+</blockquote>
+<blockquote>
+<p>救世主定律：遇到问题，分析问题，最后总能解决问题。日过遇到问题就急匆匆地从外面挖回来一个高手，然后指望高手如探囊取物般轻松搞定，最后怕是只有彼此抱怨和伤害。很多问题只是看起来一样，具体问题总是要具体对待的。没有银弹，没有救世主。所以这个定律准确地应该说是“没有救世主定律”。</p>
+</blockquote>
+<h3 id="随需应变：网站的可扩展架构"><a href="#随需应变：网站的可扩展架构" class="headerlink" title="随需应变：网站的可扩展架构"></a>随需应变：网站的可扩展架构</h3><ul>
+<li>扩展性（Extensibility）：指的是对现在系统影响最小的情况下，系统功能可持续扩展或提升的能力。表现在系统基础设施稳定不需要经常变更，应用之间较少依赖和耦合，对需求变更可以敏捷响应。他是系统架构设计层面的开闭原则（对扩展开放，对修改关闭），架构设计考虑未来功能扩展，当系统增加新功能时，不需要对现有系统的结构和代码进行修改；</li>
+<li>伸缩性（Scalability）：指的是系统能够增加（减少）自身规模的方式增强（减少）自己计算处理事务的能力。如果这种增减是成比例的，就被称作线性伸缩性。在网站架构中，通常指利用集群的方式增加服务器数量、提高系统的整体事务吞吐能力。</li>
+</ul>
+<h4 id="大型网站分布式服务的需求与特点"><a href="#大型网站分布式服务的需求与特点" class="headerlink" title="大型网站分布式服务的需求与特点"></a>大型网站分布式服务的需求与特点</h4><ul>
+<li>负载均衡</li>
+<li>失效转移</li>
+<li>高效的远程通信</li>
+<li>整合异构系统</li>
+<li>对应用最少侵入</li>
+<li>版本管理</li>
+<li>实时监控</li>
+</ul>
+<h3 id="固若金汤：网站的安全架构"><a href="#固若金汤：网站的安全架构" class="headerlink" title="固若金汤：网站的安全架构"></a>固若金汤：网站的安全架构</h3><h3 id="大型网站典型故障案例分析"><a href="#大型网站典型故障案例分析" class="headerlink" title="大型网站典型故障案例分析"></a>大型网站典型故障案例分析</h3><h4 id="1-写日志也会引发故障"><a href="#1-写日志也会引发故障" class="headerlink" title="1 写日志也会引发故障"></a>1 写日志也会引发故障</h4><ul>
+<li>应用程序自己的日志输出配置和第三方组件日志输出要分别配置</li>
+<li>检查log配置文件，日志输出级别至少为warn，并且检查log输出代码调用，调用级别要符合真实日志级别。</li>
+<li>有些开源的第三方组件也会不恰当地输出太多Error日志，需要关闭这些第三方库的日志输出，至于那些第三方库有问题，只有在遇到问题的时候才知道。</li>
+</ul>
+<h4 id="2-高并发情况下访问数据库引发的故障"><a href="#2-高并发情况下访问数据库引发的故障" class="headerlink" title="2 高并发情况下访问数据库引发的故障"></a>2 高并发情况下访问数据库引发的故障</h4><ul>
+<li>首页不应该访问数据库，首页需要的数据可以从缓存服务器或者引擎服务器或者搜索引擎服务器获取。</li>
+<li>首页最好是静态的。</li>
+</ul>
+<h4 id="3-缓存引发的故障"><a href="#3-缓存引发的故障" class="headerlink" title="3 缓存引发的故障"></a>3 缓存引发的故障</h4><ul>
+<li>当缓存已经不仅仅是改善性能，而是成为网站架构不可或缺的一部分时，对缓存的管理就需要提高到和其他服务器一样的级别。</li>
+</ul>
+<h4 id="4-大文件读写独占磁盘引发的故障"><a href="#4-大文件读写独占磁盘引发的故障" class="headerlink" title="4 大文件读写独占磁盘引发的故障"></a>4 大文件读写独占磁盘引发的故障</h4><ul>
+<li>存储使用需要根据不同的文件类型和用途进行管理，图片都是小文件，应该使用专用的存储服务器，不能和大文件公用存储。批处理用的大文件可以使用其他类型的分布式文件系统。</li>
+</ul>
+<blockquote>
+<p>有位软件技术前辈曾经说过“软件设计有两种风格，一种是将软件设计得很复杂，以使其缺陷没有那么明显；一种是将软件设计得很简单，以使其没有明显的缺陷”。这两种风格的软件工程师都大有人在，只是在互联网公司，后一种更多一些，因为即使是不明显的缺陷在网站的快速发展冲击下，也会很快凸显数来，令其“作者”疲于应对，狼狈不堪，吃一次亏，学一次乖，以后设计软件时就会设计得简单些，如果问题能够很快被发现，要解决也相对容易；</p>
+</blockquote>
+<h3 id="架构师领导艺术"><a href="#架构师领导艺术" class="headerlink" title="架构师领导艺术"></a>架构师领导艺术</h3><ul>
+<li>不要只有一个架构师一个人拥有架构</li>
+<li>让其他人维护框架与架构文档</li>
+</ul>
+<blockquote>
+<p>所谓问题，就是体验-期望，当体验不能满足期望，就会觉得出现了问题；消除问题有两种手段：改善体验或降低期望。降低期望只是回避了问题，而如果直面期望和体验之间的差距，就会发现问题所在，找到突破点。</p>
+</blockquote>
+<ul>
+<li>把“我的问题”表述成“我们的问题”</li>
+</ul>
+<p>大多数人都不喜欢问题，问题意味着麻烦，当他听到你说”我遇到一个问题“的时候，下意识地要远离你和你的问题，如果你需要他的支持，就要想办法把你的问题变成他的问题，是他遇到了问题，而你来帮他解决。</p>
+<ul>
+<li>给上司题封闭性问题，给下属题开放式问题。</li>
+<li>提出问题而不是批评人</li>
+<li>用赞同的方式提出问题</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">架构</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.buhuiwy.cn/2020/11/08/%E5%A4%A7%E5%9E%8B%E5%88%86%E5%B8%83%E5%BC%8F%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/12/24/Flyway%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">FlyWay入门</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -239,9 +529,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
