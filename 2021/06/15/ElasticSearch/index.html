@@ -6,16 +6,102 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.buhuiwy.cn">
-  <title>Tag: SpringBoot | Mr.Right</title>
+  <title>ElasticSearch | Mr.Right</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不念过往，不惧将来！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mr.Right">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.buhuiwy.cn&#x2F;tags&#x2F;SpringBoot&#x2F;index.html">
+  <meta name="description" content="ElasticSearch版本：ElasticSearch 7.6.1 6.X 7.X 的区别十分大， 6.x 的API （原生API、RestFul 高级！）  我们要讲解什么？  SQL ： like %狂神说%，如果是的大数据，就十分慢！索引！ ElasticSearch：搜索！（百度、github、淘宝电商！）  聊一个人  货比三家  安装  生态圈  分词器 ik  RestFul">
+<meta name="keywords" content="ElasticSearch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ElasticSearch">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.buhuiwy.cn&#x2F;2021&#x2F;06&#x2F;15&#x2F;ElasticSearch&#x2F;index.html">
 <meta property="og:site_name" content="Mr.Right">
-<meta property="og:description" content="不念过往，不惧将来！">
+<meta property="og:description" content="ElasticSearch版本：ElasticSearch 7.6.1 6.X 7.X 的区别十分大， 6.x 的API （原生API、RestFul 高级！）  我们要讲解什么？  SQL ： like %狂神说%，如果是的大数据，就十分慢！索引！ ElasticSearch：搜索！（百度、github、淘宝电商！）  聊一个人  货比三家  安装  生态圈  分词器 ik  RestFul">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215203132.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215213049.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215218548.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215224468.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215233693.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215240703.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215247543.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215252488.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215258934.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215304874.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215310886.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215317906.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215339305.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215343605.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215348064.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215352486.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215400942.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215407958.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215419706.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215531121.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215952950.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220228455.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220236517.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220242914.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220249130.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220253795.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220259464.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220304952.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220311674.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220334002.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220429342.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220435544.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220440763.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220501030.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220511223.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220727734.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220733363.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220834169.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220840176.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220848769.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220854585.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220859341.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220903458.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220943092.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220948431.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220954025.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220958478.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221002712.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221006403.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221011032.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221014992.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221023338.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221102446.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221253831.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221346567.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221350774.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221357121.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221405535.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221410477.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221414943.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221430756.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221436341.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221441553.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221446490.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221450819.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221455778.png">
+<meta property="og:image" content="file:&#x2F;&#x2F;&#x2F;C:&#x2F;Users&#x2F;ZHANGB~1&#x2F;AppData&#x2F;Local&#x2F;Temp&#x2F;msohtmlclip1&#x2F;01&#x2F;clip_image003.gif">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221530225.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221537671.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221553544.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221609901.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221656070.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221700950.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221704469.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221709503.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221715126.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221733005.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221747199.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221752365.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221757413.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221802617.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628222003791.png">
+<meta property="og:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628222017152.png">
+<meta property="og:updated_time" content="2021-06-15T03:19:00.527Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215203132.png">
   
     <link rel="alternative" href="/atom.xml" title="Mr.Right" type="application/atom+xml">
   
@@ -159,212 +245,732 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-ElasticSearch" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+
+
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ElasticSearch
+    </h1>
+  
+
+        
+        <a href="/2021/06/15/ElasticSearch/" class="archive-article-date">
+  	<time datetime="2021-06-15T03:11:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-15</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer"/>
+
+<h1 id="ElasticSearch"><a href="#ElasticSearch" class="headerlink" title="ElasticSearch"></a>ElasticSearch</h1><p>版本：ElasticSearch 7.6.1</p>
+<p>6.X 7.X 的区别十分大， 6.x 的API （原生API、RestFul 高级！）</p>
+<blockquote>
+<p>我们要讲解什么？</p>
+</blockquote>
+<p>SQL ： like %狂神说%，如果是的大数据，就十分慢！索引！</p>
+<p>ElasticSearch：搜索！（百度、github、淘宝电商！）</p>
+<ol>
+<li><p>聊一个人</p>
+</li>
+<li><p>货比三家</p>
+</li>
+<li><p>安装</p>
+</li>
+<li><p>生态圈</p>
+</li>
+<li><p>分词器 ik</p>
+</li>
+<li><p>RestFul操作 ES</p>
+</li>
+<li><p>CRUD</p>
+</li>
+<li><p>SpringBoot 集成 ElasticSearch （从原理分析！）</p>
+</li>
+<li><p>爬虫爬取数据！</p>
+</li>
+<li><p>实战，模拟全文检索！</p>
+</li>
+</ol>
+<p>以后你只要，需要用到搜索，就可以使用ES！（大数据量的情况下使用！）</p>
+<a id="more"></a>
+
+<h1 id="聊聊Doug-Cutting"><a href="#聊聊Doug-Cutting" class="headerlink" title="聊聊Doug Cutting"></a>聊聊Doug Cutting</h1><blockquote>
+<p>本故事内容来自公众号：鲜枣课堂</p>
+</blockquote>
+<p>1998年9月4日，Google公司在美国硅谷成立。正如大家所知，它是一家做搜索引擎起家的公司。</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215203132.png" alt="image-20200628215203132"></p>
+<p>无独有偶，一位名叫<strong>Doug Cutting</strong>的美国工程师，也迷上了搜索引擎。他做了一个用于文本搜索的函数库（姑且理解为软件的功能组件），命名为<strong>Lucene</strong>。</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215213049.png" alt="image-20200628215213049"></p>
+<p>Lucene是用JAVA写成的，目标是为各种中小型应用软件加入全文检索功能。因为好用而且开源（代码公开），非常受程序员们的欢迎。</p>
+<p>早期的时候，这个项目被发布在Doug Cutting的个人网站和SourceForge（一个开源软件网站）。后来，2001年底，Lucene成为<strong>Apache软件基金会</strong>jakarta项目的一个子项目。</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215218548.png" alt="image-20200628215218548"></p>
+<p>2004年，Doug Cutting再接再励，在Lucene的基础上，和Apache开源伙伴Mike Cafarella合作，开发了一款可以代替当时的主流搜索的开源搜索引擎，命名为<strong>Nutch</strong>。</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215224468.png" alt="image-20200628215224468"></p>
+<p>Nutch是一个建立在Lucene核心之上的网页搜索应用程序，可以下载下来直接使用。它在Lucene的基础上加了网络爬虫和一些网页相关的功能，目的就是从一个简单的站内检索推广到全球网络的搜索上，就像Google一样。</p>
+<p>Nutch在业界的影响力比Lucene更大。</p>
+<p>大批网站采用了Nutch平台，大大降低了技术门槛，使低成本的普通计算机取代高价的Web服务器成为可能。甚至有一段时间，在硅谷有了一股用Nutch低成本创业的潮流。（大数据！）随着时间的推移，无论是Google还是Nutch，都面临搜索对象”体积”不断增大的问题。</p>
+<p>尤其是Google，作为互联网搜索引擎，需要存储大量的网页，并不断优化自己的搜索算法，提升搜索效率。</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215233693.png" alt="image-20200628215233693"></p>
+<p>在这个过程中，Google确实找到了不少好办法，并且无私地分享了出来。</p>
+<p>大数据就两个问题：存储 + 计算！</p>
+<p>2003年，Google发表了一篇技术学术论文，公开介绍了自己的谷歌文件系统*<em>GFS（Google File *</em></p>
+<p><strong>System）</strong>。这是Google公司为了存储海量搜索数据而设计的专用文件系统。</p>
+<p>第二年，也就是2004年，Doug Cutting基于Google的GFS论文，实现了<strong>分布式文件存储系统</strong>，并将它命名为<strong>NDFS（Nutch Distributed File System）</strong>。</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215240703.png" alt="image-20200628215240703"></p>
+<p>还是2004年，Google又发表了一篇技术学术论文，介绍自己的<strong>MapReduce编程模型</strong>。这个编程模型，用于大规模数据集（大于1TB）的并行分析运算。</p>
+<p>第二年（2005年），Doug Cutting又基于MapReduce，在Nutch搜索引擎实现了该功能。</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215247543.png" alt="image-20200628215247543"></p>
+<p>2006年，当时依然很厉害的<strong>Yahoo（雅虎）公司</strong>，招安了Doug Cutting。</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215252488.png" alt="image-20200628215252488"></p>
+<p>加盟Yahoo之后，Doug Cutting将NDFS和MapReduce进行了升级改造，并重新命名为</p>
+<p><strong>Hadoop</strong>（NDFS也改名为HDFS，Hadoop Distributed File System）。</p>
+<p>这个，就是后来大名鼎鼎的大数据框架系统——Hadoop的由来。而Doug Cutting，则被人们称为</p>
+<p><strong>Hadoop之父</strong>。</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215258934.png" alt="image-20200628215258934"></p>
+<p>Hadoop这个名字，实际上是Doug Cutting他儿子的黄色玩具大象的名字。所以，Hadoop的Logo，就是一只奔跑的黄色大象。</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215304874.png" alt="image-20200628215304874"></p>
+<p>我们继续往下说。</p>
+<p>还是2006年，Google又发论文了。</p>
+<p>这次，它们介绍了自己的<strong>BigTable</strong>。这是一种分布式数据存储系统，一种用来处理海量数据的非关系型数据库。</p>
+<p>Doug Cutting当然没有放过，在自己的hadoop系统里面，引入了BigTable，并命名为<strong>HBase</strong>。</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215310886.png" alt="image-20200628215310886"></p>
+<p>好吧，反正就是紧跟Google时代步伐，你出什么，我学什么。</p>
+<p>所以，Hadoop的核心部分，基本上都有Google的影子。</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215317906.png" alt="image-20200628215317906"></p>
+<p>2008年1月，Hadoop成功上位，正式成为Apache基金会的顶级项目。</p>
+<p>同年2月，Yahoo宣布建成了一个拥有1万个内核的Hadoop集群，并将自己的搜索引擎产品部署在上面。</p>
+<p>7月，Hadoop打破世界纪录，成为 快排序1TB数据的系统，用时209秒。</p>
+<blockquote>
+<p>回到主题</p>
+</blockquote>
+<p>Lucene 是一套信息检索工具包！ jar包！ 不包含 搜索引擎系统！</p>
+<p>包含的：索引结构！ 读写索引的工具！排序，搜索规则.… 工具类！</p>
+<p><strong>Lucene 和 ElasticSearch 关系：</strong></p>
+<p>ElasticSearch 是基于 Lucene 做了一些封装和增强（我们上手是十分简单！）我的讲课风格：学习更多的是培养大家的学习兴趣！教学风格：开源、免费的、授人以渔！</p>
+<p>只要学不死，就往死里学！</p>
+<h1 id="ElasticSearch概述"><a href="#ElasticSearch概述" class="headerlink" title="ElasticSearch概述"></a>ElasticSearch概述</h1><p>Elaticsearch，简称为es， es是一个开源的高扩展的分布式全文检索引擎，它可以近乎实时的存储、检索数据；本身扩展性很好，可以扩展到上百台服务器，处理PB级别（大数据时代）的数据。es也使用</p>
+<p>Java开发并使用Lucene作为其核心来实现所有索引和搜索的功能，但是它的目的是通过简单的RESTful</p>
+<p>API来隐藏Lucene的复杂性，从而让全文搜索变得简单。</p>
+<p>据国际权威的数据库产品评测机构DB Engines的统计，在2016年1月，ElasticSearch已超过Solr等，成为排名第一的搜索引擎类应用。</p>
+<blockquote>
+<p>历史</p>
+</blockquote>
+<p>多年前，一个叫做Shay Banon的刚结婚不久的失业开发者，由于妻子要去伦敦学习厨师，他便跟着也去了。在他找工作的过程中，为了给妻子构建一个食谱的搜索引擎，他开始构建一个早期版本的Lucene。直接基于Lucene工作会比较困难，所以Shay开始抽象Lucene代码以便Java程序员可以在应用中添加搜索功能。他发布了他的第一个开源项目，叫做”Compass”。</p>
+<p>后来Shay找到一份工作，这份工作处在高性能和内存数据网格的分布式环境中，因此高性能的、实时</p>
+<p>的、分布式的搜索引擎也是理所当然需要的。然后他决定重写Compass库使其成为一个独立的服务叫做</p>
+<p>Elasticsearch。</p>
+<p>第一个公开版本出现在2010年2月，在那之后Elasticsearch已经成为Github上 受欢迎的项目之一，代码贡献者超过300人。一家主营Elasticsearch的公司就此成立，他们一边提供商业支持一边开发新功能，不过Elasticsearch将永远开源且对所有人可用。</p>
+<p>Shay的妻子依旧等待着她的食谱搜索……</p>
+<p>现在我们就知道了 elasticsearch 重要性！<strong>谁在使用：</strong> 1、维基百科，类似百度百科，全文检索，高亮，搜索推荐/2 （权重，百度！）</p>
+<ol start="2">
+<li><p>The Guardian（国外新闻网站），类似搜狐新闻，用户行为日志（点击，浏览，收藏，评论）+社交网络数据（对某某新闻的相关看法），数据分析，给到每篇新闻文章的作者，让他知道他的文章的公众反馈（好，坏，热门，垃圾，鄙视，崇拜）</p>
+</li>
+<li><p>Stack Overflow（国外的程序异常讨论论坛），IT问题，程序的报错，提交上去，有人会跟你讨论和回答，全文检索，搜索相关问题和答案，程序报错了，就会将报错信息粘贴到里面去，搜索有没有对应的答案</p>
+</li>
+<li><p>GitHub（开源代码管理），搜索上千亿行代码</p>
+</li>
+<li><p>电商网站，检索商品</p>
+</li>
+<li><p>日志数据分析，logstash采集日志，ES进行复杂的数据分析，ELK技术， elasticsearch+logstash+kibana</p>
+</li>
+<li><p>商品价格监控网站，用户设定某商品的价格阈值，当低于该阈值的时候，发送通知消息给用户，比如说订阅牙膏的监控，如果高露洁牙膏的家庭套装低于50块钱，就通知我，我就去买。</p>
+</li>
+<li><p>BI系统，商业智能，Business Intelligence。比如说有个大型商场集团，BI，分析一下某某区域 近 3年的用户消费金额的趋势以及用户群体的组成构成，产出相关的数张报表，**区， 近3年，每年消费</p>
+</li>
+</ol>
+<p>金额呈现100%的增长，而且用户群体85%是高级白领，开一个新商场。ES执行数据分析和挖掘，</p>
+<p>Kibana进行数据可视化</p>
+<ol start="9">
+<li>国内：站内搜索（电商，招聘，门户，等等），IT系统搜索（OA，CRM，ERP，等等），数据分析</li>
+</ol>
+<p>（ES热门</p>
+<p>的一个使用场景）</p>
+<h1 id="ES和solr的差别"><a href="#ES和solr的差别" class="headerlink" title="ES和solr的差别"></a>ES和solr的差别</h1><p>架构选择！</p>
+<h2 id="Elasticsearch简介"><a href="#Elasticsearch简介" class="headerlink" title="Elasticsearch简介"></a>Elasticsearch简介</h2><p>Elasticsearch是一个实时分布式搜索和分析引擎。它让你以前所未有的速度处理大数据成为可能。</p>
+<p>它用于<strong>全文搜索</strong>、<strong>结构化搜索</strong>、<strong>分析</strong>以及将这三者混合使用：</p>
+<p>维基百科使用Elasticsearch提供全文搜索并高亮关键字，以及输入实时搜索(search-asyou-type)和搜索纠错(did-you-mean)等搜索建议功能。</p>
+<p>英国卫报使用Elasticsearch结合用户日志和社交网络数据提供给他们的编辑以实时的反馈，以便及时了解公众对新发表的文章的回应。</p>
+<p>StackOverflow结合全文搜索与地理位置查询，以及more-like-this功能来找到相关的问题和答案。</p>
+<p>Github使用Elasticsearch检索1300亿行的代码。</p>
+<p>但是Elasticsearch不仅用于大型企业，它还让像DataDog以及Klout这样的创业公司将 初的想法变成可扩展的解决方案。</p>
+<p>Elasticsearch可以在你的笔记本上运行，也可以在数以百计的服务器上处理PB级别的数据 。</p>
+<p>Elasticsearch是一个基于Apache Lucene(TM)的开源搜索引擎。无论在开源还是专有领域，Lucene可以被认为是迄今为止 先进、性能 好的、功能 全的搜索引擎库。但是，Lucene只是一个库。想要使用它，你必须使用Java来作为开发语言并将其直接集成到你的应用中，更糟糕的是，Lucene非常复杂，你需要深入了解检索的相关知识来理解它是如何工作的。</p>
+<p>Elasticsearch也使用Java开发并使用Lucene作为其核心来实现所有索引和搜索的功能，但是它的目的是通过简单的RESTful API来隐藏Lucene的复杂性，从而让全文搜索变得简单。</p>
+<h2 id="Solr简介"><a href="#Solr简介" class="headerlink" title="Solr简介"></a>Solr简介</h2><p>Solr 是Apache下的一个顶级开源项目，采用Java开发，它是基于Lucene的全文搜索服务器。Solr提供了比Lucene更为丰富的查询语言，同时实现了可配置、可扩展，并对索引、搜索性能进行了优化</p>
+<p>Solr可以独立运行，运行在Jetty、Tomcat等这些Servlet容器中，Solr 索引的实现方法很简单，用 POST 方法向 Solr 服务器发送一个描述 Field 及其内容的 XML 文档，Solr根据xml文档添加、删除、更新索引。Solr 搜索只需要发送 HTTP GET 请求，然后对 Solr 返回Xml、json等格式的查询结果进行解析，组织页面布局。Solr不提供构建UI的功能，Solr提供了一个管理界面，通过管理界面可以查询Solr的配置和运行情况。</p>
+<p>solr是基于lucene开发企业级搜索服务器，实际上就是封装了lucene。</p>
+<p>Solr是一个独立的企业级搜索应用服务器，它对外提供类似于Web-service的API接口。用户可以通过 http请求，向搜索引擎服务器提交一定格式的文件，生成索引；也可以通过提出查找请求，并得到返回结果。</p>
+<h2 id="Lucene简介"><a href="#Lucene简介" class="headerlink" title="Lucene简介"></a>Lucene简介</h2><p>Lucene是apache软件基金会4 jakarta项目组的一个子项目，是一个开放源代码的全文检索引擎工具</p>
+<p>包，但它不是一个完整的全文检索引擎，而是一个全文检索引擎的架构，提供了完整的查询引擎和索引引擎，部分文本分析引擎（英文与德文两种西方语言）。Lucene的目的是为软件开发人员提供一个简单易用的工具包，以方便的在目标系统中实现全文检索的功能，或者是以此为基础建立起完整的全文检索引擎。Lucene是一套用于全文检索和搜寻的开源程式库，由Apache软件基金会支持和提供。Lucene提供了一个简单却强大的应用程式接口，能够做全文索引和搜寻。在Java开发环境里Lucene是一个成熟的免费开源工具。就其本身而言，Lucene是当前以及 近几年 受欢迎的免费Java信息检索程序库。人们经常提到信息检索程序库，虽然与搜索引擎有关，但不应该将信息检索程序库与搜索引擎相混淆。</p>
+<p>Lucene是一个全文检索引擎的架构。那什么是全文搜索引擎？</p>
+<p>全文搜索引擎是名副其实的搜索引擎，国外具代表性的有Google、Fast/AllTheWeb、AltaVista、</p>
+<p>Inktomi、Teoma、WiseNut等，国内著名的有百度（Baidu）。它们都是通过从互联网上提取的各个网站的信息（以网页文字为主）而建立的数据库中，检索与用户查询条件匹配的相关记录，然后按一定的排列顺序将结果返回给用户，因此他们是真正的搜索引擎。</p>
+<p>从搜索结果来源的角度，全文搜索引擎又可细分为两种，一种是拥有自己的检索程序（Indexer），俗称 “蜘蛛”（Spider）程序或”机器人”（Robot）程序，并自建网页数据库，搜索结果直接从自身的数据库中调用，如上面提到的7家引擎；另一种则是租用其他引擎的数据库，并按自定的格式排列搜索结果，如</p>
+<p>Lycos引擎。</p>
+<h2 id="Elasticsearch和Solr比较"><a href="#Elasticsearch和Solr比较" class="headerlink" title="Elasticsearch和Solr比较"></a>Elasticsearch和Solr比较</h2><p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215339305.png" alt="image-20200628215339305"></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215343605.png" alt="image-20200628215343605"></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215348064.png" alt="image-20200628215348064"></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215352486.png" alt="image-20200628215352486"></p>
+<p><strong>ElasticSearch vs Solr 总结</strong></p>
+<ol>
+<li><p>es基本是开箱即用（解压就可以用 ! ），非常简单。Solr安装略微复杂一丢丢！</p>
+</li>
+<li><p>Solr 利用 Zookeeper 进行分布式管理，而 Elasticsearch 自身带有分布式协调管理功能。</p>
+</li>
+<li><p>Solr 支持更多格式的数据，比如JSON、XML、CSV，而 Elasticsearch 仅支持json文件格式。</p>
+</li>
+<li><p>Solr 官方提供的功能更多，而 Elasticsearch 本身更注重于核心功能，高级功能多有第三方插件提供，例如图形化界面需要kibana友好支撑~!</p>
+</li>
+<li><p>Solr 查询快，但更新索引时慢（即插入删除慢），用于电商等查询多的应用； ES建立索引快（即查询慢），即实时性查询快，用于facebook新浪等搜索。</p>
+</li>
+</ol>
+<blockquote>
+<p>Solr 是传统搜索应用的有力解决方案，但 Elasticsearch 更适用于新兴的实时搜索应用。</p>
+</blockquote>
+<ol start="6">
+<li>Solr比较成熟，有一个更大，更成熟的用户、开发和贡献者社区，而 Elasticsearch相对开发维护者较少，更新太快，学习使用成本较高。（趋势！）</li>
+</ol>
+<h1 id="ElasticSearch安装"><a href="#ElasticSearch安装" class="headerlink" title="ElasticSearch安装"></a>ElasticSearch安装</h1><p>声明：JDK1.8 ， 低要求！ ElasticSearch 客户端，界面工具！</p>
+<p>Java开发，ElasticSearch 的版本和我们之后对应的 Java 的核心jar包！ 版本对应！JDK 环境是正常！</p>
+<blockquote>
+<p>下载</p>
+</blockquote>
+<p>官网：<a href="https://www.elastic.co/" target="_blank" rel="noopener">[https://www.elastic.co/]{.underline}</a></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215400942.png" alt="image-20200628215400942"></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215407958.png" alt="image-20200628215407958"></p>
+<p>下载地址：<a href="https://www.elastic.co/cn/downloads/elasticsearch" target="_blank" rel="noopener">[https://www.elastic.co/cn/downloads/elasticsearch]{.underline}</a> 官网下载巨慢，翻墙，网盘中下载即可！</p>
+<p>我们学习的话 Window 和 Linux 都可以学习！我们这里现在Window下学习！</p>
+<p>ELK 三剑客，解压即用！（web项目！前端环境！）</p>
+<blockquote>
+<p>window 下安装！</p>
+</blockquote>
+<ol>
+<li>解压就可以使用了！</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215419706.png" alt="image-20200628215419706"></p>
+<ol start="2">
+<li>熟悉目录！</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">bin  启动文件</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">config 配置文件</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	log4j2   日志配置文件</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	jvm.options  java 虚拟机相关的配置</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	elasticsearch.yml   elasticsearch的配置文件！ 默认 9200！ 跨域</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">lib 相关的jar包</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">logs 日志</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">modules 功能模块</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">plugins 插件</span></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>启动，访问9200；</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215531121.png" alt="image-20200628215531121"></p>
+<ol start="4">
+<li>访问测试！</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628215952950.png" alt="image-20200628215952950"></p>
+<blockquote>
+<p>安装可视化界面 es head的插件</p>
+</blockquote>
+<p>没有前端基础的，先去看我的Vue，把基本的环境安装完毕！ 1、下载地址：<a href="https://github.com/mobz/elasticsearch-head/" target="_blank" rel="noopener">[https://]{.underline}g[ithub.com/mobz/elasticsearch-head/]{.underline}</a></p>
+<ol start="2">
+<li>启动</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm install</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">npm run start</span></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>接测试发现，存在跨域问题：配置es</li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="attr">http.cors.enables:</span> <span class="literal">true</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="string">http.cors.allow-origin</span> <span class="string">"*"</span></span></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>重启es服务器，然后再次连接</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220228455.png" alt="image-20200628220228455"></p>
+<p>你们初学，就把es当做一个数据库！ （可以建立索引（库），文档（库中的数据！））</p>
+<p>这个head我们就把它当做数据展示工具！我们后面所有的查询，Kibana！</p>
+<blockquote>
+<p>了解 ELK</p>
+</blockquote>
+<p>ELK是Elasticsearch、Logstash、Kibana三大开源框架首字母大写简称。市面上也被成为Elastic</p>
+<p>Stack。其中Elasticsearch是一个基于Lucene、分布式、通过Restful方式进行交互的近实时搜索平台框架。像类似百度、谷歌这种大数据全文搜索引擎的场景都可以使用Elasticsearch作为底层支持框架，可见Elasticsearch提供的搜索能力确实强大,市面上很多时候我们简称Elasticsearch为es。Logstash是ELK 的中央数据流引擎，用于从不同目标（文件/数据存储/MQ）收集的不同格式数据，经过过滤后支持输出到不同目的地（文件/MQ/redis/elasticsearch/kafka等）。Kibana可以将elasticsearch的数据通过友好的页面展示出来，提供实时分析的功能。</p>
+<p>市面上很多开发只要提到ELK能够一致说出它是一个日志分析架构技术栈总称，但实际上ELK不仅仅适用于日志分析，它还可以支持其它任何数据分析和收集的场景，日志分析和收集只是更具有代表性。并非唯一性。</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220236517.png" alt="image-20200628220236517"></p>
+<blockquote>
+<p>安装Kibana</p>
+</blockquote>
+<p>Kibana是一个针对Elasticsearch的开源分析及可视化平台，用来搜索、查看交互存储在Elasticsearch索引中的数据。使用Kibana，可以通过各种图表进行高级数据分析及展示。Kibana让海量数据更容易理解。它操作简单，基于浏览器的用户界面可以快速创建仪表板（dashboard）实时显示Elasticsearch查询动态。设置Kibana非常简单。无需编码或者额外的基础架构，几分钟内就可以完成Kibana安装并启动</p>
+<p>Elasticsearch索引监测。</p>
+<p>官网：<a href="https://www.elastic.co/cn/kibana" target="_blank" rel="noopener">[https://www.elastic.co/cn/kibana]{.underline}</a></p>
+<p>Kibana 版本要和 Es 一致！</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220242914.png" alt="image-20200628220242914"></p>
+<p>下载完毕后，解压也需要一些时间！是一个标准的工程！好处：ELK 基本上都是拆箱即用！</p>
+<blockquote>
+<p>启动测试：</p>
+</blockquote>
+<ol>
+<li>解压后端的目录</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220249130.png" alt="image-20200628220249130"></p>
+<ol start="2">
+<li>启动</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220253795.png" alt="image-20200628220253795"></p>
+<ol start="3">
+<li>访问测试</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220259464.png" alt="image-20200628220259464"></p>
+<ol start="4">
+<li>开发工具！ （Post、curl、head、谷歌浏览器插件测试！）</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220304952.png" alt="image-20200628220304952"></p>
+<p>我们之后的所有操作都在这里进行编写！很多学习大数据的人，Hadoop！</p>
+<ol start="5">
+<li>汉化！自己修改kibana配置即可！ zh-CN！</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220311674.png" alt="image-20200628220311674"></p>
+<h2 id="ES核心概念"><a href="#ES核心概念" class="headerlink" title="ES核心概念"></a>ES核心概念</h2><ol>
+<li><p>索引</p>
+</li>
+<li><p>字段类型（mapping）</p>
+</li>
+<li><p>文档（documents）</p>
+</li>
+</ol>
+<blockquote>
+<p>概述</p>
+</blockquote>
+<p>在前面的学习中，我们已经掌握了es是什么，同时也把es的服务已经安装启动，那么es是如何去存储数据，数据结构是什么，又是如何实现搜索的呢？我们先来聊聊ElasticSearch的相关概念吧！集群，节点，索引，类型，文档，分片，映射是什么？</p>
+<blockquote>
+<p>elasticsearch是面向文档，关系行数据库 和 elasticsearch 客观的对比！一切都是JSON！</p>
+</blockquote>
+<p>+———————+——————-+<br>| &gt; <strong>Relational DB</strong> | <strong>Elasticsearch</strong> |<br>+=====================+===================+<br>| &gt; 数据库(database)  | 索引(indices)     |<br>+———————+——————-+<br>| &gt; 表(tables)        | types             |<br>+———————+——————-+<br>| &gt; 行(rows)          | documents         |<br>+———————+——————-+<br>| &gt; 字段(columns)     | fields            |<br>+———————+——————-+</p>
+<p>elasticsearch(集群)中可以包含多个索引(数据库)，每个索引中可以包含多个类型(表)，每个类型下又包含多 个文档(行)，每个文档中又包含多个字段(列)。</p>
+<p><strong>物理设计：</strong></p>
+<p>elasticsearch 在后台把每个<strong>索引划分成多个分片</strong>，每分分片可以在集群中的不同服务器间迁移一个人就是一个集群！默认的集群名称就是 elaticsearh</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220334002.png" alt="image-20200628220334002"></p>
+<p><strong>逻辑设计：</strong></p>
+<p>一个索引类型中，包含多个文档，比如说文档1，文档2。 当我们索引一篇文档时，可以通过这样的一各顺序找到 它: 索引 ▷ 类型 ▷ 文档ID ，通过这个组合我们就能索引到某个具体的文档。 注意:ID不必是整数，实际上它是个字 符串。</p>
+<blockquote>
+<p>文档</p>
+</blockquote>
+<p>就是我们的一条条数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">user</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. zhangsan <span class="number">18</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="number">2</span>. lisi     <span class="number">3</span></span></pre></td></tr></table></figure>
+
+<p>之前说elasticsearch是面向文档的，那么就意味着索引和搜索数据的 小单位是文档，elasticsearch 中，文档有几个 重要属性 :</p>
+<blockquote>
+<p>自我包含，一篇文档同时包含字段和对应的值，也就是同时包含 key:value！</p>
+<p>可以是层次型的，一个文档中包含自文档，复杂的逻辑实体就是这么来的！ {就是一个json对象！ fastjson进行自动转换！}</p>
+<p>灵活的结构，文档不依赖预先定义的模式，我们知道关系型数据库中，要提前定义字段才能使用，在elasticsearch中，对于字段是非常灵活的，有时候，我们可以忽略该字段，或者动态的添加一个新的字段。</p>
+</blockquote>
+<p>尽管我们可以随意的新增或者忽略某个字段，但是，每个字段的类型非常重要，比如一个年龄字段类</p>
+<p>型，可以是字符 串也可以是整形。因为elasticsearch会保存字段和类型之间的映射及其他的设置。这种映射具体到每个映射的每种类型，这也是为什么在elasticsearch中，类型有时候也称为映射类型。</p>
+<blockquote>
+<p>类型</p>
+</blockquote>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220429342.png" alt="image-20200628220429342"></p>
+<p>类型是文档的逻辑容器，就像关系型数据库一样，表格是行的容器。 类型中对于字段的定义称为映射，比如 name 映 射为字符串类型。 我们说文档是无模式的，它们不需要拥有映射中所定义的所有字段，</p>
+<p>比如新增一个字段，那么elasticsearch是怎么做的呢?elasticsearch会自动的将新字段加入映射，但是这个字段的不确定它是什么类型，elasticsearch就开始猜，如果这个值是18，那么elasticsearch会认为它是整形。 但是elasticsearch也可能猜不对， 所以 安全的方式就是提前定义好所需要的映射，这点跟关系型数据库殊途同归了，先定义好字段，然后再使用，别 整什么幺蛾子。</p>
+<blockquote>
+<p>索引</p>
+</blockquote>
+<p>就是数据库！</p>
+<p>索引是映射类型的容器，elasticsearch中的索引是一个非常大的文档集合。索引存储了映射类型的字段和其他设置。 然后它们被存储到了各个分片上了。 我们来研究下分片是如何工作的。</p>
+<p><strong>物理设计 ：节点和分片 如何工作</strong></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220435544.png" alt="image-20200628220435544"></p>
+<p>一个集群至少有一个节点，而一个节点就是一个elasricsearch进程，节点可以有多个索引默认的，如果你创建索引，那么索引将会有个5个分片 ( primary shard ,又称主分片 ) 构成的，每一个主分片会有一个副本 ( replica shard ,又称复制分片 )</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220440763.png" alt="image-20200628220440763"></p>
+<p>上图是一个有3个节点的集群，可以看到主分片和对应的复制分片都不会在同一个节点内，这样有利于某个节点挂掉 了，数据也不至于丢失。 实际上，一个分片是一个Lucene索引，一个包含倒排索引的文件目录，倒排索引的结构使 得elasticsearch在不扫描全部文档的情况下，就能告诉你哪些文档包含特定的关键字。 不过，等等，倒排索引是什 么鬼?</p>
+<blockquote>
+<p>倒排索引</p>
+</blockquote>
+<p>elasticsearch使用的是一种称为倒排索引的结构，采用Lucene倒排索作为底层。这种结构适用于快速的全文搜索， 一个索引由文档中所有不重复的列表构成，对于每一个词，都有一个包含它的文档列表。 例如，现在有两个文档， 每个文档包含如下内容：</p>
+<blockquote>
+<p>Study every day, good good up to forever # 文档1包含的内容</p>
+<p>To forever, study every day, good good up # 文档2包含的内容</p>
+</blockquote>
+<p>为了创建倒排索引，我们首先要将每个文档拆分成独立的词(或称为词条或者tokens)，然后创建一个包含所有不重 复的词条的排序列表，然后列出每个词条出现在哪个文档 :</p>
+<p>+————+————+————+<br>| &gt; <strong>term</strong> | <strong>doc_1</strong> | <strong>doc_2</strong> |<br>+============+============+============+<br>| &gt; Study    | √          | ×          |<br>+————+————+————+<br>| &gt; To       | x          | ×          |<br>+————+————+————+<br>| &gt; every    | √          | √          |<br>+————+————+————+<br>| &gt; forever  | √          | √          |<br>+————+————+————+<br>| &gt; day      | √          | √          |<br>+————+————+————+<br>| &gt; study    | ×          | √          |<br>+————+————+————+<br>| &gt; good     | √          | √          |<br>+————+————+————+<br>| &gt; every    | √          | √          |<br>+————+————+————+<br>| &gt; to       | √          | ×          |<br>+————+————+————+<br>| &gt; up       | √          | √          |<br>+————+————+————+</p>
+<p>现在，我们试图搜索 to forever，只需要查看包含每个词条的文档 score</p>
+<p>+————+————+————+<br>| &gt; <strong>term</strong> | <strong>doc_1</strong> | <strong>doc_2</strong> |<br>+============+============+============+<br>| &gt; to       | √          | ×          |<br>+————+————+————+<br>| &gt; forever  | √          | √          |<br>+————+————+————+<br>| &gt; total    | 2          | 1          |<br>+————+————+————+</p>
+<p>两个文档都匹配，但是第一个文档比第二个匹配程度更高。如果没有别的条件，现在，这两个包含关键字的文档都将返回。</p>
+<p>再来看一个示例，比如我们通过博客标签来搜索博客文章。那么倒排索引列表就是这样的一个结构 :</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220501030.png" alt="image-20200628220501030"></p>
+<p>如果要搜索含有 python 标签的文章，那相对于查找所有原始数据而言，查找倒排索引后的数据将会快的多。只需要 查看标签这一栏，然后获取相关的文章ID即可。完全过滤掉无关的所有数据，提高效率！ elasticsearch的索引和Lucene的索引对比</p>
+<p>在elasticsearch中， 索引 （库）这个词被频繁使用，这就是术语的使用。 在elasticsearch中，索引被分为多个分片，每份 分片是一个Lucene的索引。所以一个elasticsearch索引是由多个Lucene索引组成的。别问为什么，谁让elasticsearch使用Lucene作为底层呢! 如无特指，说起索引都是指elasticsearch 的索引。</p>
+<p>接下来的一切操作都在kibana中Dev Tools下的Console里完成。基础操作！</p>
+<h2 id="IK分词器插件"><a href="#IK分词器插件" class="headerlink" title="IK分词器插件"></a>IK分词器插件</h2><blockquote>
+<p>什么是IK分词器？</p>
+</blockquote>
+<p>分词：即把一段中文或者别的划分成一个个的关键字，我们在搜索时候会把自己的信息进行分词，会把数据库中或者索引库中的数据进行分词，然后进行一个匹配操作，默认的中文分词是将每个字看成一个词，比如 “我爱狂神” 会被分为&quot;我&quot;,&quot;爱&quot;,&quot;狂&quot;,&quot;神&quot;，这显然是不符合要求的，所以我们需要安装中文分词器ik来解决这个问题。</p>
+<p>如果要使用中文，建议使用ik分词器！</p>
+<p>IK提供了两个分词算法：ik_smart 和 ik_max_word，其中 ik_smart 为 少切分，ik_max_word为 细粒度划分！一会我们测试！</p>
+<blockquote>
+<p>安装</p>
+</blockquote>
+<ol>
+<li><p><a href="https://github.com/medcl/elasticsearch-analysis-ik" target="_blank" rel="noopener">[https://]{.underline}g[ithub.com/medcl/elasticsearch-anal]{.underline}y[sis-ik]{.underline}</a></p>
+</li>
+<li><p>下载完毕之后，放入到我们的elasticsearch 插件即可！</p>
+</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220511223.png" alt="image-20200628220511223"></p>
+<ol start="3">
+<li>重启观察ES，可以看到ik分词器被加载了！</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220727734.png" alt="image-20200628220727734"></p>
+<ol start="4">
+<li>elasticsearch-plugin 可以通过这个命令来查看加载进来的插件</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220733363.png" alt="image-20200628220733363"></p>
+<ol start="5">
+<li>使用kibana测试！</li>
+</ol>
+<blockquote>
+<p>查看不同的分词效果</p>
+</blockquote>
+<p>其中 ik_smart 为 少切分</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220834169.png" alt="image-20200628220834169"></p>
+<p>ik_max_word为 细粒度划分！穷尽词库的可能！字典！</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220840176.png" alt="image-20200628220840176"></p>
+<blockquote>
+<p>我们输入 超级喜欢狂神说Java</p>
+</blockquote>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220848769.png" alt="image-20200628220848769"></p>
+<p>发现问题：狂神说被拆开了！</p>
+<p>这种自己需要的词，需要自己加到我们的分词器的字典中！</p>
+<blockquote>
+<p>ik 分词器增加自己的配置！</p>
+</blockquote>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220854585.png" alt="image-20200628220854585"></p>
+<p>重启es，看细节！</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220859341.png" alt="image-20200628220859341"></p>
+<p>再次测试一下狂神说，看下效果！</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220903458.png" alt="image-20200628220903458"></p>
+<p>以后的话，我们需要自己配置 分词就在自己定义的dic文件中进行配置即可！</p>
+<h2 id="Rest风格说明"><a href="#Rest风格说明" class="headerlink" title="Rest风格说明"></a>Rest风格说明</h2><p>一种软件架构风格，而不是标准，只是提供了一组设计原则和约束条件。它主要用于客户端和服务器交互类的软件。基于这个风格设计的软件可以更简洁，更有层次，更易于实现缓存等机制。</p>
+<p>基本Rest命令说明：</p>
+<p>+————+————————————————–+————————–+<br>| <strong>method</strong> | <strong>url地址</strong>                                      | <strong>描述</strong>                 |<br>+============+==================================================+==========================+<br>| PUT        | localhost:9200/索引名称/类型名称/文档id          | &gt; 创建文档（指定文档id） |<br>+————+————————————————–+————————–+<br>| POST       | localhost:9200/索引名称/类型名称                 | &gt; 创建文档（随机文档id） |<br>+————+————————————————–+————————–+<br>| POST       | localhost:9200/索引名称/类型名称/文档id/_update | 修改文档                 |<br>+————+————————————————–+————————–+<br>| DELETE     | localhost:9200/索引名称/类型名称/文档id          | 删除文档                 |<br>+————+————————————————–+————————–+<br>| GET        | localhost:9200/索引名称/类型名称/文档id          | 查询文档通过文档id       |<br>+————+————————————————–+————————–+<br>| POST       | localhost:9200/索引名称/类型名称/_search        | 查询所有数据             |<br>+————+————————————————–+————————–+</p>
+<h2 id="关于索引的基本操作"><a href="#关于索引的基本操作" class="headerlink" title="关于索引的基本操作"></a>关于索引的基本操作</h2><p>1、创建一个索引！</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">PUT /索引名/类型名/文档id</span></pre></td></tr></table></figure>
+
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220943092.png" alt="image-20200628220943092"></p>
+<p>完成了自动增加了索引！数据也成功的添加了，这就是我说大家在初期可以把它当做数据库学习的原因！</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220948431.png" alt="image-20200628220948431"></p>
+<p>3、那么 name 这个字段用不用指定类型呢。毕竟我们关系型数据库 是需要指定类型的啊 !</p>
+<blockquote>
+<p>字符串类型</p>
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/text.html" target="_blank" rel="noopener">[text]{.underline}</a> 、 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/keyword.html" target="_blank" rel="noopener">[ke]{.underline}y[word]{.underline}</a> 数值类型</p>
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/number.html" target="_blank" rel="noopener">[lon]{.underline}g, [inte]{.underline}g[er]{.underline}, [short]{.underline}, [b]{.underline}y[te]{.underline}, [double]{.underline}, [float]{.underline}, [half_float]{.underline}, [scaled_float]{.underline}</a> 日期类型 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/date.html" target="_blank" rel="noopener">[date]{.underline}</a></p>
+<p>te布尔值类型 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/boolean.html" target="_blank" rel="noopener">[boolean]{.underline}</a> 二进制类型 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/binary.html" target="_blank" rel="noopener">[binary]{.underline}</a></p>
+<p>等等......</p>
+</blockquote>
+<ol start="4">
+<li>指定字段的类型</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220954025.png" alt="image-20200628220954025"></p>
+<p>获得这个规则！ 可以通过 GET 请求获取具体的信息！</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628220958478.png" alt="image-20200628220958478"></p>
+<ol start="5">
+<li>查看默认的信息</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221002712.png" alt="image-20200628221002712"></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221006403.png" alt="image-20200628221006403"></p>
+<p>如果自己的文档字段没有指定，那么es 就会给我们默认配置字段类型！</p>
+<blockquote>
+<p>虚心学习，这个世界上大佬很多！</p>
+</blockquote>
+<p>扩展： 通过命令 elasticsearch 索引情况！ 通过get _cat/ 可以获得es的当前的很多信息！</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221011032.png" alt="image-20200628221011032"></p>
+<blockquote>
+<p>修改 提交还是使用PUT 即可！ 然后覆盖！ 新办法！</p>
+</blockquote>
+<p>曾经！</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221014992.png" alt="image-20200628221014992"></p>
+<p>现在的方法！</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221023338.png" alt="image-20200628221023338"></p>
+<blockquote>
+<p>删除索引！</p>
+</blockquote>
+<p>通过DELETE 命令实现删除、 根据你的请求来判断是删除索引还是删除文档记录！使用RESTFUL 风格是我们ES推荐大家使用的！</p>
+<h2 id="关于文档的基本操作（重点）"><a href="#关于文档的基本操作（重点）" class="headerlink" title="关于文档的基本操作（重点）"></a>关于文档的基本操作（重点）</h2><blockquote>
+<p>基本操作</p>
+</blockquote>
+<ol>
+<li>添加数据</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">PUT /狂神说/user/1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	"name": "狂神说"，</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	"age": 23,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	"desc": "谜一样的男子",</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	"tags": ["技术宅", "直男"]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221102446.png" alt="image-20200628221102446"></p>
+<ol start="2">
+<li>获取数据 GET</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221253831.png" alt="image-20200628221253831"></p>
+<ol start="3">
+<li>更新数据 PUT</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221346567.png" alt="image-20200628221346567"></p>
+<ol start="4">
+<li>Post _update , 推荐使用这种更新方式！</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221350774.png" alt="image-20200628221350774"></p>
+<p>简单地搜索！</p>
+<p>简答的条件查询，可以根据默认的映射规则，产生基本的查询！</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221357121.png" alt="image-20200628221357121"></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221405535.png" alt="image-20200628221405535"></p>
+<blockquote>
+<p>复杂操作搜索 select ( 排序，分页，高亮，模糊查询，精准查询！)</p>
+</blockquote>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221410477.png" alt="image-20200628221410477"></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221414943.png" alt="image-20200628221414943"></p>
+<p>输出结果，不想要那么多！ </p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221430756.png" alt="image-20200628221430756"></p>
+<p>我们之后使用Java操作es ，所有的方法和对象就是这里面的 key！</p>
+<blockquote>
+<p>排序！</p>
+</blockquote>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221436341.png" alt="image-20200628221436341"></p>
+<blockquote>
+<p>分页查询！</p>
+</blockquote>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221441553.png" alt="image-20200628221441553"></p>
+<p>数据下标还是从0开始的，和学的所有数据结构是一样的！</p>
+<p>/search/{current}/{pagesize}</p>
+<blockquote>
+<p>布尔值查询</p>
+</blockquote>
+<p>must （and），所有的条件都要符合 where id = 1 and name = xxx</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221446490.png" alt="image-20200628221446490"></p>
+<p>should（or），所有的条件都要符合 where id = 1 or name = xxx</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221450819.png" alt="image-20200628221450819"></p>
+<p>must_not （not）</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221455778.png" alt="image-20200628221455778"></p>
+<p><img src="file:///C:/Users/ZHANGB~1/AppData/Local/Temp/msohtmlclip1/01/clip_image003.gif" alt="img"></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221530225.png" alt="image-20200628221530225"></p>
+<blockquote>
+<p>精确查询！</p>
+</blockquote>
+<p>term 查询是直接通过倒排索引指定的词条进程精确查找的！<strong>关于分词：</strong></p>
+<blockquote>
+<p>term ，直接查询精确的</p>
+</blockquote>
+<p>match，会使用分词器解析！（先分析文档，然后在通过分析的文档进行查询！）<strong>两个类型 text keyword</strong></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221537671.png" alt="image-20200628221537671"></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221553544.png" alt="image-20200628221553544"></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221609901.png" alt="image-20200628221609901"></p>
+<blockquote>
+<p>多个值匹配精确查询！</p>
+</blockquote>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221656070.png" alt="image-20200628221656070"></p>
+<blockquote>
+<p>高亮查询</p>
+</blockquote>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221700950.png" alt="image-20200628221700950"></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221704469.png" alt="image-20200628221704469"></p>
+<p>这些其实MySQL 也可以做，只是MySQL 效率比较低！</p>
+<blockquote>
+<p>匹配</p>
+<p>按照条件匹配精确匹配</p>
+<p>区间范围匹配匹配字段过滤多条件查询</p>
+<p>高亮查询</p>
+</blockquote>
+<h1 id="集成SpringBoot"><a href="#集成SpringBoot" class="headerlink" title="集成SpringBoot"></a>集成SpringBoot</h1><blockquote>
+<p>找官方文档！</p>
+</blockquote>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221709503.png" alt="image-20200628221709503"></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221715126.png" alt="image-20200628221715126"></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221733005.png" alt="image-20200628221733005"></p>
+<ol>
+<li><p>找到原生的依赖</p>
+</li>
+<li><p>找对象</p>
+</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221747199.png" alt="image-20200628221747199"></p>
+<ol start="3">
+<li>分析这个类中的方法即可！</li>
+</ol>
+<blockquote>
+<p>配置基本的项目</p>
+</blockquote>
+<p>问题：一定要保证 我们的导入的依赖和我们的es 版本一致</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221752365.png" alt="image-20200628221752365"></p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221757413.png" alt="image-20200628221757413"></p>
+<p>源码中提供对象！</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628221802617.png" alt="image-20200628221802617"></p>
+<p>虽然这里导入3个类，静态内部类，核心类就一个！</p>
+<blockquote>
+<p>具体的Api测试！</p>
+</blockquote>
+<ol>
+<li><p>创建索引</p>
+</li>
+<li><p>判断索引是否存在</p>
+</li>
+<li><p>删除索引</p>
+</li>
+<li><p>创建文档</p>
+</li>
+<li><p>crud文档！</p>
+</li>
+</ol>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628222003791.png" alt="image-20200628222003791"></p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>终的效果！</p>
+<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200628222017152.png" alt="image-20200628222017152"></p>
+<p><strong>爬虫</strong></p>
+<blockquote>
+<p>数据问题？数据库获取，消息队列中获取中，都可以成为数据源，爬虫！</p>
+</blockquote>
+<p>爬取数据：（获取请求返回的页面信息，筛选出我们想要的数据就可以了！）</p>
+<p><strong>前后端分离</strong></p>
+<p><strong>搜索高亮</strong></p>
+<blockquote>
+<p>以后大家学习完我这个es就可以编写基本es业务了！</p>
+</blockquote>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>demo：<a href="https://github.com/zhangbohua/es-demo.git" target="_blank" rel="noopener">https://github.com/zhangbohua/es-demo.git</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/SpringBoot%E4%B8%8E%E5%AE%89%E5%85%A8/">SpringBoot与安全</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">ElasticSearch</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.buhuiwy.cn/2021/06/15/ElasticSearch/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/%E4%BB%BB%E5%8A%A1/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/15/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E4%BD%93%E7%B3%BB%E8%AF%A6%E8%A7%A3%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">大数据学习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">异步任务</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/">注册Servlet三大组件【Servlet、Filter、Listener】</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/07/%E6%B6%88%E6%81%AF/" class="archive-article-date">
-  	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/%E6%B6%88%E6%81%AF/">消息</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -391,9 +997,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
