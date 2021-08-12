@@ -192,7 +192,7 @@
 </blockquote>
 <p>SQL ： like %狂神说%，如果是的大数据，就十分慢！索引！</p>
 <p>ElasticSearch：搜索！（百度、github、淘宝电商！）</p>
-<ol>
+<ul>
 <li><p>聊一个人</p>
 </li>
 <li><p>货比三家</p>
@@ -213,7 +213,7 @@
 </li>
 <li><p>实战，模拟全文检索！</p>
 </li>
-</ol>
+</ul>
 <p>以后你只要，需要用到搜索，就可以使用ES！（大数据量的情况下使用！）</p>
         
           <a class="article-more-a" href="/2021/06/15/ElasticSearch/#more">more >></a>
@@ -303,7 +303,7 @@
 <li>数据分析；</li>
 <li>数据可视化；</li>
 </ul>
-<p><img src="C:%5CUsers%5Czhangbh-b%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210418174627852.png" alt="image-20210418174627852"></p>
+<p><img src="https://typora-zhangbh.oss-cn-beijing.aliyuncs.com/img/typora/image-20210418174627852.png" alt="image-20210418174627852"></p>
         
           <a class="article-more-a" href="/2021/06/15/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E4%BD%93%E7%B3%BB%E8%AF%A6%E8%A7%A3%E7%AC%94%E8%AE%B0/#more">more >></a>
         
@@ -527,95 +527,6 @@
 
 
   
-    <article id="post-Windows下批量启动关闭java程序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-
-
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/">Windows下批量启动/关闭java程序</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2019-12-24T09:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <meta name="referrer" content="no-referrer"/>
-
-<h2 id="Windows下批量启动-关闭java程序"><a href="#Windows下批量启动-关闭java程序" class="headerlink" title="Windows下批量启动/关闭java程序"></a>Windows下批量启动/关闭java程序</h2><p>最近公司要将一批微服务部署到<code>windows server</code>上，对于微服务项目来说，一次要部署多个<code>jar</code>包是让人崩溃的，所以这里想做一个批量运行\停止的脚本。</p>
-<h3 id="批量启动："><a href="#批量启动：" class="headerlink" title="批量启动："></a>批量启动：</h3><ul>
-<li>在<code>cmd</code>下，<code>java -jar ####.jar</code>运行后窗口不能关闭，但是有多个<code>jar</code>包，则会开启多个<code>cmd</code>窗口，非常难受。</li>
-<li>在<code>cmd</code>下，<code>javaw -jar ####.jar</code>运行后窗口可以关，但如果有多个<code>jar</code>，就回存在进程中有许多相同的<code>javaw</code>进程，无法区分是哪个<code>jar</code>，很难去关闭特定某个<code>jar</code>的进程。</li>
-</ul>
-<h3 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h3><ul>
-<li>为了解决多个<code>cmd</code>窗口的问题；通过<code>bat</code>文件批量执行<code>jar</code>文件，每个包用<code>start javaw -jar ####.jar</code>来运行。</li>
-<li>为了解决进程难以区分问题；通过复制<code>javaw.exe</code>为对应jar包的文件名称来执行<code>jar</code>包，比如<code>eureka.jar</code>，复制<code>javaw.exe</code>为<code>eureka.exe</code>，然后<code>start eureka -jar eureka.jar</code>，这样进程中就是<code>eureka</code>。</li>
-<li>如果<code>jar</code>之间有执行依赖，则通过<code>ping</code>来给前一个<code>jar</code>提供执行时间。</li>
-</ul>
-        
-          <a class="article-more-a" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-Flyway使用说明" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -676,6 +587,95 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/12/24/Flyway%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Windows下批量启动关闭java程序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+
+
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/">Windows下批量启动/关闭java程序</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2019-12-24T09:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer"/>
+
+<h2 id="Windows下批量启动-关闭java程序"><a href="#Windows下批量启动-关闭java程序" class="headerlink" title="Windows下批量启动/关闭java程序"></a>Windows下批量启动/关闭java程序</h2><p>最近公司要将一批微服务部署到<code>windows server</code>上，对于微服务项目来说，一次要部署多个<code>jar</code>包是让人崩溃的，所以这里想做一个批量运行\停止的脚本。</p>
+<h3 id="批量启动："><a href="#批量启动：" class="headerlink" title="批量启动："></a>批量启动：</h3><ul>
+<li>在<code>cmd</code>下，<code>java -jar ####.jar</code>运行后窗口不能关闭，但是有多个<code>jar</code>包，则会开启多个<code>cmd</code>窗口，非常难受。</li>
+<li>在<code>cmd</code>下，<code>javaw -jar ####.jar</code>运行后窗口可以关，但如果有多个<code>jar</code>，就回存在进程中有许多相同的<code>javaw</code>进程，无法区分是哪个<code>jar</code>，很难去关闭特定某个<code>jar</code>的进程。</li>
+</ul>
+<h3 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h3><ul>
+<li>为了解决多个<code>cmd</code>窗口的问题；通过<code>bat</code>文件批量执行<code>jar</code>文件，每个包用<code>start javaw -jar ####.jar</code>来运行。</li>
+<li>为了解决进程难以区分问题；通过复制<code>javaw.exe</code>为对应jar包的文件名称来执行<code>jar</code>包，比如<code>eureka.jar</code>，复制<code>javaw.exe</code>为<code>eureka.exe</code>，然后<code>start eureka -jar eureka.jar</code>，这样进程中就是<code>eureka</code>。</li>
+<li>如果<code>jar</code>之间有执行依赖，则通过<code>ping</code>来给前一个<code>jar</code>提供执行时间。</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/24/Windows%E4%B8%8B%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADjava%E7%A8%8B%E5%BA%8F/">展开全文 >></a>
         </p>
       
 
@@ -792,7 +792,7 @@
 
 
   
-    <article id="post-缓存" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-消息" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -801,12 +801,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/%E7%BC%93%E5%AD%98/">缓存</a>
+      <a class="article-title" href="/2019/12/07/%E6%B6%88%E6%81%AF/">消息</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/%E7%BC%93%E5%AD%98/" class="archive-article-date">
+        <a href="/2019/12/07/%E6%B6%88%E6%81%AF/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -816,21 +816,15 @@
       
         <meta name="referrer" content="no-referrer"/>
 
-<h3 id="搭建数据库环境"><a href="#搭建数据库环境" class="headerlink" title="搭建数据库环境"></a>搭建数据库环境</h3><ul>
-<li><p>导入数据库文件</p>
-</li>
-<li><p>创建出department和employee表</p>
-</li>
-<li><p>创建JavaBean封装数据</p>
-</li>
-<li><p>整合Mybatis操作数据库</p>
-<ul>
-<li>整合数据源信息</li>
-</ul>
-</li>
-</ul>
+<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>1.大多应用中，可通过消息服务中间件来提升系统异步通信、扩展解耦能力</p>
+<p>2.消息服务中两个重要概念：</p>
+<pre><code>消息代理（message broker）和目的地（destination）</code></pre><p>当消息发送者发送消息以后，将由消息代理接管，消息代理保证消息传递到指定目的地。</p>
+<p>3.消息队列主要有两种形式的目的地</p>
+<p>1.队列（queue）：点对点消息通信（point-to-point）</p>
+<p>2.主题（topic）：发布（publish）/订阅（subscribe）消息通信</p>
+<h3 id="异步处理"><a href="#异步处理" class="headerlink" title="异步处理"></a>异步处理</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf0c36f055568?w=519&h=132&f=png&s=12978" alt="1567674440906"></p>
         
-          <a class="article-more-a" href="/2019/12/07/%E7%BC%93%E5%AD%98/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/%E6%B6%88%E6%81%AF/#more">more >></a>
         
       
 
@@ -844,7 +838,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">Redis</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
         		</li>
       		
 		</ul>
@@ -854,7 +848,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/%E7%BC%93%E5%AD%98/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/%E6%B6%88%E6%81%AF/">展开全文 >></a>
         </p>
       
 
@@ -884,7 +878,7 @@
 
 
   
-    <article id="post-任务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-注册Servlet三大组件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -893,12 +887,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">异步任务</a>
+      <a class="article-title" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/">注册Servlet三大组件【Servlet、Filter、Listener】</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/%E4%BB%BB%E5%8A%A1/" class="archive-article-date">
+        <a href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -908,11 +902,10 @@
       
         <meta name="referrer" content="no-referrer"/>
 
-<p>在Java应用中，绝大多数情况下都是通过同步的方式来实现交互处理的；但是在处理与第三方系统交互的时候，容易造成响应迟缓的情况，之前大部分都是使用多线程来完成此类任务，其实，在<code>Spring 3.x</code>之后，就已经内置了<code>@Async</code>来完美解决这个问题。</p>
-<p>两个注解：</p>
-<p><strong>@EnableAysnc</strong>、<strong>@Aysnc</strong></p>
+<p>由于SpringBoot默认是以jar包的方式启动嵌入式的Servlet容器来启动SpringBoot的web应用，没有web.xml文件。<br>注册三大组件用以下方式</p>
+<p><strong>ServletRegistrationBean</strong></p>
         
-          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/#more">more >></a>
         
       
 
@@ -936,7 +929,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/%E4%BB%BB%E5%8A%A1/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/%E6%B3%A8%E5%86%8CServlet%E4%B8%89%E5%A4%A7%E7%BB%84%E4%BB%B6/">展开全文 >></a>
         </p>
       
 
@@ -1150,10 +1143,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">FlyWay</a>
               </li>
              
@@ -1162,11 +1151,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Ubuntu</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1174,7 +1159,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">YApi</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1194,11 +1187,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">ElasticSearch</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">MQ</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">MQ</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">ElasticSearch</a>
               </li>
              
               <li class="article-tag-list-item">

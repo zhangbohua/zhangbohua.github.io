@@ -161,7 +161,7 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Swagger2整合SpringBoot" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JAVA并发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -170,12 +170,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/">Swagger2整合SpringBoot</a>
+      <a class="article-title" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">JAVA并发</a>
     </h1>
   
 
         
-        <a href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/" class="archive-article-date">
+        <a href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/" class="archive-article-date">
   	<time datetime="2019-12-07T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
@@ -185,9 +185,10 @@
       
         <meta name="referrer" content="no-referrer"/>
 
-<h2 id="Swagger2注解详细"><a href="#Swagger2注解详细" class="headerlink" title="Swagger2注解详细"></a>Swagger2注解详细</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Api</span>：用在请求的类上，表示对类的说明</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    tags=<span class="string">"说明该类的作用，可以在UI界面上看到的注解"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    value=<span class="string">"该参数没什么意义，在UI界面上也看到，所以不需要配置"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiOperation</span>：用在请求的方法上，说明方法的用途、作用</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    value=<span class="string">"说明方法的用途、作用"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    notes=<span class="string">"方法的备注说明"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiImplicitParams</span>：用在请求的方法上，表示一组参数说明</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@ApiImplicitParam</span>：用在<span class="meta">@ApiImplicitParams</span>注解中，指定一个请求参数的各个方面</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        name：参数名</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        value：参数的汉字说明、解释</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        required：参数是否必须传</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        paramType：参数放在哪个地方</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">            · header --&gt; 请求参数的获取：<span class="meta">@RequestHeader</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">            · query --&gt; 请求参数的获取：<span class="meta">@RequestParam</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">            · path（用于restful接口）--&gt; 请求参数的获取：<span class="meta">@PathVariable</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">            · body（不常用）</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">            · form（不常用）    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">        dataType：参数类型，默认String，其它值dataType=<span class="string">"Integer"</span>       </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">        defaultValue：参数的默认值</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiResponses</span>：用在请求的方法上，表示一组响应</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@ApiResponse</span>：用在<span class="meta">@ApiResponses</span>中，一般用于表达一个错误的响应信息</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">        code：数字，例如<span class="number">400</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">        message：信息，例如<span class="string">"请求参数没填好"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">        response：抛出异常的类</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiModel</span>：用于响应类上，表示一个返回响应数据的信息</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">            （这种一般用在post创建的时候，使用<span class="meta">@RequestBody</span>这样的场景，</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">            请求参数无法使用<span class="meta">@ApiImplicitParam</span>注解进行描述的时候）</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@ApiModelProperty</span>：用在属性上，描述响应类的属性</span></pre></td></tr></table></figure>
+<h3 id="线程与进程的区别"><a href="#线程与进程的区别" class="headerlink" title="线程与进程的区别"></a>线程与进程的区别</h3><p>线程，程序执行流的最小执行单位，是行程中的实际运作单位，经常容易和进程这个概念混淆。那么，线程和进程究竟有什么区别呢？首先，进程是一个动态的过程，是一个活动的实体。简单来说，一个应用程序的运行就可以被看做是一个进程，而线程，是运行中的实际的任务执行者。可以说，进程中包含了多个可以同时运行的线程。</p>
+<h3 id="线程的基本概念"><a href="#线程的基本概念" class="headerlink" title="线程的基本概念"></a>线程的基本概念</h3><p><img src="https://user-gold-cdn.xitu.io/2019/12/7/16edf199915321a4?w=808&h=293&f=png&s=53728" alt="img"></p>
         
-          <a class="article-more-a" href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/#more">more >></a>
         
       
 
@@ -201,7 +202,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">Swagger</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -211,7 +212,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/Swagger2%E6%95%B4%E5%90%88SpringBoot/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/JAVA%E5%B9%B6%E5%8F%91/">展开全文 >></a>
         </p>
       
 
@@ -342,10 +343,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">FlyWay</a>
               </li>
              
@@ -354,11 +351,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Ubuntu</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -366,7 +359,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">YApi</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -386,11 +387,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">ElasticSearch</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">MQ</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">MQ</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">ElasticSearch</a>
               </li>
              
               <li class="article-tag-list-item">
